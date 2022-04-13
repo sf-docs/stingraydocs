@@ -87,29 +87,26 @@ theme:
     - search.highlight
     - search.shares
     - content.code.annotate
-#    - toc.integrate
-#    - navigation.sections
+    - toc.integrate
+    - navigation.sections
 extra_css:
   - stylesheets/extra.css
 #  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
 
 plugins:
-#  - git-revision-date-localized:
-#      type: iso_datetime
+  - git-revision-date-localized:
+      type: iso_datetime
   - search:
       lang: 
         - en
         - ru
 
-# repo_url: https://github.com/andreygladilin/mktest
-# repo_name: andreygladilin/mktest
-
-# extra:
-#  social:
-#    - icon: fontawesome/brands/twitter 
-#      link: https://twitter.com/squidfunk
-#    - icon: fontawesome/brands/github 
-#      link: https://twitter.com/squidfunk
+extra:
+  social:
+    - icon: fontawesome/brands/twitter 
+      link: https://twitter.com/squidfunk
+    - icon: fontawesome/brands/github 
+      link: https://twitter.com/squidfunk
 
 markdown_extensions:
   - meta
@@ -138,3 +135,6 @@ extra_javascript:
 #  - javascripts/highlight.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - javascripts/tablesort.js
+
+# repo_url: https://github.com/andreygladilin/mktest
+# repo_name: andreygladilin/mktest
