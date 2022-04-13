@@ -1,3 +1,140 @@
-site_name: My Docs
+site_name: Документация
+nav:
+  - Общая информация:
+    - gi/index.md
+    - gi/tool description.md
+    - gi/user workstation requirements.md
+    - gi/glossary.md
+  - Руководство пользователя: 
+      - ug/index.md
+      - Работа с приложениями:
+          - Приложения в AppSec.Hub: ug/work with applications.md
+          - Добавление нового приложения: ug/adding a new application.md
+          - Настройки приложения: ug/application settings.md
+          - Конфигурация приложения: ug/application configuration.md
+          - Security Pipelines: ug/security pipelines.md
+          - On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/on-boarding.md
+      - Проблемы и дефекты безопасности:
+          - Работа с проблемами и дефектами безопасности: ug/handling security problems and defects.md
+          - Проблемы безопасности: ug/security issues.md
+          - Дефекты безопасности: ug/security defects.md
+          - Синхронизация с Jira — настройки: ug/setting of synchronisation with Jira.md
+      - Аналитика: ug/analytics.md
+      - Приложения:
+        - Приложение 1. Описание параметров запуска скриптов On-boarding: ug/appendix 1.md
+        - Приложение 2. Примеры запуска скриптов для интеграции: ug/appendix 2.md
+        - Приложение 3. Результаты сканирования: ug/appendix 3.md
+        - Приложение 4. Коды выхода Meta-runner: ug/appendix 4.md
+        - Приложение 5. Конфигурационный файл app.properties: ug/appendix 5.md
+  - Руководство по установке, настройке и интеграции:
+    - aag/index.md
+    - aag/installing, running and updating AppSec.Hub.md
+    - Интеграции:
+      - aag/integration with tools.md
+      - aag/integration with software development tools.md
+      - aag/integration with ast tools.md
+      - aag/itegration with wiki tools.md
+      - aag/selection of priority tools.md
+      - aag/disabling tools.md
+    - Конфигурация:
+      - aag/appsechub configuration.md
+      - aag/users and teams.md
+      - aag/organisation of workspaces.md
+      - aag/setting up notifications.md
+      - aag/quality gates.md
+      - aag/tagging settings.md
+      - aag/categories of vulnerabilities.md
+      - aag/custom webhooks configuration.md
+      - aag/application vulnerability correlation settings.md
+      - aag/managing the number of tasks import streams.md
+    - Управление лицензией AppSec.Hub: aag/appsechub licence management.md
+    - Приложения:
+      - aag/appendix 1.md
+      - aag/appendix 2.md
+      - aag/appendix 3.md
+  - Рекомендации по безопасной разработке приложений:
+    - sag/index.md
+    - sag/protected objects.md
+    - sag/users and groups.md
+    - sag/secure configuration.md
+    - sag/session lifetime.md
+    - sag/audit logs.md
+    - sag/appendix 1.md
 theme:
+  language: ru
+  logo: assets/logo.png
+  favicon: assets/favicon.png
   name: material
+  custom_dir: overrides
+  palette:
+#    - media: "(prefers-color-scheme: light)" 
+      scheme: appsechub
+#      toggle:
+#        icon: material/weather-night
+#        name: Switch to dark mode
+#    - media: "(prefers-color-scheme: dark)" 
+#      scheme: slate
+#      toggle:
+#        icon: material/weather-sunny
+#        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.shares
+    - content.code.annotate
+#    - toc.integrate
+#    - navigation.sections
+extra_css:
+  - stylesheets/extra.css
+#  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
+
+plugins:
+#  - git-revision-date-localized:
+#      type: iso_datetime
+  - search:
+      lang: 
+        - en
+        - ru
+
+# repo_url: https://github.com/andreygladilin/mktest
+# repo_name: andreygladilin/mktest
+
+# extra:
+#  social:
+#    - icon: fontawesome/brands/twitter 
+#      link: https://twitter.com/squidfunk
+#    - icon: fontawesome/brands/github 
+#      link: https://twitter.com/squidfunk
+
+markdown_extensions:
+  - meta
+  - abbr
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      use_pygments: false
+      auto_title: true
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: ⚓︎
+
+extra_javascript:
+#  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
+#  - javascripts/highlight.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tablesort.js
