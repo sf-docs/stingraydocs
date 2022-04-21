@@ -1,65 +1,18 @@
 site_name: Документация
 nav:
-  - Общая информация:
-    - gi/index.md
-    - gi/tool description.md
-    - gi/user workstation requirements.md
-    - gi/glossary.md
-  - Руководство пользователя: 
-      - ug/index.md
-      - Работа с приложениями:
-          - Приложения в AppSec.Hub: ug/work with applications.md
-          - Добавление нового приложения: ug/adding a new application.md
-          - Настройки приложения: ug/application settings.md
-          - Конфигурация приложения: ug/application configuration.md
-          - Security Pipelines: ug/security pipelines.md
-          - On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/on-boarding.md
-      - Проблемы и дефекты безопасности:
-          - Работа с проблемами и дефектами безопасности: ug/handling security problems and defects.md
-          - Проблемы безопасности: ug/security issues.md
-          - Дефекты безопасности: ug/security defects.md
-          - Синхронизация с Jira — настройки: ug/setting of synchronisation with Jira.md
-      - Аналитика: ug/analytics.md
-      - Приложения:
-        - Приложение 1. Описание параметров запуска скриптов On-boarding: ug/appendix 1.md
-        - Приложение 2. Примеры запуска скриптов для интеграции: ug/appendix 2.md
-        - Приложение 3. Результаты сканирования: ug/appendix 3.md
-        - Приложение 4. Коды выхода Meta-runner: ug/appendix 4.md
-        - Приложение 5. Конфигурационный файл app.properties: ug/appendix 5.md
-  - Руководство по установке, настройке и интеграции:
-    - aag/index.md
-    - aag/installing, running and updating AppSec.Hub.md
-    - Интеграции:
-      - aag/integration with tools.md
-      - aag/integration with software development tools.md
-      - aag/integration with ast tools.md
-      - aag/itegration with wiki tools.md
-      - aag/selection of priority tools.md
-      - aag/disabling tools.md
-    - Конфигурация:
-      - aag/appsechub configuration.md
-      - aag/users and teams.md
-      - aag/organisation of workspaces.md
-      - aag/setting up notifications.md
-      - aag/quality gates.md
-      - aag/tagging settings.md
-      - aag/categories of vulnerabilities.md
-      - aag/custom webhooks configuration.md
-      - aag/application vulnerability correlation settings.md
-      - aag/managing the number of tasks import streams.md
-    - Управление лицензией AppSec.Hub: aag/appsechub licence management.md
-    - Приложения:
-      - aag/appendix 1.md
-      - aag/appendix 2.md
-      - aag/appendix 3.md
-  - Рекомендации по безопасной разработке приложений:
-    - sag/index.md
-    - sag/protected objects.md
-    - sag/users and groups.md
-    - sag/secure configuration.md
-    - sag/session lifetime.md
-    - sag/audit logs.md
-    - sag/appendix 1.md
+  - Общая информация: gi/index.md
+  - Руководство пользователя: ug/index.md
+  - Руководство по установке, настройке и интеграции: aag/index.md
+  - Рекомендации по безопасной разработке:
+    - rg/index.md
+    - Рекомендации для Android:
+      - rg/ru/android/index.md
+      - Небезопасное хранение ключевой информации:
+        - rg/ru/android/a_writable_keystore.md
+        - rg/ru/android/a_keystore_with_write_permission_protected_by_a_weak_password.md
+    - Рекомендации для iOS:
+      - rg/ru/ios/index.md
+
 theme:
   language: ru
   logo: assets/logo.png
@@ -87,7 +40,8 @@ theme:
     - search.highlight
     - search.shares
     - content.code.annotate
-    - toc.integrate
+# Убрать правую колонку
+#    - toc.integrate
     - navigation.sections
 extra_css:
   - stylesheets/extra.css
