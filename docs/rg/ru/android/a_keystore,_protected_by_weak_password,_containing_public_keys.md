@@ -1,4 +1,4 @@
-# Доступное на запись хранилище ключей со слабым паролем
+# Хранилище ключей со слабым паролем, содержащее открытые ключи
 
 <table class='noborder'>
     <colgroup>
@@ -7,18 +7,18 @@
     </colgroup>
     <tbody>
       <tr>
-        <td rowspan="2"><img src="../../../img/defekt_srednij.png"/></td>
-        <td>Критичность:<strong> СРЕДНИЙ</strong></td>
+        <td rowspan="2"><img src="../../../img/defekt_nizkij.png"/></td>
+        <td>Критичность:<strong> НИЗКИЙ</strong></td>
       </tr>
       <tr>
         <td>Способ обнаружения:<strong> DAST, КЛЮЧЕВАЯ ИНФОРМАЦИЯ</strong></td>
       </tr>
     </tbody>
-  </table>
+</table>
 
 ## Описание
 
-Приложение использует доступное на запись хранилище ключей со слабым паролем. Это может привести к подмене ключевой информации. Ключ шифрования не должен храниться в общедоступном месте. Keystore и хранящиеся в нём ключи должны быть защищены надёжным паролем.
+Приложение использует хранилище ключей со слабым паролем, содержащее открытые ключи. Keystore и хранящиеся в нём ключи должны быть защищены надёжным паролем.
 
 При использовании криптографических операций на устройстве необходимо обеспечить максимальную безопасность основного секрета в таких операциях — ключа шифрования. При использовании ассиметричного шифрования — необходимо сохранить в секрете приватный ключ, в то время как в случае использования симметричных алгоритмов следует защищать ключ, который используется и для шифрования и для расшифрования sensitive-информации. Существует несколько основных способов хранения ключей в зависимости от версии операционной системы в хранилище AndroidKeyStore или в директории приложении в BKS. Наиболее безопасным вариантом, безусловно является хранение ключей в AndroidKeyStore. Но, если необходимо хранить ключи в BKS нужно не забывать о том, что и само хранилище и все ключи в нем должны быть защищены надежным паролем.
 
@@ -53,7 +53,7 @@
     -provider org.bouncycastle.jce.provider.BouncyCastleProvider
     -providerpath "C:\Users\Indra\Downloads\bcprov-jdk15on-154.jar"
     -storetype BKS -storepass "StorePass123"
-    --------------------------------------------------------------------------------------
+    ------------------------------------------------------------------------------------------------------
     openssl pkcs12 -export -in "/home/myapp/myapp_cert_2016/ssl_certificate.crt"
     -inkey "/home/myapp/myapp_cert_2016/domainname.key"
     -certfile "/home/myapp/myapp_cert_2016/ssl_certificate.crt" -out testkeystore.p12
@@ -62,27 +62,28 @@
     -srcstoretype pkcs12 -destkeystore ""C:\Users\Indra\myapp\wso2carbon.jks"
     -deststoretype JKS
     Destination keystore password : exportpass123
-    ----------------------------------------------------- Final JKS Keystore generation --
+    ----------------------------------------------------- Final JKS Keystore generation ------------------
     # openssl pkcs12 -export -in "/home/myapp/myapp_cert_2016/ssl_certificate.crt"
-    -inkey "/home/myapp/myapp_cert_2016/domainname.key" -certfile "/home/myapp/myapp_cert_2016/ssl_certificate.crt"
-    -out myapp_cert.p12
+    -inkey "/home/myapp/myapp_cert_2016/domainname.key"
+    -certfile "/home/myapp/myapp_cert_2016/ssl_certificate.crt" -out myapp_cert.p12
     Export Password : StorePass123
-    keytool -importkeystore -srckeystore "C:\Users\Indra\myapp\myapp_cert.p12" -srcstoretype pkcs12
-    -destkeystore "C:\Users\Indra\myapp\myapp_keystore.jks" -deststoretype JKS
+    keytool -importkeystore -srckeystore "C:\Users\Indra\myapp\myapp_cert.p12"
+    -srcstoretype pkcs12 -destkeystore "C:\Users\Indra\myapp\myapp_keystore.jks"
+    -deststoretype JKS
     Import Password : StorePass123
-    ----------------------------------------------------- Final BKS Keystore generation --
-    keytool -importkeystore -srckeystore "C:\Users\Indra\myapp\myapp_keystore.jks -deststoretype JKS"
-    -destkeystore "C:\Users\Indra\myapp\myapp_keystore.bks" -srcstoretype JKS -deststoretype BKS
-    -srcstorepass StorePass123 -deststorepass StorePass123
-    -provider org.bouncycastle.jce.provider.BouncyCastleProvider
+    ----------------------------------------------------- Final BKS Keystore generation ------------------
+    keytool -importkeystore -srckeystore "C:\Users\Indra\myapp\myapp_keystore.jks
+    -deststoretype JKS" -destkeystore "C:\Users\Indra\myapp\myapp_keystore.bks"
+    -srcstoretype JKS -deststoretype BKS -srcstorepass StorePass123
+    -deststorepass StorePass123 -provider org.bouncycastle.jce.provider.BouncyCastleProvider
     -providerpath "C:\Users\Indra\Downloads\bcprov-jdk15on-154.jar"
     On error or exception steps to be taken
     - Comment above line and add the new line in java.security file in jre/lib/security
         #security.provider.7=com.sun.security.sasl.Provider
         security.provider.7=org.bouncycastle.jce.provider.BouncyCastleProvider
-    - You need to install the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy  
- 
- Для генерации и использования AndroidKeyStore возможно использовать вспомогательные библиотеки или же возможно реализовать генерацию и получение ключа самостоятельно.
+    - You need to install the Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy 
+
+Для генерации и использования AndroidKeyStore возможно использовать вспомогательные библиотеки или же возможно реализовать генерацию и получение ключа самостоятельно.
 
 **Добавление нового ключа в KeyStore**
 
@@ -112,7 +113,7 @@
         refreshKeys();
     }
 
-**Удаление нового ключа в KeyStore**
+**Удаление ключа из KeyStore**
 
     public void deleteKey(final String alias) {
         AlertDialog alertDialog =new AlertDialog.Builder(this)
@@ -200,9 +201,9 @@
 
 1. [https://developer.android.com/training/articles/keystore#kotlin](https://developer.android.com/training/articles/keystore#kotlin)
 
-2.  [https://www.androidauthority.com/use-android-keystore-store-passwords-sensitive-information-623779/](https://www.androidauthority.com/use-android-keystore-store-passwords-sensitive-information-623779/)
+2. [https://www.androidauthority.com/use-android-keystore-store-passwords-sensitive-information-623779/](https://www.androidauthority.com/use-android-keystore-store-passwords-sensitive-information-623779/)
 
-3.  [https://developer.android.com/guide/topics/security/cryptography](https://developer.android.com/guide/topics/security/cryptography)
+3. [https://developer.android.com/guide/topics/security/cryptography](https://developer.android.com/guide/topics/security/cryptography)
 
 4. [https://developer.android.com/reference/androidx/security/crypto/EncryptedFile](https://developer.android.com/reference/androidx/security/crypto/EncryptedFile)
 
