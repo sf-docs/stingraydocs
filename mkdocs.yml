@@ -30,6 +30,18 @@ nav:
       - Передача sensitive-информации по сети:
         - rg/ru/android/inclusion_of_sensitive_information_into_the_get_request_parameters.md
         - rg/ru/android/inclusion_of_sensitive_information_into_an_https_request.md
+        - rg/ru/android/transmission_of_sensitive_information_in_an_http_request.md
+        - rg/ru/android/transmission_of_sensitive_information_in_an_http_response.md
+        - rg/ru/android/inclusion_of_sensitive_information_into_an_https_response.md
+      - Хранение sensitive-информации:
+        - rg/ru/android/storing_sensitive_information_in_memory.md
+        - rg/ru/android/storing_sensitive_information_in_a_public_file_outside_the_application_s_directory.md
+        - rg/ru/android/storing_sensitive_information_in_a_public_file_inside_the_application_s_directory.md
+        - rg/ru/android/storing_sensitive_information_in_a_private_file_outside_the_application_s_directory.md
+        - rg/ru/android/storing_sensitive_information_in_a_private_file_inside_the_application_s_directory.md
+        - rg/ru/android/storing_sensitive_information_in_a_public_protected_database.md
+        - rg/ru/android/storing_sensitive_information_in_a_protected_database.md
+        - rg/ru/android/storing_sensitive_information_in_an_insecure_database.md
     - Рекомендации для iOS:
       - rg/ru/ios/index.md
 
