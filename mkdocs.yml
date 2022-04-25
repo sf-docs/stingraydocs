@@ -70,9 +70,22 @@ nav:
       - rg/ru/android/insecure_settings_in_androidmanifest.xml._the_android_requestlegacyexternalstorage_flag.md
       - rg/ru/android/ssl-pinning_is_missing_or_incorrectly_realized.md
       - rg/ru/android/ability_to_run_private_activity_indirectly.md
-
     - Рекомендации для iOS:
-      - rg/ru/ios/index.md
+      - Хранение ключей/сертификатов:
+        - rg/ru/ios/storing_a_key_certificate_in_the_directory_resources_of_the_application_ios.md
+        - rg/ru/ios/storing_a_private_key_certificate_protected_by_a_password_in_the_directory_resources_of_the_application_ios.md
+        - rg/ru/ios/storing_a_public_key_certificate_in_the_directory_resources_of_the_application_ios.md
+        - rg/ru/ios/storing_a_private_key_certificate_that_is_not_protected_by_a_password_in_the_directory_resources_of_the_application_ios.md
+      - Небезопасное хранение ключевой информации:
+        - rg/ru/ios/a_writable_keystore_ios.md
+        - rg/ru/ios/a_keystore_with_write_permission_protected_by_a_weak_password_ios.md
+        - rg/ru/ios/readable_file_keystore_ios.md
+        - rg/ru/ios/a_readable_keystore,_protected_by_a_weak_password,_with_private_keys_ios.md
+        - rg/ru/ios/a_readable_keystore,_protected_by_a_weak_password,_with_public_keys_ios.md
+        - rg/ru/ios/a_readable_keystore_containing_private_keys_protected_by_a_weak_password_ios.md
+        - rg/ru/ios/using_a_file_keystore_ios.md
+
+
 
 theme:
   language: ru

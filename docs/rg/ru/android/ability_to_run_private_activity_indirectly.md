@@ -85,13 +85,13 @@
 
 2. Проводить валидацию to-be-redirected Intent на предмет вредоносности -такой Intent не должен направляться в private/in-house Activity
 
-    Intent intent = getIntent();
-    Intent redirectIntent = (Intent) intent.getParcelableExtra(“redirect_intent”);
-    ComponentName name = redirectIntent.resolveActivity(getPackageManager());
-    // проверяем целевое имя пакета и класса
-    if(name.getPackageName().equals(“safe_package”) && name.getClassName().equals(“safe_class”)) {
-        startActivity(redirectIntent);
-    }
+        Intent intent = getIntent();
+        Intent redirectIntent = (Intent) intent.getParcelableExtra(“redirect_intent”);
+        ComponentName name = redirectIntent.resolveActivity(getPackageManager());
+        // проверяем целевое имя пакета и класса
+        if(name.getPackageName().equals(“safe_package”) && name.getClassName().equals(“safe_class”)) {
+            startActivity(redirectIntent);
+        }
 
 ### Partner Activity
 

@@ -31,11 +31,11 @@
 Риски при использовании **Activity** и соответствующие им защитные меры различаются в зависимости от того, как используется эта **Activity**. Мы выделяем 4 типа **Activity** в зависимости от способов использования. Для определения типа **Activity**, которую планируется создавать, необходимо воспользоваться таблицей и диаграммой, представленными ниже.
 
 <figure markdown>
-![](../../../img/sistema_stingrej_nebezopasnaya-peredacha-sensitive-informaczii-v-activity.png)
+![](../../img/sistema_stingrej_nebezopasnaya-peredacha-sensitive-informaczii-v-activity.png)
 </figure>
 
 <figure markdown>
-![](../../../img/30eeefd4-c210-43cd-b612-f9f75e7524d3.png)
+![](../../img/30eeefd4-c210-43cd-b612-f9f75e7524d3.png)
 </figure>
 
 **Создание и использование public Activity**
