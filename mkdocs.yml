@@ -42,6 +42,30 @@ nav:
         - rg/ru/android/storing_sensitive_information_in_a_public_protected_database.md
         - rg/ru/android/storing_sensitive_information_in_a_protected_database.md
         - rg/ru/android/storing_sensitive_information_in_an_insecure_database.md
+        - rg/ru/android/storing_sensitive_information_in_a_public_unprotected_database.md
+        - rg/ru/android/storing_sensitive_information_in_the_application_source_code.md
+        - rg/ru/android/storage_or_use_of_previously_found_sensitive_information.md
+        - rg/ru/android/storing_sensitive_information_in_the_keyboard_cache.md
+      - Хранение ключей/сертификатов:
+        - rg/ru/android/storing_a_private_key_certificate_that_is_not_protected_by_a_password_in_the_directory_resources_of_the_application.md
+        - rg/ru/android/storing_a_public_key_certificate_in_the_directory_resources_of_the_application.md
+        - rg/ru/android/storing_a_private_key_certificate_protected_by_a_password_in_the_directory_resources_of_the_application.md
+        - rg/ru/android/storing_a_key_certificate_in_the_directory_resources_of_the_application.md
+      - rg/ru/android/output_of_sensitive_information_into_the_system_log.md
+      - rg/ru/android/insecure_signature_algorithm.md
+      - rg/ru/android/insufficient_length_of_a_signature_key.md
+      - rg/ru/android/transmission_of_sensitive_information_in_broadcastreceiver.md
+      - rg/ru/android/transmission_of_sensitive_information_to_a_private_broadcastreceiver.md
+      - rg/ru/android/transmission_of_sensitive_information_in_sql_query_parameters.md
+      - rg/ru/android/possibility_to_create_a_backup_copy_of_the_application.md
+      - rg/ru/android/application_is_not_obfuscated.md
+      - rg/ru/android/weak_database_encryption_password.md
+      - rg/ru/android/interception_of_the_database_encryption_password.md
+      - rg/ru/android/an_application_allows_network_connections_via_http.md
+      - rg/ru/android/insecure_networking_configuration.md
+      - rg/ru/android/potential_execution_of_arbitrary_code_within_the_application.md
+      - rg/ru/android/storing_cookie_values_in_the_standard_webview_database.md
+
     - Рекомендации для iOS:
       - rg/ru/ios/index.md
 
