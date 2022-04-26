@@ -84,7 +84,14 @@ nav:
         - rg/ru/ios/a_readable_keystore,_protected_by_a_weak_password,_with_public_keys_ios.md
         - rg/ru/ios/a_readable_keystore_containing_private_keys_protected_by_a_weak_password_ios.md
         - rg/ru/ios/using_a_file_keystore_ios.md
-
+        - rg/ru/ios/a_keystore,_protected_by_weak_password,_containing_private_keys_ios.md
+        - rg/ru/ios/a_keystore,_protected_by_weak_password,_containing_public_keys_ios.md
+        - rg/ru/ios/a_keystore_containing_private_keys_protected_by_a_weak_password_ios.md
+      - rg/ru/ios/enabled_caching_of_network_requests_ios.md
+      - rg/ru/ios/output_of_sensitive_information_into_the_system_log_ios.md
+      - rg/ru/ios/insecure_app_transport_security_configuration_ios.md
+      - rg/ru/ios/application_does_not_use_overflow_protection_features_ios.md
+      - rg/ru/ios/presence_of_build_scripts_in_the_built_application_package_ios.md
 
 
 theme:
