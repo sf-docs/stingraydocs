@@ -125,7 +125,7 @@
 Хранение сертификата/ключа в директории/ресурсах приложения
 </a><br>
 
-<br>
+<h3>Прочие</h3>
 <a href="ru/android/output_of_sensitive_information_into_the_system_log/">
 Вывод sensitive-информации в системный лог
 </a><br>
@@ -234,7 +234,7 @@
 <a href="ru/ios/a_keystore_containing_private_keys_protected_by_a_weak_password_ios/">
 Хранилище ключей с приватными ключами, защищёнными слабым паролем
 </a><br>
-<br>
+<h3>Прочие</h3>
 <a href="ru/ios/enabled_caching_of_network_requests_ios/">
 Включенное кэширование сетевых запросов
 </a><br>

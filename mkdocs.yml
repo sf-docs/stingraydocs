@@ -69,6 +69,10 @@ nav:
       - rg/ru/android/insecure_settings_in_androidmanifest.xml._the_android_requestlegacyexternalstorage_flag.md
       - rg/ru/android/ssl-pinning_is_missing_or_incorrectly_realized.md
       - rg/ru/android/ability_to_run_private_activity_indirectly.md
+      - rg/ru/android/url_spoofing_possibility.md
+      - rg/ru/android/ability_to_open_an_arbitrary_url_in_webview.md
+      - rg/ru/android/access_to_an_arbitrary_file.md
+      - rg/ru/android/ability_to_access_an_arbitrary_file_via_contentprovider.md
     - Рекомендации для iOS:
       - Хранение ключей/сертификатов:
         - rg/ru/ios/storing_a_key_certificate_in_the_directory_resources_of_the_application_ios.md
