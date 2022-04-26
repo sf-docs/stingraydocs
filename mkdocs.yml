@@ -92,6 +92,14 @@ nav:
       - rg/ru/ios/insecure_app_transport_security_configuration_ios.md
       - rg/ru/ios/application_does_not_use_overflow_protection_features_ios.md
       - rg/ru/ios/presence_of_build_scripts_in_the_built_application_package_ios.md
+      - rg/ru/ios/presence_of_podfile_in_the_built_application_package_ios.md
+      - rg/ru/ios/storing_sensitive_information_in_the_keyboard_cache_ios.md
+      - rg/ru/ios/storing_sensitive_information_in_nsuserdefaults_ios.md
+      - rg/ru/ios/storing_sensitive_information_in_a_private_file_ios.md
+      - rg/ru/ios/storing_sensitive_information_in_the_application_source_code_ios.md
+      - rg/ru/ios/storing_sensitive_information_in_binary_cookies_ios.md
+      - rg/ru/ios/storage_or_use_of_previously_found_sensitive_information_ios.md
+  - FAQ: faq/index.md
 
 
 theme:
