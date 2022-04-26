@@ -16,7 +16,6 @@ nav:
         - rg/ru/android/a_readable_keystore_containing_private_keys_protected_by_a_weak_password.md
         - rg/ru/android/using_a_file_keystore.md
         - rg/ru/android/a_keystore,_protected_by_weak_password,_containing_private_keys.md
-        - rg/ru/android/a_keystore_with_write_permission_protected_by_a_weak_password.md
         - rg/ru/android/a_keystore,_protected_by_weak_password,_containing_public_keys.md
         - rg/ru/android/a_keystore_containing_private_keys_protected_by_a_weak_password.md
       - Передача sensitive-информации в Activity:
