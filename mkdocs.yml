@@ -1,7 +1,22 @@
 site_name: Документация
 nav:
-  - Общая информация: gi/index.md
-  - Руководство пользователя: ug/index.md
+  - Общая информация:
+    - gi/index.md
+    - gi/o_produkte.md
+    - gi/trebovaniya_k_rabochemu_mestu_polzovatelya.md
+    - gi/osnovnye_ponyatiya.md
+  - Руководство пользователя:
+    - ug/index.md
+    - ug/autentifikaciya_polzovatelya.md
+    - ug/osnovnoe_menu.md
+    - ug/projects.md
+    - ug/pravila.md
+    - ug/rezultaty_skanirovanij.md
+    - ug/zapusk_skanirovaniya.md
+    - ug/spisok_test_kejsov.md
+    - ug/trebovaniya.md
+    - ug/profile.md
+    - ug/dokumentaciya_i_rekomendacii.md
   - Руководство по установке, настройке и интеграции: aag/index.md
   - Рекомендации по безопасной разработке:
     - rg/index.md
@@ -140,8 +155,8 @@ extra_css:
 #  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
 
 plugins:
-  - git-revision-date-localized:
-      type: iso_datetime
+#  - git-revision-date-localized:
+#      type: iso_datetime
   - search:
       lang: 
         - en
