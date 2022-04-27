@@ -1,4 +1,4 @@
-# Возможность открытия произвольной URL в WebView
+# Возможность открытия произвольного URL в WebView
 
 <table class='noborder'>
     <colgroup>
