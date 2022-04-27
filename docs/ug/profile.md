@@ -1,14 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <title>Профили</title>
-  <meta name="topic-status" content="Draft"/>
-  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
-</head>
-<body>
-  <h2>Профили</h2>
+# Профили
+  
   <p>По нажатию на имя профиля на странице <strong>Проекты</strong> или во вкладке <strong>Список профилей</strong> открывается страница <strong>Профиль</strong> с детальной информацией о нем. На странице можно получить информацию о настройках модулей сканирования в данном профиле (включить, отключить или настроить их), просмотреть и изменить стандарты безопасности, на соответствие которым будет проверяться анализируемое данным профилем приложение. А также получить информацию о количестве найденных дефектов за все время существования профиля сканирования.</p>
   <p style="text-align: center"><img height="600" src="../assets/images/image46.png" width="100%"/></p>
   <p class="a1">На странице присутствуют три вкладки: <strong>Профиль</strong>, <strong>Модули</strong>, <strong>Требования</strong>.</p>

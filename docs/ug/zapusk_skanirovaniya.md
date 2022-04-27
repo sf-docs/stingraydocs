@@ -1,14 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Запуск сканирования</title>
-  <meta name="topic-status" content="Draft" />
-</head>
-<body>
-  <h2>Запуск сканирования</h2>
+# Запуск сканирования
+
   <p data-list-level="2">Запуск сканирования может быть произведен в ручном или в автоматическом режиме. Запустить сканирование можно через пункт основного меню <strong>Запуск сканирования</strong>.</p>
   <p data-list-level="2"><img src="../assets/images/image69.png" style="cursor: nwse-resize;" /></p>
   <p class="a1">На странице <strong>Запуск сканирования</strong> представлены необходимые поля для запуска анализа приложения:</p>
@@ -85,5 +76,3 @@
   <p>Для запуска сканирования приложений из систем сборки созданы средства инструментальной поддержки, позволяющие значительно упростить этот процесс.<br />
     Запуск сканирования из систем сборки подробно описан в разделе в разделе <a href="../aag/integracii.htm" title="Интеграции">Интеграции</a> Руководства по установке, настройке и интеграции.</p>
   <p> </p>
-</body>
-</html>

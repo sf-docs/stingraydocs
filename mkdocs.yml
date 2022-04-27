@@ -17,7 +17,40 @@ nav:
     - ug/trebovaniya.md
     - ug/profile.md
     - ug/dokumentaciya_i_rekomendacii.md
-  - Руководство по установке, настройке и интеграции: aag/index.md
+  - Руководство по установке, настройке и интеграции:
+    - aag/index.md
+    - aag/Integracii.md
+    - aag/Integracii_cherez_REST_API.md
+    - aag/Integracii_sistemy.md
+    - aag/Integraciya_c_Burp_Suite.md
+    - aag/Integraciya_s_AppScreener.md
+    - aag/Integraciya_s_Appstore.md
+    - aag/Integraciya_s_Firebase.md
+    - aag/Integraciya_s_Google_Play.md
+    - aag/Integraciya_s_LDAP.md
+    - aag/Integraciya_s_Netsparker.md
+    - aag/Integraciya_s_Oversecured.md
+    - aag/Nastrojka_monitoringa.md
+    - aag/Nastrojka_zhurnalov_audita.md
+    - aag/Nastrojki.md
+    - aag/Obnovlenie_sistemy.md
+    - aag/Organizacii.md
+    - aag/Ostanovka_Stingray.md
+    - aag/Perezagruzka_servera_bez_obnovleniya_Stingray.md
+    - aag/Polzovateli.md
+    - aag/Pravila_analiza_na_urovne_Organizacii.md
+    - aag/Prilozhenie_1.md
+    - aag/Prilozhenie_2.md
+    - aag/Prilozhenie_3.md
+    - aag/Prilozheniya.md
+    - aag/Sistema_distribucii_AppCenter.md
+    - aag/Sistema_distribucii_HockeyApp.md
+    - aag/Sistema_distribucii_Nexus_Repository.md
+    - aag/Sistemy_CI_CD.md
+    - aag/Trebovaniya_k_infrastrukture.md
+    - aag/Ustanovka_Stingray.md
+    - aag/Ustrojstva.md
+    - aag/Zapusk_Stingray.md
   - Рекомендации по безопасной разработке:
     - rg/index.md
     - Рекомендации для Android:

@@ -1,14 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Правила</title>
-  <meta name="topic-status" content="Draft" />
-</head>
-<body>
-  <h2>Правила</h2>
+# Правила
   <p class="a1">На данной вкладке представлены правила анализа уязвимостей, которые применяются для выбранного проекта. В общем случае правила соответствуют определенным на уровне организации (см. раздел <a href="../aag/pravila_analiza_na_urovne_organizacii.htm" title="Правила анализа на уровне Организации">Правила анализа на уровне Организации</a> в Руководстве по установке, настройке и интеграции), но есть возможность изменить или добавить правила в соответствии со спецификой сканируемого приложения. Необходимо отметить, что правила, добавленные непосредственно в проекте, будут применяться только в рамках этого проекта.</p>
   <p class="a1" style="text-align: center"><img height="1018" src="../assets/images/image92.png" width="95%" /></p>
   <h3 data-list-level="4">Переопределение правил анализа</h3>
@@ -76,5 +66,3 @@
   <p style="text-align: center"><img alt="Изображение выглядит как текст
 Автоматически созданное описание" height="167" src="../assets/images/UG_files/image28.png" width="60%" /></p>
   <p style="text-align: center"> </p>
-</body>
-</html>

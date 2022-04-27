@@ -1,0 +1,57 @@
+/*Created with Adobe RoboHelp*/
+a {
+  text-decoration: underline;
+}
+/*TOC Styling*/
+div.pdf-toc-body {}
+h1.pdf-toc-title {}
+a.pdf-toc-level-1 {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+a.pdf-toc-level-2 {
+  font-size: 16px;
+  text-decoration: none;
+}
+a.pdf-toc-level-3 {
+  font-size: 14px;
+  text-decoration: none;
+}
+a.pdf-toc-level-4 {
+  font-size: 14px;
+  text-decoration: none;
+}
+a.pdf-toc-level-5 {
+  font-size: 14px;
+  text-decoration: none;
+}
+a.pdf-toc-level-6 {
+  font-size: 14px;
+  text-decoration: none;
+}
+/*Index Styling*/
+div.book-idx-body {
+  column-count: 2;
+  column-fill: balance;
+}
+h1.book-idx-title {
+  column-span: all;
+}
+div.book-idx-unit {}
+p.book-idx-keyword {}
+span.book-idx-name {}
+a.book-idx-link {
+  text-decoration: none;
+}
+div.book-idx-child {
+  padding-left: 10px;
+}
+/*Glossary Styling*/
+div.book-glo-body {}
+h1.book-glo-title {}
+div.book-glo-unit {}
+p.book-glo-term {
+  font-weight: bold;
+}
+p.book-glo-definition {}

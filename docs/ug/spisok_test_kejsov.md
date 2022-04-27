@@ -1,14 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Тест кейсы</title>
-  <meta name="topic-status" content="Draft" />
-</head>
-<body>
-  <h2>Тест кейсы</h2>
+# Тест кейсы
+
   <p data-list-level="2">Работа с тест кейсами в системе производится через пункты основного меню <strong>Список тест кейсов</strong> и <strong>Записать тест кейс</strong>. Для начала работы выберите пункт <strong>Список тест кейсов</strong>.</p>
   <p class="a5" style="text-align: center"><img alt="Рисунок 219" height="499" src="../assets/images/UG_files/image82.png" width="30%" /></p>
   <p class="a1">На странице <strong>Список тест кейсов</strong> отображены все записанные тест кейсы для различных проектов и приложений.</p>
@@ -65,5 +56,3 @@
   <p class="a1">Кроме этого, тест кейс может быть удален непосредственно на странице <strong>Список тест кейсов</strong> с помощью расположенного справа от строки соответствующего тест кейса раскрывающегося меню.</p>
   <p class="a1" style="text-align: center"><img alt="Рисунок 37" height="439" src="../assets/images/UG_files/image89.png" style="cursor: nwse-resize;" width="100%" /></p>
   <p class="a1" style="text-align: center"> </p>
-</body>
-</html>

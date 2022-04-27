@@ -1,14 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Аутентификация пользователя</title>
-  <meta name="topic-status" content="Draft" />
-</head>
-<body>
-  <h1>Аутентификация пользователя</h1>
+# Аутентификация пользователя
+
   <p>Ссылка для доступа к веб-интерфейсу Stingray (GUI) должна быть предоставлена администратором. Перейдите по ссылке, чтобы открыть окно аутентификации.</p>
   <p>Для входа в систему выберите способ авторизации, введите имя пользователя (логин) и пароль, а затем нажмите кнопку <strong>Login</strong>.</p>
   <p style="text-align: center"><img height="626" src="../assets/images/image96.png" width="50%" /></p>
@@ -32,5 +23,3 @@
   <p>Если в профиле пользователя включена двухфакторная аутентификация, см. раздел <a data-xref="{title}" href="Profil_polzovatelya.htm">Профиль пользователя</a>, после ввода логина отображается дополнительное окно, в котором необходимо ввести код, появившийся в приложении Google Authenticator (скачать в <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=ru&amp;gl=US">Google Play</a> или <a href="https://apps.apple.com/ru/app/google-authenticator/id388497605">App Store</a>).</p>
   <p style="text-align: center"><img height="527" src="../assets/images/image63.png" width="50%" /></p>
   <p>Если код двухфакторной аутентификации будет три раза введен неправильно, пользователь блокируется на 5 минут.</p>
-</body>
-</html>

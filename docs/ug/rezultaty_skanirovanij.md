@@ -1,14 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Результаты сканирований</title>
-  <meta name="topic-status" content="Draft" />
-</head>
-<body>
-  <h2>Результаты сканирований</h2>
+# Результаты сканирований
+
   <h3 data-list-level="2">Список результатов</h3>
   <p class="a1">При выборе пункта меню <strong>Результаты сканирования</strong> отображается список всех проведенных сканирований. На этой странице можно посмотреть все прошедшие сканирования. Каждое сканирование представлено одной строкой. Данные о результатах сканирований автоматически обновляются каждые 10 секунд, что освобождает пользователя от необходимости обновлять страницу вручную.</p>
   <p class="a1" style="text-align: center"><img height="1152" src="../assets/images/image61.png" width="100%" /></p>
@@ -160,5 +151,3 @@
   <p class="a1">Данная вкладка доступна только для результатов автоматического сканирования ‎и предоставляет возможность просмотра видеозаписи проведенного сканирования ‎и процесс выполнения тест кейса.</p>
   <p class="a5" style="text-align: center"><img alt="Рисунок 11" src="../assets/images/UG_files/image73.gif" style="cursor: nwse-resize;" /></p>
   <p class="a5" style="text-align: center"> </p>
-</body>
-</html>

@@ -1,14 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Требования</title>
-  <meta name="topic-status" content="Draft" />
-</head>
-<body>
-  <h2>Требования</h2>
+# Требования
+
   <p data-list-level="2">На странице <strong>Требования </strong>основного меню представлены все стандарты информационной безопасности и входящие в них требования, на соответствие которым можно проверить приложение.</p>
   <p class="a5" style="text-align: center"><img alt="Рисунок 87" height="710" src="../assets/images/UG_files/image92.png" width="100%" /></p>
   <p class="a1">Рассмотрим способы управления требованиями в системе.</p>
@@ -57,5 +48,3 @@
   <p class="a5" style="text-align: center"><img align="" alt="Изображение выглядит как текст
 Автоматически созданное описание" height="777" src="../assets/images/UG_files/image109.png" width="50%" /></p>
   <p class="a5" style="text-align: center"> </p>
-</body>
-</html>

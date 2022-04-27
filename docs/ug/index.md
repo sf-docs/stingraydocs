@@ -1,14 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Руководство пользователя</title>
-  <meta name="topic-status" content="Draft" />
-</head>
-<body>
-  <h1>Руководство пользователя</h1>
+# Руководство пользователя
+
   <table style="width: 100%;">
     <tbody>
       <tr>
@@ -33,5 +24,3 @@
     <li><a href="Dokumentaciya_i_rekomendacii.htm">Документация и рекомендации</a></li>
   </ul>
   <p> </p>
-</body>
-</html>

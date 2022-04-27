@@ -1,14 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Профиль пользователя</title>
-  <meta name="topic-status" content="Draft" />
-</head>
-<body>
-  <h2><a id="Профиль_пользователя"></a>Профиль пользователя</h2>
+# Профиль пользователя
+
   <p>Для перехода на страницу <strong>Профиль пользователя</strong> необходимо в правом верхнем углу окна нажать иконку «<img alt="Рисунок 73" height="13.7" src="../assets/images/UG_files/image110.png" width="18.5" />» и выбрать в выпадающем меню пункт <strong>Профиль пользователя</strong>. Кроме этого, используя данное выпадающее меню, можно выйти из системы.</p>
   <p class="a5" style="text-align: center"><img alt="Изображение выглядит как текст
 Автоматически созданное описание" height="164" src="../assets/images/UG_files/image111.png" width="25%" /></p>
@@ -44,5 +35,3 @@
   <p class="a1">В открывшемся окне введите текущий пароль, а затем дважды новый пароль, в заключение нажмите кнопку <strong>Изменить</strong>. При необходимости можно включить отображение паролей, нажав иконку <img height="16" src="../assets/images/image86.png" width="16" />.</p>
   <p class="a1" style="text-align: center"><img height="486" src="../assets/images/image85.png" width="50%" /></p>
   <p class="a1"> </p>
-</body>
-</html>
