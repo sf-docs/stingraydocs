@@ -1,7 +1,7 @@
 # Интеграции
 
-  <p>Для настройки интеграции с различными инструментами необходимо в правом верхнем углу нажать иконку настроек <img height="21" src="assets/images/image82.png" width="20" />, а далее на странице <strong>Настройки</strong> выбрать вкладку <strong>Интеграции</strong>.</p>
-  <p style="text-align: center"><img height="882" src="assets/images/image33.png" style="cursor: nesw-resize;" width="100%" /></p>
+  <p>Для настройки интеграции с различными инструментами необходимо в правом верхнем углу нажать иконку настроек <img height="21" src="../assets/images/image82.png" width="20" />, а далее на странице <strong>Настройки</strong> выбрать вкладку <strong>Интеграции</strong>.</p>
+  <p style="text-align: center"><img height="882" src="../assets/images/image33.png" style="cursor: nesw-resize;" width="100%" /></p>
   <p>В левом верхнем углу вкладки <strong>Интеграции</strong> располагается раскрывающееся меню, которое позволяет переключаться между настройками инструментов.</p>
   <h3>CI/CD</h3>
   <p>Выберите в раскрывающемся меню <strong>CI/CD</strong> — здесь представлены следующие поля:</p>

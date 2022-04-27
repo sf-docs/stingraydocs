@@ -6,7 +6,7 @@
   <h2>Импорт данных в Netsparker</h2>
   <p>В главном меню Netsparker выберите <strong>Scans</strong> &gt; <strong>New Scan</strong>.</p>
   <p>На странице <strong>New Scan</strong> выберите <strong>Imported Links</strong>.</p>
-  <p style="text-align: center"><img height="382" src="assets/images/image73.png" style="border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0);" width="60%" /></p>
+  <p style="text-align: center"><img height="382" src="../assets/images/image73.png" style="border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0);" width="60%" /></p>
   <p>Укажите импортируемый файл в поле <strong>Import Links</strong>.</p>
   <p> </p>
   <p> </p>

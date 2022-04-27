@@ -7,7 +7,7 @@
   <ul class="Disc">
     <li><code>google_play_package_name</code> — имя скачиваемого пакета. Чтобы узнать имя пакета приложения, можно открыть его страницу в Google Play — имя пакета является частью URL (параметр <code>id</code>).</li>
   </ul>
-  <p style="text-align: center"><img src="assets/images/image97.png" /></p>
+  <p style="text-align: center"><img src="../assets/images/image97.png" /></p>
   <ul class="Disc">
     <li><code>google_play_email</code> — электронная почта аккаунта Google.</li>
     <li><code>google_play_password</code> — пароль аккаунта Google.</li>
@@ -31,7 +31,7 @@
 20/04/2022 15:00:30 - ERROR Google Play - server says: &quot;NeedsBrowser&quot;</code></pre>
   <p>Необходимо перейти по ссылке и пройти проверку безопасности в браузере.</p>
   <p><strong>Примечание:</strong> Возможно, такая проверка не потребуется.</p>
-  <p style="text-align: center"><img height="621" src="assets/images/image99.png" width="95%" /></p>
+  <p style="text-align: center"><img height="621" src="../assets/images/image99.png" width="95%" /></p>
   <p>Пройдя проверку безопасности, запустите скрипт с этими же параметрами повторно. </p>
   <p><strong>Примечание:</strong> Если на этом этапе необходимо скачать приложение, добавьте параметр <code>--google_play_download_with_creds</code>.</p>
   <p>Результатом будут следующие сообщения:</p>

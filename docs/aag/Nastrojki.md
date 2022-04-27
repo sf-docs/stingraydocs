@@ -13,9 +13,9 @@
     </tbody>
   </table>
   <p>Для перехода на вкладку <strong>Настройки</strong> необходимо в правом верхнем углу нажать на иконку «шестеренки». Настройки системы доступны только пользователям с правами <strong>Администратора</strong>.<span style="font-size:11pt"><span style="line-height:90%"><span style="font-family:&quot;Arial Nova&quot;,sans-serif"><span style="color:#555555"></span></span></span></span></p>
-  <p style="text-align: center"><img height="927" src="assets/images/image50.png" style="cursor: nesw-resize;" width="95%" /><span style="font-size:10pt"><span style="font-family:&quot;Arial Nova&quot;,sans-serif"><span style="color:#555555"><span style="letter-spacing:0.3pt"><span style="font-style:italic"><span style="font-style:normal"> </span></span></span></span></span></span></p>
+  <p style="text-align: center"><img height="927" src="../assets/images/image50.png" style="cursor: nesw-resize;" width="95%" /><span style="font-size:10pt"><span style="font-family:&quot;Arial Nova&quot;,sans-serif"><span style="color:#555555"><span style="letter-spacing:0.3pt"><span style="font-style:italic"><span style="font-style:normal"> </span></span></span></span></span></span></p>
   <p>На странице настроек доступны несколько вкладок: <strong>Пользователи</strong>, <strong>Группы</strong>, <strong>Проекты</strong>, <strong>Правила</strong>, <strong>Устройства</strong>, <strong>Организации</strong>, <strong>Интеграции</strong>.</p>
-  <p style="text-align: center"><img height="654" src="assets/images/image51.png" width="95%" /></p>
+  <p style="text-align: center"><img height="654" src="../assets/images/image51.png" width="95%" /></p>
   <p> </p>
 </body>
 </html>
