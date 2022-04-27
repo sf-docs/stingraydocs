@@ -72,7 +72,7 @@ nav:
       - rg/ru/android/url_spoofing_possibility.md
       - rg/ru/android/ability_to_open_an_arbitrary_url_in_webview.md
       - rg/ru/android/access_to_an_arbitrary_file.md
-      - rg/ru/access_to_an_arbitrary_contentprovider.md
+      - rg/ru/android/access_to_an_arbitrary_contentprovider.md
       - rg/ru/android/ability_to_access_an_arbitrary_file_via_contentprovider.md
     - Рекомендации для iOS:
       - Хранение ключей/сертификатов:
