@@ -18,7 +18,7 @@
 
 ## Описание
 
-Уязвимость позволяет запускать внутренние **не экспортируемые** Activity приложения. Это может повлечь за собой достаточно широкий спектр проблем, начиная от обхода аутентификации, заканчивая компрометацией пользовательских данных.
+Уязвимость позволяет запускать внутренние **неэкспортируемые** Activity приложения. Это может повлечь за собой достаточно широкий спектр проблем, начиная обходом аутентификации и заканчивая компрометацией пользовательских данных.
 
 Уязвимость присутствует в приложениях, которые используют Intent из недоверенного источника (например, полученные из стороннего приложения с помощью методов `getIntent`, `getParcelableExtra` или `onActivityResult`) для запуска (`startActivity`, `startActivityForResult`) своих внутренних Activity (в дальнейшем будет использован термин «to-be-redirected Intent», то есть тот Intent, который получен из недоверенного источника и далее используется для запуска Activity).
 
@@ -41,7 +41,7 @@
         }
         finish();
 
-Вызвав такой код из вредоносного приложения в. результате будет запущена внутренняя Activity уязвимого приложения (vuln.app.pkg.PrivateActivity)
+В результате вызова такого кода из вредоносного приложения будет запущена внутренняя Activity уязвимого приложения (**vuln.app.pkg.PrivateActivity**)
 
 <figure markdown>
 ![](../../img/11197bc2203-e7d1-4f68-84a5-a39a94e2f241.jpg)
@@ -53,37 +53,37 @@
 
 1. Реализовать private/in-house видимость у компонентов, которые принимают “to-be-redirected Intent" и используют его для последующего запуска private/in-house Activity. 
 
-В качестве примера - это объявление Activity внутренней. То есть, отсутствуют intent-filter или флаг exported выставлен в значение false:
+    Например, объявление Activity внутренней — отсутствуют `intent-filter` или флаг `exported` выставлен в значение `false`:
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-            package="com.swordfishsecurity.appsec.android.activity.privateactivity" >
-            <application
-                android:allowBackup="false"
-                android:icon="@drawable/ic_launcher"
-                android:label="@string/app_name" >
-                <!-- Private activity -->
-                <!-- *** 1 *** Не используйте taskAffinity -->
-                <!-- *** 2 *** Не используйте launchMode -->
-                <!-- *** 3 *** Явно указывайте атрибут exported="false" -->
-                <activity
-                    android:name=".PrivateActivity"
-                    android:label="@string/app_name"
-                    android:exported="false" />
-                <!-- Public activity запускаемая по умолчанию -->
-                <activity
-                    android:name=".PrivateUserActivity"
-                    android:label="@string/app_name"
-                    android:exported="true" >
-                    <intent-filter>
-                        <action android:name="android.intent.action.MAIN" />
-                        <category android:name="android.intent.category.LAUNCHER" />
-                    </intent-filter>
-                </activity>
-            </application>
-    </manifest>
+        <?xml version="1.0" encoding="utf-8"?>
+        <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+                package="com.swordfishsecurity.appsec.android.activity.privateactivity" >
+                <application
+                    android:allowBackup="false"
+                    android:icon="@drawable/ic_launcher"
+                    android:label="@string/app_name" >
+                    <!-- Private activity -->
+                    <!-- *** 1 *** Не используйте taskAffinity -->
+                    <!-- *** 2 *** Не используйте launchMode -->
+                    <!-- *** 3 *** Явно указывайте атрибут exported="false" -->
+                    <activity
+                        android:name=".PrivateActivity"
+                        android:label="@string/app_name"
+                        android:exported="false" />
+                    <!-- Public activity запускаемая по умолчанию -->
+                    <activity
+                        android:name=".PrivateUserActivity"
+                        android:label="@string/app_name"
+                        android:exported="true" >
+                        <intent-filter>
+                            <action android:name="android.intent.action.MAIN" />
+                            <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>
+                    </activity>
+                </application>
+        </manifest>
 
-2. Проводить валидацию to-be-redirected Intent на предмет вредоносности -такой Intent не должен направляться в private/in-house Activity
+2. Проводить валидацию to-be-redirected Intent на предмет вредоносности — он не должен направляться в private/in-house Activity
 
         Intent intent = getIntent();
         Intent redirectIntent = (Intent) intent.getParcelableExtra(“redirect_intent”);
@@ -95,7 +95,7 @@
 
 ### Partner Activity
 
-Так же еще одним способом является работа с приложениями партнерами. Они представляют собой приложения, которые используются сотрудничающими компаниями, которые хотят безопасно обмениваться информацией и функциональностью.
+Еще одним способом является работа с приложениями партнерами. Они представляют собой приложения, которые используются сотрудничающими компаниями, которые хотят безопасно обмениваться информацией и функциональностью.
 
 В рамках такого обмена вводится понятие Partner Activity. Это Activity, которая может совместно использоваться только из приложений, которые разработаны компаниями-партнёрами. 
 
@@ -105,13 +105,13 @@
 
 При создании Partner Activity необходимо придерживаться нескольких правил:
 
-1. Не используйте taskAffinity
-2. Не используйте launchMode
-3. Не объявляйте intent-filter и явно указывайте атрибут exported="true"
-4. Проверяйте, что сертификат вызывающего приложения содержится в списке сертификатов доверенных приложений
-5. Проводите проверку и безопасную обработку полученного Intent, не смотря на то, что он был получен из того же приложения-партнёра
-6. Возвращайте только ту информацию, к которой приложение-партнёр имеет право получить доступ
-7. Для реализации пункта 4 необходимо реализовать получение отпечатка сертификатов доверенных приложений и их регистрацию в нашем приложении. Для этого можно воспользоваться следующими примерами кода с детальными комментариями:
+1. Не используйте `taskAffinity`.
+2. Не используйте `launchMode`.
+3. Не объявляйте `intent-filter` и явно указывайте атрибут `exported="true"`.
+4. Проверяйте, что сертификат вызывающего приложения содержится в списке сертификатов доверенных приложений.
+5. Проводите проверку и безопасную обработку полученного Intent, не смотря на то, что он был получен из того же приложения-партнёра.
+6. Возвращайте только ту информацию, к которой приложение-партнёр имеет право получить доступ.
+7. Для реализации пункта 4 необходимо организовать получение отпечатка сертификатов доверенных приложений и их регистрацию в нашем приложении. Для этого можно воспользоваться следующими примерами кода с детальными комментариями.
 
 **AndroidManifest.xml**
 
@@ -272,14 +272,14 @@
 
 ### Использование Partner Activity
 
-Если вы собираетесь использовать Activity из приложения-партнера, необходимо следовать следующим правилам:
+Если вы собираетесь использовать Activity из приложения-партнёра, необходимо следовать следующим правилам:
 
-1. Проверяйте что сертификат целевого приложения присутствует в "белом списке"
-2. Не устанавливайте флаг `FLAG_ACTIVITY_NEW_TASK` в Intent, который будет использоваться для запуска Activity
-3. Отправляйте (с помощью putExtra) только ту информацию, к которой приложение-партнёр имеет право получить доступ, не больше
-4. Используйте явный Intent для запуска Partner Activity
-5. Используйте `startActivityForResult()` для запуска Partner Activity
-6. Проводите проверку и безопасную обработку полученных данных результата, не смотря на то, что они были получены из приложения-партнёра
+1. Проверяйте что сертификат целевого приложения присутствует в «белом списке».
+2. Не устанавливайте флаг `FLAG_ACTIVITY_NEW_TASK` в Intent, который будет использоваться для запуска Activity.
+3. Отправляйте (с помощью putExtra) только ту информацию, к которой приложение-партнёр имеет право получить доступ, не больше.
+4. Используйте явный Intent для запуска Partner Activity.
+5. Используйте `startActivityForResult()` для запуска Partner Activity.
+6. Проводите проверку и безопасную обработку полученных данных результата, не смотря на то, что они были получены из приложения-партнёра.
 7. Для реализации первого пункта можно воспользоваться следующими примерами кода:
 
 **AndroidManifest.xml**

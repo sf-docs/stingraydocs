@@ -28,7 +28,7 @@
     setupWebView(webView);
     webView.loadUrl(getIntent().getStringExtra("url"));
 
-Или так:
+Или такой:
 
     String url = uri.getQueryParameter("url");
     if(url != null) {
@@ -37,15 +37,15 @@
 
 ## Рекомендации
 
-1. Не использовать динамически формируемые URL для WebView
+1. Не использовать динамически формируемые URL для WebView.
 
         webView.loadUrl("https://url.to.your.contents/");
 
 2. Проводить валидацию URL:
 
-    1. Разрешать доступ только к ресурсам компании. Т.е. поддерживать white-list url-адресов и сверять с ним URL, передаваемый в метод loadUrl
+    1. Разрешать доступ только к ресурсам компании, т. е. поддерживать white-list url-адресов и сверять с ним URL, передаваемый в метод `loadUrl`.
 
-    2. Разрешать доступ только к определённым origin. Т.е. проверять схему и домен URL
+    2. Разрешать доступ только к определённым origin, т. е. проверять схему и домен URL.
 
             List<String> whiteHosts = Arrays.asList("stackoverflow.com",  "stackexchange.com", "google.com");
             public boolean isValid(String url) {
