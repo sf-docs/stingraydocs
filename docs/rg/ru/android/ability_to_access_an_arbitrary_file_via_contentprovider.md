@@ -40,22 +40,22 @@
     throw new RuntimeException(th);
     }
 
-В результате вредоносное приложение получит доступ к файлу `private_internal_file` в директории приложения уязвимого приложения (`vuln.app.pkg`).
+В результате вредоносное приложение получит доступ к файлу `private_internal_file` в директории уязвимого приложения (`vuln.app.pkg`).
 
 ## Рекомендации
 
-Для устранения подобных проблем в приложении необходимо убедиться в соответствии нескольким правилам:
+Для устранения подобных проблем в приложении необходимо убедиться в соответствии нескольким правилам.
 
 1. Реализовать private/in-house видимость у ContentProvider. 
 
-    В качестве примера - это объявление ContentProvider внутренним:
+    Например, объявить ContentProvider внутренним:
 
         <provider
         android:name=".PrivateProvider"
         android:authorities="notvuln.app.pkg.some_authority"
         android:exported="false" />
 
-    Для того, чтобы оградить ContentProvider от его использования сторонними приложениями, необходимо определить permission с protectionLevel="signature" и прописать его в объявлении этого ContentProvider'а:
+    Чтобы оградить ContentProvider от его использования сторонними приложениями, необходимо определить `permission` с `protectionLevel="signature"` и прописать его в объявлении этого ContentProvider'а:
 
         <?xml version="1.0" encoding="utf-8"?>
         <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -82,13 +82,13 @@
 
 2. Если ContentProvider должен оставаться публичным для сторонних приложений, то необходимо проводить валидацию canonical пути файла непосредственно перед его возвратом запрашивающему приложению:
 
-    @Override
-    public ParcelFileDescriptor openFile (Uri uri, String mode) throws FileNotFoundException {
-    File file = new File(sdcardDir, uri.getLastPathSegment());
-    if (!file.getCanonicalPath().startsWith(sdcardDir)) {
-        throw new IllegalArgumentException();
-    }
-    return ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY);
-    }
+        @Override
+        public ParcelFileDescriptor openFile (Uri uri, String mode) throws FileNotFoundException {
+        File file = new File(sdcardDir, uri.getLastPathSegment());
+        if (!file.getCanonicalPath().startsWith(sdcardDir)) {
+            throw new IllegalArgumentException();
+        }
+        return ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY);
+        }
 
 ## Ссылки
