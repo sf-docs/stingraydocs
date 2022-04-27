@@ -6,7 +6,6 @@ nav:
   - Рекомендации по безопасной разработке:
     - rg/index.md
     - Рекомендации для Android:
-      - rg/ru/android/index.md
       - Небезопасное хранение ключевой информации:
         - rg/ru/android/a_writable_keystore.md
         - rg/ru/android/a_keystore_with_write_permission_protected_by_a_weak_password.md
@@ -178,8 +177,8 @@ markdown_extensions:
       permalink: ⚓︎
 
 extra_javascript:
-#  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
-#  - javascripts/highlight.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
+  - javascripts/highlight.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - javascripts/tablesort.js
 
