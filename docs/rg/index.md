@@ -1,8 +1,10 @@
 # Рекомендации по безопасной разработке приложений
 
 <div style='float: left; width: 50%'>
-<h2 style=' margin: 0 0 0 0' style='line-high: 0'>Рекомендации для Android</h2>
-<h3>Небезопасное хранение ключевой информации</h3>
+## Рекомендации для Android
+
+### Небезопасное хранение ключевой информации
+
 <a href="ru/android/a_writable_keystore/">
 Доступное на запись хранилище ключей
 </a><br>
@@ -34,7 +36,8 @@
 Хранилище ключей с приватными ключами, защищёнными слабым паролем
 </a><br>
 
-<h3>Передача sensitive-информации в Activity</h3>
+### Передача sensitive-информации в Activity
+
 <a href="ru/android/insecure_transmission_of_sensitive_information_in_activity/">
 Небезопасная передача sensitive-информации в Activity
 </a><br>
@@ -45,7 +48,8 @@
 Передача sensitive-информации во внутреннюю Activity
 </a><br>
 
-<h3>Передача sensitive-информации в Service</h3>
+### Передача sensitive-информации в Service
+
 <a href="ru/android/insecure_transmission_of_sensitive_information_in_service/">
 Небезопасная передача sensitive-информации в Service
 </a><br>
@@ -56,7 +60,8 @@
 Небезопасная передача sensitive-информации во внутренний Service
 </a><br>
 
-<h3>Передача sensitive-информации по сети</h3>
+### Передача sensitive-информации по сети
+
 <a href="ru/android/inclusion_of_sensitive_information_into_the_get_request_parameters/">
 Включение sensitive-информации в параметры GET-запроса
 </a><br>
@@ -73,7 +78,8 @@
 Получение чувствительной информации в HTTPS-ответе
 </a><br>
 
-<h3>Хранение sensitive-информации</h3>
+### Хранение sensitive-информации
+
 <a href="ru/android/storing_sensitive_information_in_memory/">
 Хранение sensitive-информации в памяти
 </a><br>
@@ -111,7 +117,8 @@
 Хранение sensitive-информации в кэше клавиатуры
 </a><br>
 
-<h3>Хранение ключей/сертификатов</h3>
+### Хранение ключей/сертификатов
+
 <a href="ru/android/storing_a_private_key_certificate_that_is_not_protected_by_a_password_in_the_directory_resources_of_the_application/">
 Хранение приватного ключа/сертификата не защищенного паролем в директории/ресурсах приложения
 </a><br>
@@ -125,7 +132,8 @@
 Хранение сертификата/ключа в директории/ресурсах приложения
 </a><br>
 
-<h3>Прочие</h3>
+### Прочие
+
 <a href="ru/android/output_of_sensitive_information_into_the_system_log/">
 Вывод sensitive-информации в системный лог
 </a><br>
@@ -188,8 +196,10 @@
 </div>
 
 <div>
-<h2>Рекомендации для iOS</h2>
-<h3>Хранение ключей/сертификатов</h3>
+## Рекомендации для iOS
+
+### Хранение ключей/сертификатов
+
 <a href="ru/ios/storing_a_key_certificate_in_the_directory_resources_of_the_application_ios/">
 Хранение сертификата/ключа в директории/ресурсах приложения
 </a><br>
@@ -203,7 +213,8 @@
 Хранение приватного ключа/сертификата не защищенного паролем в директории/ресурсах приложения
 </a><br>
 
-<h3>Небезопасное хранение ключевой информации</h3>
+### Небезопасное хранение ключевой информации
+
 <a href="ru/ios/a_writable_keystore_ios/">
 Доступное на запись хранилище ключей
 </a><br>
@@ -234,7 +245,9 @@
 <a href="ru/ios/a_keystore_containing_private_keys_protected_by_a_weak_password_ios/">
 Хранилище ключей с приватными ключами, защищёнными слабым паролем
 </a><br>
-<h3>Прочие</h3>
+
+### Прочие
+
 <a href="ru/ios/enabled_caching_of_network_requests_ios/">
 Включенное кэширование сетевых запросов
 </a><br>
