@@ -42,9 +42,7 @@
 
 Для устранения подобных проблем в приложении необходимо убедиться в соответствии нескольким правилам:
 
-1. Реализовать private/in-house видимость у компонентов, которые принимают Intent и используют его в методе `setResult`. 
-
-Например, объявление Activity внутренней — отсутствуют `intent-filter` или флаг `exported` выставлен в значение `false`.
+1. Реализовать private/in-house видимость у компонентов, которые принимают Intent и используют его в методе `setResult`. Например, объявление Activity внутренней — отсутствуют `intent-filter` или флаг `exported` выставлен в значение `false`.
 
         <?xml version="1.0" encoding="utf-8"?>
         <manifest xmlns:android="http://schemas.android.com/apk/res/android"
