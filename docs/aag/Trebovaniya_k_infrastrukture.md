@@ -5,8 +5,8 @@
     Для работы системы обязательно наличие поддержки виртуализации, а именно необходим процессор с поддержкой технологии виртуализации Intel Virtualization Technology (VT, VT-x, vmx) или AMD Virtualization (AMD-V, SVM).</p>
   <h3><strong>Минимальные технические характеристики серверного оборудования</strong></h3>
   <ul class="Disc">
-    <li>4-ядерный CPU 2 ГГц; </li>
-    <li>Оперативная память: 16 Гб. </li>
+    <li>6-ядерный CPU 2 ГГц; </li>
+    <li>Оперативная память: 24 Гб. </li>
     <li>Свободное дисковое пространство 100 GB (+ пространство для размещения прикладных систем и баз данных).</li>
   </ul>
   <h3><strong>Рекомендуемые технические характеристики серверного оборудования</strong></h3>
@@ -50,10 +50,10 @@
           <p>1</p>
         </td>
         <td style="background-color: rgba(0, 105, 230, 0.20);border-width: 3px;border-color: rgb(255, 255, 255);font-size: 0.9rem">
-          <p>4-ядерный процессор (2 ГГц) с поддержкой технологии виртуализации Intel Virtualization Technology (VT, VT-x, vmx) или AMD Virtualization (AMD-V, SVM)</p>
+          <p>6-ядерный процессор (2 ГГц) с поддержкой технологии виртуализации Intel Virtualization Technology (VT, VT-x, vmx) или AMD Virtualization (AMD-V, SVM)</p>
         </td>
         <td style="background-color: rgba(0, 105, 230, 0.20);text-align: center;border-width: 3px;border-color: rgb(255, 255, 255);font-size: 0.9rem">
-          <p>16</p>
+          <p>24</p>
         </td>
         <td style="background-color: rgba(0, 105, 230, 0.20);text-align: center;border-width: 3px;border-color: rgb(255, 255, 255);font-size: 0.9rem">
           <p>200</p>
@@ -107,10 +107,10 @@
           <p>2 Android, 2 iOS</p>
         </td>
         <td style="background-color: rgba(0, 105, 230, 0.20);border-width: 3px;border-color: rgb(255, 255, 255);text-align: center;font-size: 0.9rem">
-          <p>4</p>
+          <p>6</p>
         </td>
         <td style="background-color: rgba(0, 105, 230, 0.20);border-width: 3px;border-color: rgb(255, 255, 255);text-align: center;font-size: 0.9rem">
-          <p>16</p>
+          <p>24</p>
         </td>
       </tr>
       <tr>
