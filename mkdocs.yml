@@ -181,6 +181,7 @@ theme:
     - search.highlight
     - search.shares
     - content.code.annotate
+    - content.tabs.link
 # Убрать правую колонку
 #    - toc.integrate
 #    - navigation.sections
