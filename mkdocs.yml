@@ -43,10 +43,10 @@ nav:
       - aag/integraciya_s_firebase.md
       - aag/integraciya_s_appstore.md
       - aag/integraciya_c_burp_suite.md
-      - aag/Integraciya_s_Netsparker.md
-      - aag/Integraciya_s_AppScreener.md
-      - aag/Integraciya_s_Oversecured.md
-      - aag/Integraciya_s_Google_Play.md
+      - aag/integraciya_s_netsparker.md
+      - aag/integraciya_s_appscreener.md
+      - aag/integraciya_s_oversecured.md
+      - aag/integraciya_s_google_play.md
     - Настройка мониторинга:
       - aag/Nastrojka_zhurnalov_audita.md
     - Приложения:

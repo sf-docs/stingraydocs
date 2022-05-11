@@ -11,9 +11,9 @@
 
 * `google_play_package_name` — имя скачиваемого пакета. Чтобы узнать имя пакета приложения, можно открыть его страницу в Google Play — имя пакета является частью URL (параметр `id`).
 
-<figure markdown>
-![]()
-</figure>
+    <figure markdown>
+    ![](../aag/img/32.png)
+    </figure>
 
 * `google_play_email` — электронная почта аккаунта Google.
 * `google_play_password` — пароль аккаунта Google.
@@ -22,15 +22,15 @@
 Таким образом, команда предварительного запуска скрипта может выглядеть следующим образом:
 
     python mdast_cli/mdast_scan.py \
-            --profile_id 1337 \
-            --architecture_id 1 \
-            --distribution_system google_play \
-            --url "https://saas.mobile.appsec.world" \
-            --company_id 1 \
-            --token 5d5f6c98*********487a68ee20d4562d9f \
-            --google_play_package_name com.instagram.android \
-            --google_play_email download*******ly@gmail.com \
-            --google_play_password Password
+      --profile_id 1337 \
+      --architecture_id 1 \
+      --distribution_system google_play \
+      --url "https://saas.mobile.appsec.world" \
+      --company_id 1 \
+      --token 5d5f6c98*********487a68ee20d4562d9f \
+      --google_play_package_name com.instagram.android \
+      --google_play_email download*******ly@gmail.com \
+      --google_play_password Password
 
 Результатом предварительного запуска будут следующие сообщения: 
 
@@ -45,7 +45,7 @@
     Возможно, такая проверка не потребуется.
 
 <figure markdown>
-![]()
+![](../aag/img/33.png)
 </figure>
 
 Пройдя проверку безопасности, запустите скрипт с этими же параметрами повторно. 
@@ -68,18 +68,18 @@
 После получения необходимых параметров можно, запустив скрипт, скачать приложение и запустить его ручное сканирование.
 
     python mdast_cli/mdast_scan.py \
-        --profile_id 1337 \
-        --architecture_id 1 \
-        --distribution_system google_play \
-        --url "https://saas.mobile.appsec.world" \
-        --company_id 1 \
-        --token 5d5f6c98*********487a68ee20d4562d9f \
-        --google_play_package_name com.instagram.android \
-        --google_play_gsfid 432******************43 \
-        --google_play_auth_token JAgw_2h*************************************8KRaYQ.
-        --google_play_file_name best_apk_d0wnl04d3r
+      --profile_id 1337 \
+      --architecture_id 1 \
+      --distribution_system google_play \
+      --url "https://saas.mobile.appsec.world" \
+      --company_id 1 \
+      --token 5d5f6c98*********487a68ee20d4562d9f \
+      --google_play_package_name com.instagram.android \
+      --google_play_gsfid 432******************43 \
+      --google_play_auth_token JAgw_2h*************************************8KRaYQ.
+      --google_play_file_name best_apk_d0wnl04d3r
 
 В результате приложение будет скачано в папку `downloaded_apps` под именем `best_apk_d0wnl04d3r.apk`, а также запустится ручное сканирование.
 
 !!! note "Примечание"
-    Более подробная информация о параметрах скрипта приведена в разделе Системы CI/CD.
+    Более подробная информация о параметрах скрипта приведена в разделе «[Системы CI/CD]()».

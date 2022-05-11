@@ -13,7 +13,7 @@ Stingray обеспечивает возможность передачи дан
 На странице **New Scan** выберите **Imported Links**.
 
 <figure markdown>
-![]()
+![](../aag/img/22.png)
 </figure>
 
 Укажите импортируемый файл в поле **Import Links**.
