@@ -11,6 +11,7 @@ nav:
     - ug/osnovnoe_menu.md
     - ug/projects.md
     - ug/pravila.md
+    - ug/standarty.md
     - ug/rezultaty_skanirovanij.md
     - ug/zapusk_skanirovaniya.md
     - ug/spisok_test_kejsov.md
@@ -30,7 +31,7 @@ nav:
       - aag/Polzovateli.md
       - aag/Pravila_analiza_na_urovne_Organizacii.md
       - aag/Ustrojstva.md
-      - aag/Organizacii.md
+      - aag/Companies.md
       - aag/Integracii.md
     - Интеграции системы:
       - aag/Integracii_cherez_REST_API.md
