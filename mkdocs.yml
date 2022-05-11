@@ -50,9 +50,9 @@ nav:
     - Настройка мониторинга:
       - aag/Nastrojka_zhurnalov_audita.md
     - Приложения:
-      - aag/Prilozhenie_1.md
-      - aag/Prilozhenie_2.md
-      - aag/Prilozhenie_3.md
+      - aag/prilozhenie_1.md
+      - aag/prilozhenie_2.md
+      - aag/prilozhenie_3.md
   - Рекомендации по безопасной разработке:
     - rg/index.md
     - Рекомендации для Android:
