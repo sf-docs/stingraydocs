@@ -31,18 +31,18 @@
 Для запуска анализа приложения по известному имени, владельцу и ID релиза необходимо выполнить следующую команду:
 
     mdast_cli --distribution_system appcenter --appcenter_token 18bc81146d374ba4b1182ed65e0b3aaa 
-    --appcenter_owner_name test_org_or_user --appcenter_app_name demo_app --appcenter_release_id 710 
-    --url "https://saas.stingray-mobile.ru" --profile_id 2 --testcase_id 3 --company_id 1 --architecture_id 1
-    --token "eyJ0eXA4OiJKA1QiLbJhcGciO5JIU4I1NiJ1..."
+      --appcenter_owner_name test_org_or_user --appcenter_app_name demo_app --appcenter_release_id 710 
+      --url "https://saas.stingray-mobile.ru" --profile_id 2 --testcase_id 3 --company_id 1 --architecture_id 1
+      --token "eyJ0eXA4OiJKA1QiLbJhcGciO5JIU4I1NiJ1..."
 
 В результате у владельца (пользователя или организации `test_org_or_user`) будет найдено приложение `demo_app` с `ID` релиза `710`. Данная версия релиза будет загружена и передана на анализ безопасности в Stingray.
 
 Для загрузки релиза с последней версией необходимо указать параметр `appcenter_release_id latest`. Тогда команда будет выглядеть следующим образом:
 
     mdast_cli --distribution_system appcenter --appcenter_token 18bc81146d374ba4b1182ed65e0b3aaa 
-    --appcenter_owner_name "test_org_or_user" --appcenter_app_name "demo_app" --appcenter_release_id latest 
-    --url "https://saas.stingray-mobile.ru" --profile_id 2 --testcase_id 3 --company_id 1 --architecture_id 1
-    --token "eyJ0eXA4OiJKA1QiLbJhcGciO5JIU4I1NiJ1..."
+      --appcenter_owner_name "test_org_or_user" --appcenter_app_name "demo_app" --appcenter_release_id latest 
+      --url "https://saas.stingray-mobile.ru" --profile_id 2 --testcase_id 3 --company_id 1 --architecture_id 1
+      --token "eyJ0eXA4OiJKA1QiLbJhcGciO5JIU4I1NiJ1..."
 
 и будет загружен последний доступный релиз для данного приложения.
 
@@ -51,8 +51,8 @@
 Для запуска анализа приложения по известному имени, владельцу и версии приложения (`version_code` в Android Manifest) необходимо выполнить следующую команду:
 
     mdast_cli --distribution_system appcenter --appcenter_token 18bc81146d374ba4b1182ed65e0b3aaa 
-    --appcenter_owner_name "test_org_or_user" --appcenter_app_name "demo_app" --appcenter_app_version 31337 
-    --url "https://saas.stingray-mobile.ru" --profile_id 2 --testcase_id 3 --company_id 1 --architecture_id 1 
-    --token "eyJ0eXA4OiJKA1QiLbJhcGciO5JIU4I1NiJ1..."
+      --appcenter_owner_name "test_org_or_user" --appcenter_app_name "demo_app" --appcenter_app_version 31337 
+      --url "https://saas.stingray-mobile.ru" --profile_id 2 --testcase_id 3 --company_id 1 --architecture_id 1 
+      --token "eyJ0eXA4OiJKA1QiLbJhcGciO5JIU4I1NiJ1..."
 
 В результате у владельца (пользователя или организации `test_org_or_user`) будет найдено приложение `demo_app` и найден релиз, в котором была указана версия приложения `31337`. Данная версия релиза будет загружена и передана на анализ безопасности в Stingray.

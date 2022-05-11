@@ -34,15 +34,15 @@ nav:
       - aag/Companies.md
       - aag/Integracii.md
     - Интеграции системы:
-      - aag/Integracii_cherez_REST_API.md
-      - aag/Sistemy_CI_CD.md
-      - aag/Integraciya_s_LDAP.md
-      - aag/Sistema_distribucii_HockeyApp.md
-      - aag/Sistema_distribucii_AppCenter.md
-      - aag/Sistema_distribucii_Nexus_Repository.md
-      - aag/Integraciya_s_Firebase.md
-      - aag/Integraciya_s_Appstore.md
-      - aag/Integraciya_c_Burp_Suite.md
+      - aag/integracii_cherez_rest_api.md
+      - aag/sistemy_ci_cd.md
+      - aag/integraciya_s_ldap.md
+      - aag/sistema_distribucii_hockeyapp.md
+      - aag/sistema_distribucii_appcenter.md
+      - aag/sistema_distribucii_nexus_repository.md
+      - aag/integraciya_s_firebase.md
+      - aag/integraciya_s_appstore.md
+      - aag/integraciya_c_burp_suite.md
       - aag/Integraciya_s_Netsparker.md
       - aag/Integraciya_s_AppScreener.md
       - aag/Integraciya_s_Oversecured.md

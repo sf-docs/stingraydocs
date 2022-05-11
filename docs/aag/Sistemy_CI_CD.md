@@ -64,40 +64,40 @@
 ### Для запуска анализа локального файла
 
     mdast_cli --distribution_system file \
-    --file_path "/files/demo/apk/demo.apk" \
-    --url "https://saas.stingray-mobile.ru" \
-    --profile_id 1 \
-    --testcase_id 4 \
-    --company_id 1 
-    - architecture_id 1 \
-    --token "token_value" 
+      --file_path "/files/demo/apk/demo.apk" \
+      --url "https://saas.stingray-mobile.ru" \
+      --profile_id 1 \
+      --testcase_id 4 \
+      --company_id 1 
+      --architecture_id 1 \
+      --token "token_value" 
 
 В результате будет запущен автоматизированный анализ приложения `demo.apk` с профилем с `id 1` и будет запущен тест кейс с `id 4`.
 
 ### Запуск без ожидания завершения сканирования
 
     mdast_cli --distribution_system file \
-    --file_path "/files/demo/apk/demo.apk" \ 
-    --url "https://saas.stingray-mobile.ru" \
-    --profile_id 1 \
-    --testcase_id 4 \
-    --company_id 1 \ 
-    — architecture_id 1 \
-    --token "token_value" \
-    –nowait
+      --file_path "/files/demo/apk/demo.apk" \ 
+      --url "https://saas.stingray-mobile.ru" \
+      --profile_id 1 \
+      --testcase_id 4 \
+      --company_id 1 \ 
+      --architecture_id 1 \
+      --token "token_value" \
+      --nowait
 
 В результате будет запущен автоматизированный анализ приложения `demo.apk` с профилем с `id 1` и будет запущен тест кейс с `id 4` и скрипт завершится сразу после запуска сканирования и не будет дожидаться окончания и генерировать отчет.
 
 ### Генерация Summary отчета в формате JSON
 
     mdast_cli --distribution_system file \
-    --file_path "/files/demo/apk/demo.apk" \ 
-    --url "https://saas.stingray-mobile.ru" \
-    --profile_id 1 \
-    --testcase_id 4 \
-    --company_id 1 \
-    - architecture_id 1 \
-    --token "token_value" \
-    --summary_report_json_file_name json-scan-repot.json
+      --file_path "/files/demo/apk/demo.apk" \ 
+      --url "https://saas.stingray-mobile.ru" \
+      --profile_id 1 \
+      --testcase_id 4 \
+      --company_id 1 \
+      --architecture_id 1 \
+      --token "token_value" \
+      --summary_report_json_file_name json-scan-repot.json
 
 В результате будет запущен автоматизированный анализ приложения `demo.apk` с профилем с `id 1` и будет запущен тест кейс с `id 4` и по завершении сканирования будет выгружен JSON отчет с суммарным количеством дефектов и краткой статистикой по сканированию.
