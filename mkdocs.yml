@@ -20,19 +20,19 @@ nav:
     - ug/dokumentaciya_i_rekomendacii.md
   - Руководство по установке, настройке и интеграции:
     - aag/index.md
-    - aag/Trebovaniya_k_infrastrukture.md
-    - aag/Ustanovka_Stingray.md
-    - aag/Zapusk_Stingray.md
-    - aag/Ostanovka_Stingray.md
-    - aag/Obnovlenie_sistemy.md
-    - aag/Perezagruzka_servera_bez_obnovleniya_Stingray.md
+    - aag/trebovaniya_k_infrastrukture.md
+    - aag/ustanovka_stingray.md
+    - aag/zapusk_stingray.md
+    - aag/ostanovka_stingray.md
+    - aag/obnovlenie_sistemy.md
+    - aag/perezagruzka_servera_bez_obnovleniya_stingray.md
     - Настройки:
-      - aag/Nastrojki.md
-      - aag/Polzovateli.md
-      - aag/Pravila_analiza_na_urovne_Organizacii.md
-      - aag/Ustrojstva.md
-      - aag/Companies.md
-      - aag/Integracii.md
+      - aag/nastrojki.md
+      - aag/polzovateli.md
+      - aag/pravila_analiza_na_urovne_organizacii.md
+      - aag/ustrojstva.md
+      - aag/companies.md
+      - aag/integracii.md
     - Интеграции системы:
       - aag/integracii_cherez_rest_api.md
       - aag/sistemy_ci_cd.md
@@ -48,7 +48,7 @@ nav:
       - aag/integraciya_s_oversecured.md
       - aag/integraciya_s_google_play.md
     - Настройка мониторинга:
-      - aag/Nastrojka_zhurnalov_audita.md
+      - aag/nastrojka_zhurnalov_audita.md
     - Приложения:
       - aag/prilozhenie_1.md
       - aag/prilozhenie_2.md
