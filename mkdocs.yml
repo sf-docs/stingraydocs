@@ -20,41 +20,39 @@ nav:
     - ug/dokumentaciya_i_rekomendacii.md
   - Руководство по установке, настройке и интеграции:
     - aag/index.md
-#    - aag/tre
-#    - aag/222.md
-#    - aag/zapusk_stingray.md
-#    - aag/ustanovka_stingray.md
-#    - aag/zapusk_stingray.md
-#    - aag/ostanovka_stingray.md
-#    - aag/obnovlenie_sistemy.md
-#    - aag/perezagruzka_servera_bez_obnovleniya_stingray.md
-#    - Настройки:
-#      - aag/nastrojki.md
-#      - aag/polzovateli.md
-#      - aag/pravila_analiza_na_urovne_organizacii.md
-#      - aag/ustrojstva.md
-#      - aag/companies.md
-#      - aag/integracii.md
-#    - Интеграции системы:
-#      - aag/integracii_cherez_rest_api.md
-#      - aag/sistemy_ci_cd.md
-#      - aag/integraciya_s_ldap.md
-#      - aag/sistema_distribucii_hockeyapp.md
-#      - aag/sistema_distribucii_appcenter.md
-#      - aag/sistema_distribucii_nexus_repository.md
-#      - aag/integraciya_s_firebase.md
-#      - aag/integraciya_s_appstore.md
-#      - aag/integraciya_c_burp_suite.md
-#      - aag/integraciya_s_netsparker.md
-#      - aag/integraciya_s_appscreener.md
-#      - aag/integraciya_s_oversecured.md
-#      - aag/integraciya_s_google_play.md
-#    - Настройка мониторинга:
-#      - aag/nastrojka_zhurnalov_audita.md
-#    - Приложения:
-#      - aag/prilozhenie_1.md
-#      - aag/prilozhenie_2.md
-#      - aag/prilozhenie_3.md
+    - aag/trebovaniya_k_infrastrukture.md
+    - aag/ustanovka_stingray.md
+    - aag/zapusk_stingray.md
+    - aag/ostanovka_stingray.md
+    - aag/obnovlenie_sistemy.md
+    - aag/perezagruzka_servera_bez_obnovleniya_stingray.md
+    - Настройки:
+      - aag/nastrojki.md
+      - aag/polzovateli.md
+      - aag/pravila_analiza_na_urovne_organizacii.md
+      - aag/ustrojstva.md
+      - aag/companies.md
+      - aag/integracii.md
+    - Интеграции системы:
+      - aag/integracii_cherez_rest_api.md
+      - aag/sistemy_ci_cd.md
+      - aag/integraciya_s_ldap.md
+      - aag/sistema_distribucii_hockeyapp.md
+      - aag/sistema_distribucii_appcenter.md
+      - aag/sistema_distribucii_nexus_repository.md
+      - aag/integraciya_s_firebase.md
+      - aag/integraciya_s_appstore.md
+      - aag/integraciya_c_burp_suite.md
+      - aag/integraciya_s_netsparker.md
+      - aag/integraciya_s_appscreener.md
+      - aag/integraciya_s_oversecured.md
+      - aag/integraciya_s_google_play.md
+    - Настройка мониторинга:
+      - aag/nastrojka_zhurnalov_audita.md
+    - Приложения:
+      - aag/prilozhenie_1.md
+      - aag/prilozhenie_2.md
+      - aag/prilozhenie_3.md
   - Рекомендации по безопасной разработке:
     - rg/index.md
     - Рекомендации для Android:
