@@ -34,10 +34,10 @@ nav:
       - aag/companies.md
       - aag/integracii.md
     - Интеграции системы:
-      - 'aag/integracii_cherez_rest_api.md'
-      - 'aag/sistemy_ci_cd.md'
-      - 'aag/integraciya_s_ldap.md'
-      - 'aag/sistema_distribucii_hockeyapp.md'
+      - aag/integracii_cherez_rest_api.md
+      - aag/sistemy_ci_cd.md
+      - aag/integraciya_s_ldap.md
+      - aag/sistema_distribucii_hockeyapp.md
       - aag/sistema_distribucii_appcenter.md
       - aag/sistema_distribucii_nexus_repository.md
       - aag/integraciya_s_firebase.md
