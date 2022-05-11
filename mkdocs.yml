@@ -20,7 +20,7 @@ nav:
     - ug/dokumentaciya_i_rekomendacii.md
   - Руководство по установке, настройке и интеграции:
     - aag/index.md
-#    - aag/trebovaniya_k_infrastrukture.md
+    - aag/trebovaniya_k_infrastrukture.md
 #    - aag/ustanovka_stingray.md
 #    - aag/zapusk_stingray.md
 #    - aag/ostanovka_stingray.md
