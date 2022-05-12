@@ -1,6 +1,6 @@
 # Рекомендации по безопасной разработке приложений
 
-<div style='float: left; width: 50%'>
+<div style='float: left; width: 50%; margin-top: -30px; margin-right: 30px;' markdown>
 
 ## Рекомендации для Android
 
@@ -196,7 +196,7 @@
 <br>
 </div>
 
-<div>
+<div markdown>
 ## Рекомендации для iOS
 
 ### Хранение ключей/сертификатов
