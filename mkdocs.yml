@@ -11,12 +11,12 @@ nav:
     - ug/osnovnoe_menu.md
     - ug/projects.md
     - ug/pravila.md
-    - ug/standarty.md
+    - ug/profile.md
     - ug/rezultaty_skanirovanij.md
     - ug/zapusk_skanirovaniya.md
     - ug/testcases.md
-    - ug/trebovaniya.md
-    - ug/profile.md
+    - ug/standarty.md
+    - ug/profil_polzovatelya.md
     - ug/dokumentaciya_i_rekomendacii.md
   - Руководство по установке, настройке и интеграции:
     - ag/index.md
