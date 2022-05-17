@@ -80,3 +80,5 @@
       --token 2fac9652a2fbe4****9f44af59c3381772f \
       --firebase_file_name your_app_file_name  \
       --firebase_file_extension apk
+
+.

@@ -21,7 +21,7 @@
 
 Если пароль будет введен неправильно пять раз, последующие попытки авторизации сопровождаются необходимостью введения защитного кода (captcha).
  
-Если в профиле пользователя включена двухфакторная аутентификация, см. раздел «[Профиль пользователя]()», после ввода логина отображается дополнительное окно, в котором необходимо ввести код, появившийся в приложении Google Authenticator (скачать в [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=ru&gl=US) или [App Store](https://apps.apple.com/ru/app/google-authenticator/id388497605)).
+Если в профиле пользователя включена двухфакторная аутентификация, см. раздел «[Профиль пользователя](profil_polzovatelya.md)», после ввода логина отображается дополнительное окно, в котором необходимо ввести код, появившийся в приложении Google Authenticator (скачать в [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=ru&gl=US) или [App Store](https://apps.apple.com/ru/app/google-authenticator/id388497605)).
 
 <figure markdown>
 ![](../ug/img/3.png)

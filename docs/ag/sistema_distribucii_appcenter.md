@@ -7,7 +7,7 @@
 * `url` — сетевой адрес Stingray (путь до корня без последнего «/»), при использовании cloud версии — [https://saas.stingray-mobile.ru](https://saas.stingray-mobile.ru); 
 * `profile_id` — id профиля, для которого проводится анализ;
 * `testcase_id` — id того тест-кейса, который будет воспроизведен во время анализа; возможен запуск нескольких тест-кейсов, для этого их id перечисляются через пробел. Это необязательный параметр, если он не задан, то будет запущено сканирование в ручном режиме и через 20 секунд после запуска остановлено, а данные отправлены на анализ;
-* `token` — CI/CD токен для доступа, более подробная информация приведена в разделе «[Интеграции]()»;
+* `token` — CI/CD токен для доступа, более подробная информация приведена в разделе «[Интеграции](./integracii.md)»;
 * `distribution_system` — способ загрузки приложения, возможные опции: file, appcenter;
 * `company_id` — идентификатор компании, в рамках которой будет осуществлено сканирование;
 * `architecture_id` — опциональный параметр. Определяет идентификатор архитектуры операционной системы, на которой будет произведено сканирование;
@@ -21,7 +21,7 @@
 * `appcenter_owner_name` — владелец приложения, как узнать имя владельца можно [здесь](https://intercom.help/appcenter/en/articles/1764707-how-to-find-the-app-name-and-owner-name-from-your-app-url) или в [официальной документации](https://docs.microsoft.com/en-us/appcenter/api-docs/#find-your-app-center-app-name-and-owner-name);
 * `appcenter_app_name` — имя приложения в системе AppCenter. Как его узнать можно по ссылке;
     * `appcenter_release_id` или `appcenter_app_version`:
-    * `appcenter_release_id` — идентификатор загружаемого релиза в системе AppCenter для конкретного приложения. Возможно выставить значение `latest` — тогда будет загружен последний доступный релиз приложения. [Официальная документация](https://openapi.appcenter.ms/#/distribute/releases_getLatestByUser);
+    * `appcenter_release_id` — идентификатор загружаемого релиза в системе AppCenter для конкретного приложения. Возможно выставить значение `latest` — тогда будет загружен последний доступный релиз приложения ([официальная документация](https://openapi.appcenter.ms/#/distribute/releases_getLatestByUser));
     * `appcenter_app_version` — при указании данного параметра будет найдена и скачана конкретная версия приложения по коду его версии (указанной в Android Manifest) (поле `version` в [документации](https://openapi.appcenter.ms/#/distribute/releases_list)).
 
 ## Примеры запуска

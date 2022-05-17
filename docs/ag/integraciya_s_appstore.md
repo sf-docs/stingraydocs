@@ -62,3 +62,5 @@
       --url "https://saas.mobile.appsec.world" \
       --company_id 2 \
       --token 5d5f6****************2d9f --appstore_file_name my_b3st_4pp
+
+.
