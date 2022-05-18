@@ -165,14 +165,14 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)" 
       scheme: stingray
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)" 
-      scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+  #    toggle:
+  #      icon: material/weather-night
+  #      name: Switch to dark mode
+  #  - media: "(prefers-color-scheme: dark)" 
+  #    scheme: slate
+  #    toggle:
+  #      icon: material/weather-sunny
+  #      name: Switch to light mode
   features:
     - navigation.instant
     - navigation.tabs
@@ -226,7 +226,7 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - toc:
-      permalink: ⚓︎
+#      permalink: ⚓︎
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
