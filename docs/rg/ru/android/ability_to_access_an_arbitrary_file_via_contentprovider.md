@@ -18,9 +18,9 @@
 
 ## Описание
 
-Уязвимость позволяет получить доступ к файлам приложения с помощью **экспортируемого** ContentProvider.
+Уязвимость позволяет получить доступ к файлам приложения с помощью **экспортируемого ContentProvider**.
 
-Уязвимость присутствует в приложениях, в которых реализация метода `openFile` класса производного от ContentProvider не проводит надлежащим образом проверки Uri-параметра. Вредоносное приложение может специальным образом сформировать Uri, передать его в этот ContentProvider и получить доступ к произвольному файлу.
+Уязвимость присутствует в приложениях, в которых реализация метода `openFile` класса производного от **ContentProvider** не проводит надлежащим образом проверки Uri-параметра. Вредоносное приложение может специальным образом сформировать Uri, передать его в этот **ContentProvider** и получить доступ к произвольному файлу.
 
 Пример уязвимого кода:
 
@@ -46,16 +46,16 @@
 
 Для устранения подобных проблем в приложении необходимо убедиться в соответствии нескольким правилам.
 
-1. Реализовать private/in-house видимость у ContentProvider. 
+1. Реализовать private/in-house видимость у **ContentProvider**. 
 
-    Например, объявить ContentProvider внутренним:
+    Например, объявить **ContentProvider** внутренним:
 
         <provider
         android:name=".PrivateProvider"
         android:authorities="notvuln.app.pkg.some_authority"
         android:exported="false" />
 
-    Чтобы оградить ContentProvider от его использования сторонними приложениями, необходимо определить `permission` с `protectionLevel="signature"` и прописать его в объявлении этого ContentProvider'а:
+    Чтобы оградить **ContentProvider** от его использования сторонними приложениями, необходимо определить `permission` с `protectionLevel="signature"` и прописать его в объявлении этого **ContentProvider**:
 
         <?xml version="1.0" encoding="utf-8"?>
         <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -70,7 +70,7 @@
                 android:icon="@drawable/ic_launcher"
                 android:label="@string/app_name" >
         
-                <!-- *** 2 *** Ограничьте доступ к ContentProvider при его объявлении с помощью in-house полномочия -->
+                <!-- *** 2 *** Ограничьте доступ к **ContentProvider** при его объявлении с помощью in-house полномочия -->
                 <!-- *** 3 *** Явно указывайте атрибут exported="true" -->
                 <provider
                     android:name=".InhouseProvider"
@@ -80,7 +80,7 @@
             </application>
         </manifest>
 
-2. Если ContentProvider должен оставаться публичным для сторонних приложений, то необходимо проводить валидацию canonical пути файла непосредственно перед его возвратом запрашивающему приложению:
+2. Если **ContentProvider** должен оставаться публичным для сторонних приложений, то необходимо проводить валидацию canonical пути файла непосредственно перед его возвратом запрашивающему приложению:
 
         @Override
         public ParcelFileDescriptor openFile (Uri uri, String mode) throws FileNotFoundException {

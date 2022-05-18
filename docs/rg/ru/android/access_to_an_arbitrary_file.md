@@ -72,3 +72,5 @@
     if (!file.getCanonicalPath().startsWith(sdcardDir)) {
     throw new IllegalArgumentException();
     }
+
+.

@@ -18,9 +18,9 @@
 
 ## Описание
 
-Уязвимость позволяет получить доступ к внутренним **неэкспортируемым** ContentProvider.
+Уязвимость позволяет получить доступ к внутренним **неэкспортируемым ContentProvider**.
 
-Уязвимость присутствует в приложениях, которые используют Intent из недоверенного источника (например, полученные из стороннего приложения с помощью методов `getIntent`, `getParcelableExtra` или `onActivityResult`) для возврата данных с помощью метода `setResult`.
+Уязвимость присутствует в приложениях, которые используют **Intent** из недоверенного источника (например, полученные из стороннего приложения с помощью методов `getIntent`, `getParcelableExtra` или `onActivityResult`) для возврата данных с помощью метода `setResult`.
 
 Например, вредоносное приложение может использовать такой код:
 
@@ -36,13 +36,13 @@
     setResult(RESULT_OK, getIntent());
     finish();
 
-В результате вредоносное приложение получит доступ к ContentProvider `com.victim.provider` уязвимого приложения.
+В результате вредоносное приложение получит доступ к **ContentProvider** `com.victim.provider` уязвимого приложения.
 
 ## Рекомендации
 
 Для устранения подобных проблем в приложении необходимо убедиться в соответствии нескольким правилам:
 
-1. Реализовать private/in-house видимость у компонентов, которые принимают Intent и используют его в методе `setResult`. Например, объявление Activity внутренней — отсутствуют `intent-filter` или флаг `exported` выставлен в значение `false`.
+1. Реализовать private/in-house видимость у компонентов, которые принимают **Intent** и используют его в методе `setResult`. Например, объявление **Activity** внутренней — отсутствуют `intent-filter` или флаг `exported` выставлен в значение `false`.
 
         <?xml version="1.0" encoding="utf-8"?>
         <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -75,9 +75,9 @@
             </application>
         </manifest>
 
-2. Проводить валидацию Intent на предмет вредоносности:
+2. Проводить валидацию **Intent** на предмет вредоносности:
 
-    1. Такой Intent не должен направляться в private/in-house компоненты или компоненты внешних приложений.
+    1. Такой **Intent** не должен направляться в private/in-house компоненты или компоненты внешних приложений.
 
             Intent intent = getIntent();
             Intent redirectIntent = (Intent) intent.getParcelableExtra(“redirect_intent”);
@@ -87,7 +87,7 @@
             startActivity(redirectIntent);
             }
 
-    2. Если всё же предусмотрен запуск компонент внешних приложений, то нужно проводить валидацию/санитизацию Permissions передаваемых в to-be-redirected Intent.    
+    2. Если всё же предусмотрен запуск компонент внешних приложений, то нужно проводить валидацию/санитизацию **Permissions** передаваемых в «**to-be-redirected Intent**».    
         Пример валидации:
 
                 Intent resultIntent = (Intent) intent.getParcelableExtra(“result_intent”);

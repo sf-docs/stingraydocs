@@ -18,19 +18,19 @@
 
 ## Описание
 
-Приложение включает чувствительную информацию в Intent для запуска BroadcastReceiver. Это может привести к перехвату этой информации сторонними приложениями.
+Приложение включает чувствительную информацию в **Intent** для запуска **BroadcastReceiver**. Это может привести к перехвату этой информации сторонними приложениями.
 
-Межпроцессное взаимодействие (IPC) в Android осуществляться при помощи специальных объектов — Intent. Параметры обработчиков Intent задаются в основной файле манифеста приложения — ***AndroidManifest.xml*** либо, в случае с динамическими BroadcastReceivers, в коде приложения. В случае, если используется неявные Intent (адресат сообщения не указан явно либо используется механизм широковещательных сообщений, Broadcast), данные, содержащиеся в таких сообщениях, могут быть скомпрометированы. Кроме того, вредоносными приложениями могут использоваться механизмы делегирования управления процесса, такие как неявные вызовы компонентов приложений или объекты типа PendingIntent, для перехвата потока управления и фишинговых атак.
+Межпроцессное взаимодействие (IPC) в Android осуществляться при помощи специальных объектов — **Intent**. Параметры обработчиков **Intent** задаются в основной файле манифеста приложения — ***AndroidManifest.xml*** либо, в случае с динамическими **BroadcastReceivers**, в коде приложения. В случае, если используется неявные **Intent** (адресат сообщения не указан явно либо используется механизм широковещательных сообщений, Broadcast), данные, содержащиеся в таких сообщениях, могут быть скомпрометированы. Кроме того, вредоносными приложениями могут использоваться механизмы делегирования управления процесса, такие как неявные вызовы компонентов приложений или объекты типа **PendingIntent**, для перехвата потока управления и фишинговых атак.
 
-Опасность представляют объекты типов Activity, Service, BroadcastReceiver и ContentProvider, открытые для взаимодействия с другими приложениями и не относящиеся к системным Android-вызовам (таким как `android.intent.action.MAIN`). BroadcastReceiver по умолчанию открыт для взаимодействия с другими приложениями, в этом случае возможен перехват Intent с конфиденциальной информацией или перехват управления.
+Опасность представляют объекты типов **Activity**, **Service**, **BroadcastReceiver** и **ContentProvider**, открытые для взаимодействия с другими приложениями и не относящиеся к системным Android-вызовам (таким как `android.intent.action.MAIN`). **BroadcastReceiver** по умолчанию открыт для взаимодействия с другими приложениями, в этом случае возможен перехват **Intent** с конфиденциальной информацией или перехват управления.
 
 ## Рекомендации
 
-При отправке Broadcast во внутренний BroadcastReceiver с передачей чувствительной информации должен использоваться явный Intent, Private BroadcastReceiver или LocalBroadcastManager. Также следует помнить, что приложение не должно включать чувствительную информацию в public Broadcast.
+При отправке **Broadcast** во внутренний **BroadcastReceiver** с передачей чувствительной информации должен использоваться явный **Intent**, **Private BroadcastReceiver** или **LocalBroadcastManager**. Также следует помнить, что приложение не должно включать чувствительную информацию в **Public Broadcast**.
 
-Для получения Broadcast необходимо создать BroadcastReceiver. Риски при использовании BroadcastReceiver и соответствующие им защитные меры различаются в зависимости от типа Broadcast.
+Для получения Broadcast необходимо создать **BroadcastReceiver**. Риски при использовании **BroadcastReceiver** и соответствующие им защитные меры различаются в зависимости от типа **Broadcast**.
 
-Для определения типа BroadcastReceiver, который планируется создавать, можно воспользоваться таблицей и диаграммой, представленными ниже. У приложения, получающего Broadcast, нет возможности проверить имя пакета, из которого произошла его отправка, поэтому невозможно создать partner BroadcastReceiver [по аналогии с Activity](https://appsec.atlassian.net/wiki/spaces/MSR/pages/1586692303/sensitive-+Activity).
+Для определения типа **BroadcastReceiver**, который планируется создавать, можно воспользоваться таблицей и диаграммой, представленными ниже. У приложения, получающего **Broadcast**, нет возможности проверить имя пакета, из которого произошла его отправка, поэтому невозможно создать **Partner BroadcastReceiver** [по аналогии с Activity](https://appsec.atlassian.net/wiki/spaces/MSR/pages/1586692303/sensitive-+Activity).
 
 <figure markdown>
 ![](../../img/peredacha-sensitive-informaczii-v-broadcastreceiver.png)
@@ -40,7 +40,7 @@
 ![](../../img/3.png)
 </figure>
 
-Также BroadcastReceiver может быть статическим или динамическим в зависимости от способа объявления.
+Также **BroadcastReceiver** может быть статическим или динамическим в зависимости от способа объявления.
 
 <figure markdown>
 ![](../../img/peredacha-sensitive-informaczii-v-broadcastreceiver-2.png)
@@ -48,13 +48,13 @@
 
 **Пример создания Private BroadcastReceiver**
 
-Private BroadcastReceiver является наиболее безопасным т.к. он получит Broadcast только из того же самого приложения, в котором был объявлен. Private BroadcastReceiver может быть объявлен только статически.
+**Private BroadcastReceiver** является наиболее безопасным т.к. он получит **Broadcast** только из того же самого приложения, в котором был объявлен. **Private BroadcastReceiver** может быть объявлен только статически.
 
-Правила (получение Broadcast):
+Правила (получение **Broadcast**):
 
-1. Явно указывайте атрибут exported=«false»;
-2. Проводите проверку и безопасную обработку полученного Intent, не смотря на то, что он был получен из того же самого приложения;
-3. В Intent результата можно включать конфиденциальную информацию, т.к. его отправка и получение происходит внутри приложения;
+1. Явно указывайте атрибут **exported="false"**;
+2. Проводите проверку и безопасную обработку полученного **Intent**, несмотря на то, что он был получен из того же самого приложения;
+3. В **Intent** результата можно включать конфиденциальную информацию, т.к. его отправка и получение происходит внутри приложения;
 
 **Объявление компонента в AndroidManifest.xml**
 
@@ -95,7 +95,7 @@ Private BroadcastReceiver является наиболее безопасным
         public void onReceive(Context context, Intent intent) {
             
             // *** 2 *** Проводите проверку и безопасную обработку полученного
-            // Intent, не смотря на то, что он был получен из того же самого приложения
+            // Intent, несмотря на то, что он был получен из того же самого приложения
             String param = intent.getStringExtra("PARAM");
             Toast.makeText(context,
                     String.format("Received param: \"%s\"", param),
@@ -111,64 +111,64 @@ Private BroadcastReceiver является наиболее безопасным
 
 **Правила (отправка Broadcast):**
 
-1. Используйте явный Intent с указанием имени класса BroadcastReceiver внутри приложения.
+1. Используйте явный **Intent** с указанием имени класса **BroadcastReceiver** внутри приложения.
 2. Можно отправлять чувствительную информацию.
-3. Проводите проверку и безопасную обработку полученных данных результата, не смотря на то, что они были получены из BroadcastReceiver того же самого приложения.
-
-    package com.appsec.android.broadcast.privatereceiver;
-    import android.app.Activity;
-    import android.content.BroadcastReceiver;
-    import android.content.Context;
-    import android.content.Intent;
-    import android.os.Bundle;
-    import android.view.View;
-    import android.widget.TextView;
-    public class PrivateSenderActivity extends Activity {
-        public void onSendNormalClick(View view) {
-            // *** 1 *** Используйте явный Intent с указанием имени класса BroadcastReceiver внутри приложения
-            Intent intent = new Intent(this, PrivateReceiver.class);
-            // *** 2 *** Можно отправлять чувствительную информацию
-            intent.putExtra("PARAM", "Чувствительная информация от отправителя");
-            sendBroadcast(intent);
-        }
-        
-        public void onSendOrderedClick(View view) {
-            // *** 1 *** Используйте явный Intent с указанием имени класса BroadcastReceiver внутри приложения
-            Intent intent = new Intent(this, PrivateReceiver.class);
-            // *** 2 *** Можно отправлять чувствительную информацию
-            intent.putExtra("PARAM", "Чувствительная информация от отправителя");
-            sendOrderedBroadcast(intent, null, mResultReceiver, null, 0, null, null);
-        }
-        
-        private BroadcastReceiver mResultReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                
-                // *** 3 *** Проводите проверку и безопасную обработку полученных данных
-                // результата, не смотря на то, что они были получены из BroadcastReceiver
-                // того же самого приложения
-                // См.п. "Безопасная обработка входных данных"
-                
-                String data = getResultData();
-                PrivateSenderActivity.this.logLine(
-                        String.format("Received result: \"%s\"", data));
-            }
-        };
-        
-        private TextView mLogView;
-        
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.main);
-            mLogView = (TextView)findViewById(R.id.logview);
+3. Проводите проверку и безопасную обработку полученных данных результата, несмотря на то, что они были получены из **BroadcastReceiver** того же самого приложения.
+    
+        package com.appsec.android.broadcast.privatereceiver;
+        import android.app.Activity;
+        import android.content.BroadcastReceiver;
+        import android.content.Context;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.TextView;
+        public class PrivateSenderActivity extends Activity {
+            public void onSendNormalClick(View view) {
+                // *** 1 *** Используйте явный Intent с указанием имени класса BroadcastReceiver внутри приложения
+                Intent intent = new Intent(this, PrivateReceiver.class);
+                // *** 2 *** Можно отправлять чувствительную информацию
+                intent.putExtra("PARAM", "Чувствительная информация от отправителя");
+                sendBroadcast(intent);
             }
             
-            private void logLine(String line) {
-                mLogView.append(line);
-                mLogView.append("\n");
+            public void onSendOrderedClick(View view) {
+                // *** 1 *** Используйте явный Intent с указанием имени класса BroadcastReceiver внутри приложения
+                Intent intent = new Intent(this, PrivateReceiver.class);
+                // *** 2 *** Можно отправлять чувствительную информацию
+                intent.putExtra("PARAM", "Чувствительная информация от отправителя");
+                sendOrderedBroadcast(intent, null, mResultReceiver, null, 0, null, null);
             }
-        }
+            
+            private BroadcastReceiver mResultReceiver = new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    
+                    // *** 3 *** Проводите проверку и безопасную обработку полученных данных
+                    // результата, несмотря на то, что они были получены из BroadcastReceiver
+                    // того же самого приложения
+                    // См.п. "Безопасная обработка входных данных"
+                    
+                    String data = getResultData();
+                    PrivateSenderActivity.this.logLine(
+                            String.format("Received result: \"%s\"", data));
+                }
+            };
+            
+            private TextView mLogView;
+            
+            @Override
+            public void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.main);
+                mLogView = (TextView)findViewById(R.id.logview);
+                }
+                
+                private void logLine(String line) {
+                    mLogView.append(line);
+                    mLogView.append("\n");
+                }
+            }
 
 ## Ссылки
 
