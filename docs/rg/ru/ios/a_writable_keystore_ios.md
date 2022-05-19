@@ -93,7 +93,7 @@
         print(error)
     }
 
-### Применение ключа для шифрование и расшировки
+### Применение ключа для шифрования и расшифровки
 
     let algorithm: SecKeyAlgorithm = .rsaEncryptionOAEPSHA256
     let plainText = "this is our golden secret. Encrypt it!"

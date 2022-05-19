@@ -1,4 +1,4 @@
-# Хранение приватного ключа/сертификата не защищенного паролем в директории/ресурсах приложения
+# Хранение приватного ключа/сертификата, не защищенного паролем в директории/ресурсах приложения
 
 <table class='noborder'>
     <colgroup>
@@ -44,7 +44,7 @@ KeyStore предоставляет несколько основных функ
 
 ### Android 6 и выше
 
-Для уровня API 23 и выше реализация будет проще, поскольку генерация AES ключей происходит средствами системы. Пример можно найти в документации API KeyGenParameterSpec.
+Для уровня API 23 и выше реализация будет проще, поскольку генерация AES ключей происходит средствами системы. Пример можно найти в документации API [KeyGenParameterSpec](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html).
 
 **Генерация ключа:**
 
@@ -93,7 +93,7 @@ KeyStore предоставляет несколько основных функ
 
 ### Ниже Android 6
 
-Для версий Android API ниже 23 (Android 6), требуется немного больше работы. KeyGenParameterSpec доступен только в API 23, поэтому хранилище KeyStore не может само генерировать случайные ключи AES. Вместо этого необходимо самим сгенерировать ключи используя API KeyPairGeneratorSpec.
+Для версий Android API ниже 23 (Android 6), требуется немного больше работы. [KeyGenParameterSpec](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) доступен только в API 23, поэтому хранилище KeyStore не может само генерировать случайные ключи AES. Вместо этого необходимо самим сгенерировать ключи используя API [KeyPairGeneratorSpec](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html).
 
 Как следует из названия, KeyPairGeneratorSpec генерирует пары открытого и закрытого ключей. Шифрование с открытым ключом предназначено в основном для подписи и аутентификации и не подходит для шифрования больших блоков данных, но может сочетаться с блочным шифром, таким как AES.
 

@@ -81,7 +81,7 @@ KeyGenParameterSpec — это некоторые свойства ключей,
     final Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
     cipher.init(Cipher.ENCRYPT_MODE, secretKey);
 
-Сначала происходит инициализация keyGenerator с помощью keyGenParameterSpec. После этого — непосредственно генерация [SecretKey](https://developer.android.com/reference/javax/crypto/SecretKey.html).
+Сначала происходит инициализация keyGenerator с помощью [keyGenParameterSpec](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html). После этого — непосредственно генерация [SecretKey](https://developer.android.com/reference/javax/crypto/SecretKey.html).
 
 Теперь, когда есть секретный ключ, можно использовать его для инициализации объекта [Cipher](https://developer.android.com/reference/javax/crypto/Cipher.html), который фактически и отвечает за шифрование.
 
@@ -139,7 +139,7 @@ KeyGenParameterSpec — это некоторые свойства ключей,
 
     final String unencryptedString = new String(decodedData, "UTF-8");
 
-Полный исходный код примера.
+[Полный исходный код примера](https://gist.github.com/JosiasSena/3bf4ca59777f7dedcaf41a495d96d984).
 
 ## Ссылки
 

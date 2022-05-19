@@ -29,7 +29,7 @@
 
 ## Рекомендации
 
-## Создание нового ключа в Keychain
+### Создание нового ключа в Keychain
 
     import Foundation
     import Security
@@ -47,7 +47,7 @@
     }
     let secretKey = computeSymmetricKey()
 
-## Сохранение нового ключа в Keychain
+### Сохранение нового ключа в Keychain
 
     enum KeychainErrors:Error {
         case COULDNOTINSERT
@@ -71,7 +71,7 @@
         print(error)
     }
 
-## Чтение ключа из Keychain
+### Чтение ключа из Keychain
 
     func read (tag: String) throws -> CFTypeRef {
         let readQuery: [String: Any] = [
@@ -94,7 +94,7 @@
         print(error)
     }
 
-## Применение ключа для шифрование и расшировки
+### Применение ключа для шифрования и расшифровки
 
     let algorithm: SecKeyAlgorithm = .rsaEncryptionOAEPSHA256
     let plainText = "this is our golden secret. Encrypt it!"
@@ -104,7 +104,7 @@
             throw error!.takeRetainedValue() as Error
         }
 
-## Отображение сертификатов
+### Отображение сертификатов
 
     func showCertificateInfo() -> String {
         var resultString = "--- Certificates in Keychain ---\n"
