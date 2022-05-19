@@ -24,13 +24,16 @@
 
 **Пример уязвимого кода:**
 
-    <EditText android:id="@+id/KeyBoardCache"/>
+    <EditText 
+    android:id="@+id/KeyBoardCache"/>
 
 ## Рекомендации
 
 Во всех полях ввода, которые запрашивают конфиденциальную информацию, должен быть выставлен следующий атрибут XML (для отключения автодополнений):
 
-    <EditText android:id="@+id/KeyBoardCache" android:inputType="textNoSuggestions"/>
+    <EditText 
+    android:id="@+id/KeyBoardCache" 
+    android:inputType="textNoSuggestions"/>
 
 ## Ссылки
 

@@ -143,6 +143,7 @@
     }
 
 **Применения ключа для шифрования**
+
     public void encryptString(String alias) {
         try {
             KeyStore.PrivateKeyEntry privateKeyEntry = (KeyStore.PrivateKeyEntry)keyStore.getEntry(alias, null);
