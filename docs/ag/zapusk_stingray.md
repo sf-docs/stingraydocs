@@ -6,9 +6,9 @@
 Для запуска приложения в папке, указанной при генерации конфигурации (в примере ***/opt/stingray***) выполните команды:
 
     docker-compose pull
-    docker pull eu.gcr.io/bishop-233115/stingray/android_api27:release-x
-    docker pull eu.gcr.io/bishop-233115/stingray/android_api30:release-x
-    docker pull eu.gcr.io/bishop-233115/stingray/ios:release-x
+    docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api27:release-x
+    docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api30:release-x
+    docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/ios:release-x
     docker-compose up -d
 
 !!! note "Примечание"
@@ -16,12 +16,12 @@
 
 При первом запуске системы, в случае если команда docker-compose не может загрузить образ из репозитория, необходимо вручную загрузить контейнеры:
 
-    docker pull eu.gcr.io/bishop-233115/stingray/stingray:release-x
-    docker pull eu.gcr.io/bishop-233115/stingray/android_api27:release-x
-    docker pull eu.gcr.io/bishop-233115/stingray/android_api30:release-x
-    docker pull eu.gcr.io/bishop-233115/stingray/ios:release-x
-    docker pull eu.gcr.io/bishop-233115/stingray/stingray-ui:release-x
-    docker pull eu.gcr.io/bishop-233115/stingray/stingray-knowledgebase:release-x
+    docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/stingray:release-x
+    docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api27:release-x
+    docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api30:release-x
+    docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/ios:release-x
+    docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/stingray-ui:release-x
+    docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/stingray-knowledgebase:release-x
 
 !!! note "Примечание"
     Версия релиза указывается в формате `release-x`, где `x` — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.

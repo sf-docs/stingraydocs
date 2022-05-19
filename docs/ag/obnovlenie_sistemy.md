@@ -5,14 +5,14 @@
 1. Остановите Stingray согласно инструкциям в разделе «[Остановка Stingray](./ostanovka_stingray.md)». 
 2. Обновите специальный docker-образ для подготовки конфигурационных файлов командой:
 
-        docker pull eu.gcr.io/bishop-233115/stingray/wizard:release-x
+        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
 
     !!! note "Примечание"
         Версия релиза указывается в формате `release-x`, где `x` — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
 
 3. Запустите docker-контейнер с параметром `update`.
 
-        docker run -i -t -v /opt/stingray:/opt/docker-files eu.gcr.io/bishop-233115/stingray/wizard:release-x update
+        docker run -i -t -v /opt/stingray:/opt/docker-files cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x update
 
     !!! note "Примечание"
         Версия релиза указывается в формате `release-x`, где `x` — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
@@ -20,9 +20,9 @@
 4. После завершения копирования новых конфигурационных файлов необходимо выполнить команду обновления образов из директории с конфигурационными файлами (в примере `/opt/stingray`):
 
         docker-compose pull
-        docker pull eu.gcr.io/bishop-233115/stingray/android_api27:release-x
-        docker pull eu.gcr.io/bishop-233115/stingray/android_api30:release-x
-        docker pull eu.gcr.io/bishop-233115/stingray/ios:release-x
+        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api27:release-x
+        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api30:release-x
+        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/ios:release-x
         docker-compose up -d
         docker exec stingray-maintenance django-adminmaintenance engines recreate
 
@@ -49,12 +49,12 @@
 
 5. В случае возникновения ошибок возможна загрузка образов вручную:
 
-        docker pull eu.gcr.io/bishop-233115/stingray/stingray:release-x
-        docker pull eu.gcr.io/bishop-233115/stingray/android_api27:release-x
-        docker pull eu.gcr.io/bishop-233115/stingray/android_api30:release-x
-        docker pull eu.gcr.io/bishop-233115/stingray/ios:release-x
-        docker pull eu.gcr.io/bishop-233115/stingray/stingray-ui:release-x
-        docker pull eu.gcr.io/bishop-233115/stingray/stingray-knowledgebase:release-x
+        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/stingray:release-x
+        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api27:release-x
+        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api30:release-x
+        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/ios:release-x
+        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/stingray-ui:release-x
+        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/stingray-knowledgebase:release-x
 
     !!! note "Примечание"
         Версия релиза указывается в формате `release-x`, где `x` — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
@@ -79,7 +79,7 @@
 
 4. Запустите специальный конфигуратор (Wizard) с параметром `update`.
 
-        docker run -i -t -v /opt/stingray-docker-compose:/opt/docker-files eu.gcr.io/bishop-233115/stingray/wizard:release-x update
+        docker run -i -t -v /opt/stingray-docker-compose:/opt/docker-files cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x update
 
     !!! note "Примечание"
         Версия релиза указывается в формате release-x, где x — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.

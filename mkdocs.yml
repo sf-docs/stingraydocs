@@ -189,7 +189,7 @@ theme:
 #    - navigation.sections
 extra_css:
   - stylesheets/extra.css
-#  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
 
 plugins:
 #  - git-revision-date-localized:

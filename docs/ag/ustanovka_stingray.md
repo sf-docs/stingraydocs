@@ -39,13 +39,13 @@
 
 1. Авторизуйте docker на доступ к репозиторию GCP docker-образов:
 
-        cat stingray-numeric_id.json | sudo docker login -u _json_key --password-stdin https://eu.gcr.io
+        cat stingray-numeric_id.json | docker login --username json_key --password-stdin cr.yandex
 
     Ключ `stingray-numeric_id.json` для подключения к GCP docker-образам компании Stingray Technologies предоставляется при покупке лицензии Stingray.
 
 2. Загрузите специальный docker-образ для подготовки конфигурационных файлов командой:
 
-        docker pull eu.gcr.io/bishop-233115/stingray/wizard:release-x
+        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
 
     !!! note "Примечание"
         Версия релиза указывается в формате `release-x`, где `x` — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
@@ -71,14 +71,14 @@
 
     Пример запуска контейнера с двумя подключенными volumes для файлов конфигурации и с сертификатами (при доступе по HTTPs):
 
-        docker run -i -t -v /opt/stingray:/opt/docker-files -v /opt/certs:/opt/nginx/certs eu.gcr.io/bishop-233115/stingray/wizard:release-x
+        docker run -i -t -v /opt/stingray:/opt/docker-files -v /opt/certs:/opt/nginx/certs cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
 
     !!! note "Примечание"
         Версия релиза указывается в формате `release-x`, где `x` — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
 
     Пример запуска контейнера с одним volume для файлов конфигурации (при доступе по HTTP):
 
-        docker run -i -t -v /opt/stingray:/opt/docker-files eu.gcr.io/bishop-233115/stingray/wizard:release-x
+        docker run -i -t -v /opt/stingray:/opt/docker-files cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
 
     !!! note "Примечание"
         Версия релиза указывается в формате `release-x`, где `x` — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.

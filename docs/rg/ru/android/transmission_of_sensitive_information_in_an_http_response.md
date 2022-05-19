@@ -1,4 +1,4 @@
-# Получение sensitive информации в HTTP-ответе
+# Получение sensitive-информации в HTTP-ответе
 
 <table class='noborder'>
     <colgroup>

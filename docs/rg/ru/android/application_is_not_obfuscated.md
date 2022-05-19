@@ -45,6 +45,8 @@
     -keepattributes *Annotation*
     -renamesourcefileattribute SourceFile
     -keepattributes SourceFile,LineNumberTable
+    -repackageclasses ''
+
 
 **Включение использования ProGuard для релизной сборки приложения:**
 
