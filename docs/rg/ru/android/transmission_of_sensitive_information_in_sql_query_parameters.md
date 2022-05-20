@@ -18,9 +18,9 @@
 
 ## Описание
 
-Приложение использует чувствительную информацию при запросах к базе данных. Перехват SQL-запросов не является уязвимостью, в случае, если используются меры по определению инструментации приложения при помощи таких инструментов, как Frida или Xposed, осуществляется проверка на root-доступ и база данных, в которой хранится чувствительная информация [зашифрована](https://help.stingray-mobile.ru/mergedProjects/rg/storing_sensitive_information_in_a_protected_database.htm) с использованием [стойкого пароля](https://help.stingray-mobile.ru/mergedProjects/rg/weak_database_encryption_password.htm).
+Приложение использует чувствительную информацию при запросах к базе данных. Перехват SQL-запросов не является уязвимостью, в случае, если используются меры по определению инструментации приложения при помощи таких инструментов, как Frida или Xposed, осуществляется проверка на root-доступ и база данных, в которой хранится чувствительная информация [зашифрована](./storing_sensitive_information_in_a_protected_database.md) с использованием [стойкого пароля](./weak_database_encryption_password.md).
 
-Перехваченные данные используется системой для поиска перехваченного [значения в собранных данных](https://help.stingray-mobile.ru/mergedProjects/rg/storage_or_use_of_previously_found_sensitive_information.htm).
+Перехваченные данные используется системой для поиска перехваченного [значения в собранных данных](./storage_or_use_of_previously_found_sensitive_information.md).
 
 ## Рекомендации
 

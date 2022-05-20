@@ -20,7 +20,7 @@
 
 Приложение использует библиотеку SQLCipher для шифрования базы данных. При создании или открытии БД используется пароль, на котором в дальнейшем шифруются данные. Перехват пароля не является уязвимостью, в случае, если используются меры по определению инструментации приложения при помощи таких инструментов, как Frida или Xposed и осуществляется проверка на root-доступ.
 
-Перехваченный пароль используется нашей системой для [определения его надежности](https://help.stingray-mobile.ru/mergedProjects/rg/weak_database_encryption_password.htm) и поиска его [значения в собранных данных](https://help.stingray-mobile.ru/mergedProjects/rg/storage_or_use_of_previously_found_sensitive_information.htm).
+Перехваченный пароль используется нашей системой для [определения его надежности](./weak_database_encryption_password.md) и поиска его [значения в собранных данных](./storage_or_use_of_previously_found_sensitive_information.md).
 
 ## Рекомендации
 
