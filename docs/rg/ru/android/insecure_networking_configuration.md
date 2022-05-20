@@ -97,7 +97,7 @@
     <base-config cleartextTrafficPermitted="false" />
     </network-security-config>
 
-При такой настройке для всех сетевых соединений будет разрешен доступ только по HTTPs, за исключением двух (**insecure.example.com** и **insecure.cdn.example2.com**), включая их поддомены (за включение которых отвечает настройка **includeSubdomains**), для которых разрешено общение по HTTP.
+При такой настройке для всех сетевых соединений будет разрешен доступ только по HTTPS, за исключением двух (**insecure.example.com** и **insecure.cdn.example2.com**), включая их поддомены (за включение которых отвечает настройка **includeSubdomains**), для которых разрешено общение по HTTP.
 
 **Настройки Certificate Pinning**
 

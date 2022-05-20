@@ -93,7 +93,8 @@ KeyStore предоставляет несколько основных функ
 
 ### Ниже Android 6
 
-Для версий Android API ниже 23 (Android 6), требуется немного больше работы. [KeyGenParameterSpec](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) доступен только в API 23, поэтому хранилище KeyStore не может само генерировать случайные ключи AES. Вместо этого необходимо самим сгенерировать ключи используя API KeyPairGeneratorSpec.
+Для версий Android API ниже 23 (Android 6), требуется немного больше работы. [KeyGenParameterSpec](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) доступен только в API 23, поэтому хранилище KeyStore не может само генерировать случайные ключи AES. Вместо этого необходимо самим сгенерировать ключи используя API [KeyGenParameterSpec](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html).
+
 Как следует из названия, KeyPairGeneratorSpec генерирует пары открытого и закрытого ключей. Шифрование с открытым ключом предназначено в основном для подписи и аутентификации и не подходит для шифрования больших блоков данных, но может сочетаться с блочным шифром, таким как AES.
 
 То есть это принцип KEK+DEK (Key Encryption Key + Data Encryption Key). Шифруем данные на одном ключе, который в свою очередь шифруем на другом ключе, который хранится в KeyStore. У такого подхода есть свои плюсы, например при изменении ключа шифрования достаточно перешифровать AES ключ и не трогать пользовательские данные (не перешифровывать их). Примерный алгоритм действий выглядит следующим образом:

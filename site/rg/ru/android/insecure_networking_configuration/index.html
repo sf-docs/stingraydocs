@@ -3285,7 +3285,7 @@
 &lt;base-config cleartextTrafficPermitted="false" /&gt;
 &lt;/network-security-config&gt;
 </code></pre>
-<p>При такой настройке для всех сетевых соединений будет разрешен доступ только по HTTPs, за исключением двух (<strong>insecure.example.com</strong> и <strong>insecure.cdn.example2.com</strong>), включая их поддомены (за включение которых отвечает настройка <strong>includeSubdomains</strong>), для которых разрешено общение по HTTP.</p>
+<p>При такой настройке для всех сетевых соединений будет разрешен доступ только по HTTPS, за исключением двух (<strong>insecure.example.com</strong> и <strong>insecure.cdn.example2.com</strong>), включая их поддомены (за включение которых отвечает настройка <strong>includeSubdomains</strong>), для которых разрешено общение по HTTP.</p>
 <p><strong>Настройки Certificate Pinning</strong></p>
 <p>Network Security Config позволяет достаточно просто подключить механизм Certificate Pinning в приложение. Но стоит учитывать определенные нюансы. Рассмотрим конфигурацию, которая с первого взгляда выглядит, как правильно настроенная, и разберем, как ее можно немного улучшить:</p>
 <pre class="highlight"><code>&lt;network-security-config&gt;
