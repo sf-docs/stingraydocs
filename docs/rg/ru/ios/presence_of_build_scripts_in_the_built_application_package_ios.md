@@ -30,7 +30,7 @@
     ![](../../img/image.png)
     </figure>
 
-2. Добавить ключ настройки **EXCLUDED_SOURCE_FILE_NAMES**, если он отсуствует.
+2. Добавить ключ настройки **EXCLUDED_SOURCE_FILE_NAMES**, если он отсутствует.
 
     <figure markdown>
     ![](../../img/image2.png)

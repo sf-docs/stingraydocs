@@ -7,8 +7,8 @@
 1. Необходимо убедиться, что CPU имеет поддержку технологии аппаратной виртуализации (Intel Virtualization Technology (VT, VT-x, vmx) или AMD Virtualization (AMD-V, SVM)), выполнив команды:
 
     === "Ubuntu"
-        ```sudo apt-get install cpu-checker
-        kvm-ok```
+            sudo apt-get install cpu-checker
+            kvm-ok
 
 2. Установить требуемые пакеты:
 
@@ -69,7 +69,7 @@
 
 3. Запустите docker-контейнер для подготовки конфигурации.
 
-    Пример запуска контейнера с двумя подключенными volumes для файлов конфигурации и с сертификатами (при доступе по HTTPs):
+    Пример запуска контейнера с двумя подключенными volumes для файлов конфигурации и с сертификатами (при доступе по HTTPS):
 
         docker run -i -t -v /opt/stingray:/opt/docker-files -v /opt/certs:/opt/nginx/certs cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
 
