@@ -11,7 +11,7 @@
 
 ### Небезопасное хранение ключевой информации
 
-<a href="../../rg/../../rg/ru/android/a_writable_keystore/">
+<a href="../../rg/ru/android/a_writable_keystore/">
         Доступное на запись хранилище ключей</a><br>
 <a href="../../rg/ru/android/a_keystore_with_write_permission_protected_by_a_weak_password/">
         Доступное на запись хранилище ключей со слабым паролем</a><br>
