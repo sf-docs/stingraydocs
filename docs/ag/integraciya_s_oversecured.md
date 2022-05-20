@@ -26,4 +26,4 @@
 
 ## Настройка интеграции с Oversecured
 
-Дальнейшая настройка интеграции с Oversecured выполняется аналогично интеграции с AppScreener, см. раздел «[Настройка интеграции с AppScreener](/ag/integraciya_s_appscreener/#appscreener_2)».
+Дальнейшая настройка интеграции с Oversecured выполняется аналогично интеграции с AppScreener, см. раздел «[Настройка интеграции с AppScreener](../integraciya_s_appscreener/#appscreener_2)».
