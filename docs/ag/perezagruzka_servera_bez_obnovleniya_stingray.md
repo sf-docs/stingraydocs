@@ -8,4 +8,4 @@
 
     docker exec stingray-maintenance django-admin maintenance engines restore
 
-_
+.

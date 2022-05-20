@@ -18,6 +18,10 @@ nav:
     - ug/standarty.md
     - ug/profil_polzovatelya.md
     - ug/dokumentaciya_i_rekomendacii.md
+    - Приложения:
+      - ag/prilozhenie_1.md
+      - ag/prilozhenie_2.md
+      - ag/prilozhenie_3.md
   - Руководство по установке, настройке и интеграции:
     - ag/index.md
     - ag/trebovaniya_k_infrastrukture.md
@@ -49,10 +53,6 @@ nav:
       - ag/integraciya_s_google_play.md
     - Настройка мониторинга:
       - ag/nastrojka_zhurnalov_audita.md
-    - Приложения:
-      - ag/prilozhenie_1.md
-      - ag/prilozhenie_2.md
-      - ag/prilozhenie_3.md
   - Рекомендации по безопасной разработке:
     - rg/index.md
     - Рекомендации для Android:
