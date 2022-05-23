@@ -13,11 +13,11 @@
 2. Установить требуемые пакеты:
 
     === "Ubuntu Server 16"
-        ```sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils```
+            sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
     === "Ubuntu Server 18/20"
-        ```sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager```
+            sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager
     === "RHEL/CentOS"
-        ```sudo yum install qemu-kvm libvirt libvirt-python libguestfs-tools virt-install```
+            sudo yum install qemu-kvm libvirt libvirt-python libguestfs-tools virt-install
 
 3. Установите docker и docker-compose, если это не было сделано заранее. Рекомендации по установке можно найти на официальном сайте:
 
@@ -35,13 +35,13 @@
         groupmod --gid 171 kvm
         chgrp kvm /dev/kvm
 
-### Установка при наличии доступа к внешнему репозиторию docker-образов GCP
+### Установка при наличии доступа к внешнему репозиторию docker-образов YCR
 
-1. Авторизуйте docker на доступ к репозиторию GCP docker-образов:
+1. Авторизуйте docker на доступ к репозиторию YCR docker-образов:
 
         cat stingray-numeric_id.json | docker login --username json_key --password-stdin cr.yandex
 
-    Ключ `stingray-numeric_id.json` для подключения к GCP docker-образам компании Stingray Technologies предоставляется при покупке лицензии Stingray.
+    Ключ `stingray-numeric_id.json` для подключения к Yandex Container Registry (YCR) docker-образам компании Stingray Technologies предоставляется при покупке лицензии Stingray.
 
 2. Загрузите специальный docker-образ для подготовки конфигурационных файлов командой:
 
@@ -50,7 +50,7 @@
     !!! note "Примечание"
         Версия релиза указывается в формате `release-x`, где `x` — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
 
-### Установка без наличия доступа к внешнему репозиторию docker-образов GCP
+### Установка без наличия доступа к внешнему репозиторию docker-образов YCR
 
 1. При отсутствии доступа к внешнему репозиторию docker-образов, образы поставляются в виде выгруженных tar-архивов. Для доступа к данным архивам необходимо запросить их у поставщика продукта.
 

@@ -805,15 +805,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#docker-gcp" class="md-nav__link">
-    Установка при наличии доступа к внешнему репозиторию docker-образов GCP
+  <a href="#docker-ycr" class="md-nav__link">
+    Установка при наличии доступа к внешнему репозиторию docker-образов YCR
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-gcp_1" class="md-nav__link">
-    Установка без наличия доступа к внешнему репозиторию docker-образов GCP
+  <a href="#docker-ycr_1" class="md-nav__link">
+    Установка без наличия доступа к внешнему репозиторию docker-образов YCR
   </a>
   
 </li>
@@ -3199,15 +3199,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#docker-gcp" class="md-nav__link">
-    Установка при наличии доступа к внешнему репозиторию docker-образов GCP
+  <a href="#docker-ycr" class="md-nav__link">
+    Установка при наличии доступа к внешнему репозиторию docker-образов YCR
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-gcp_1" class="md-nav__link">
-    Установка без наличия доступа к внешнему репозиторию docker-образов GCP
+  <a href="#docker-ycr_1" class="md-nav__link">
+    Установка без наличия доступа к внешнему репозиторию docker-образов YCR
   </a>
   
 </li>
@@ -3275,13 +3275,16 @@ kvm-ok
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Ubuntu Server 16</label><label for="__tabbed_2_2">Ubuntu Server 18/20</label><label for="__tabbed_2_3">RHEL/CentOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><code>sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils</code></p>
+<pre class="highlight"><code>sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+</code></pre>
 </div>
 <div class="tabbed-block">
-<p><code>sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager</code></p>
+<pre class="highlight"><code>sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager
+</code></pre>
 </div>
 <div class="tabbed-block">
-<p><code>sudo yum install qemu-kvm libvirt libvirt-python libguestfs-tools virt-install</code></p>
+<pre class="highlight"><code>sudo yum install qemu-kvm libvirt libvirt-python libguestfs-tools virt-install
+</code></pre>
 </div>
 </div>
 </div>
@@ -3305,13 +3308,13 @@ chgrp kvm /dev/kvm
 </code></pre>
 </li>
 </ol>
-<h3 id="docker-gcp">Установка при наличии доступа к внешнему репозиторию docker-образов GCP</h3>
+<h3 id="docker-ycr">Установка при наличии доступа к внешнему репозиторию docker-образов YCR</h3>
 <ol>
 <li>
-<p>Авторизуйте docker на доступ к репозиторию GCP docker-образов:</p>
+<p>Авторизуйте docker на доступ к репозиторию YCR docker-образов:</p>
 <pre class="highlight"><code>cat stingray-numeric_id.json | docker login --username json_key --password-stdin cr.yandex
 </code></pre>
-<p>Ключ <code>stingray-numeric_id.json</code> для подключения к GCP docker-образам компании Stingray Technologies предоставляется при покупке лицензии Stingray.</p>
+<p>Ключ <code>stingray-numeric_id.json</code> для подключения к Yandex Container Registry (YCR) docker-образам компании Stingray Technologies предоставляется при покупке лицензии Stingray.</p>
 </li>
 <li>
 <p>Загрузите специальный docker-образ для подготовки конфигурационных файлов командой:</p>
@@ -3323,7 +3326,7 @@ chgrp kvm /dev/kvm
 </div>
 </li>
 </ol>
-<h3 id="docker-gcp_1">Установка без наличия доступа к внешнему репозиторию docker-образов GCP</h3>
+<h3 id="docker-ycr_1">Установка без наличия доступа к внешнему репозиторию docker-образов YCR</h3>
 <ol>
 <li>
 <p>При отсутствии доступа к внешнему репозиторию docker-образов, образы поставляются в виде выгруженных tar-архивов. Для доступа к данным архивам необходимо запросить их у поставщика продукта.</p>
