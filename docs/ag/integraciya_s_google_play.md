@@ -57,7 +57,7 @@
 
     20/04/2022 15:03:36 - INFO Google Play - Google Play integration, trying to login
     20/04/2022 15:03:36 - INFO Google Play - Logging in with email and password, you should copy token after
-    20/04/2022 15:03:38 - INFO Google Play - gsfId: 3664438267732297818, authSubToken: Jgju_Toz4YVtRjqFD_pGqcTFjodc_mBULuauit8o1uB4-AKFaFKHr6wb9serwzgwLBIRvA.
+    20/04/2022 15:03:38 - INFO Google Play - gsfId: 36**********2297818, authSubToken: Jg**********RjqFD_pGqcTFjodc_mBULuauit8o1uB4-AKFaFKHr6wb9serwzgwLBIRvA.
     20/04/2022 15:03:38 - INFO Google Play - You should copy these parameters and use them for next scans instead of email and password:
     20/04/2022 15:03:38 - INFO Google Play - "--google_play_gsfid 36**********2297818 --google_play_auth_token Jgju_**********FD_pGqcTFjodc_mBULuauit8o1uB4-AKFaFKHr6wb9serwzgwLBIRvA."
 
