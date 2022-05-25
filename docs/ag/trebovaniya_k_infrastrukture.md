@@ -55,8 +55,8 @@ Linux|64-bit|Centos / RHEL 7 and higher
 :-:|-|-|:-:|:-:|-
 1|Сетевой адрес Stingray|[https://download.docker.com](https://download.docker.com)|Внешний|80, 443|Установка docker
 2|Сетевой адрес Stingray|[http://archive.ubuntu.com](http://archive.ubuntu.com)<br>[http://security.ubuntu.com](http://security.ubuntu.com)|Внешний|80, 443|Установка сопутствующих пакетов
-3|Сетевой адрес Stingray|[https://eu.gcr.io/](https://eu.gcr.io/)|Внешний|80, 443|Авторизация в хранилище docker и загрузка docker-образов
-4|Сетевой адрес Stingray|[https://storage.googleapis.com](https://storage.googleapis.com)|Внешний|80, 443|Авторизация в хранилище docker и загрузка docker-образов
+3|Сетевой адрес Stingray|[https://cr.yandex/](https://cr.yandex/)|Внешний|80, 443|Авторизация в хранилище docker и загрузка docker-образов
+4|Сетевой адрес Stingray|[https://container-registry.api.cloud.yandex.net](https://container-registry.api.cloud.yandex.net)|Внешний|80, 443|Авторизация в хранилище docker и загрузка docker-образов
 5|CI/CD система, в которой осуществляется процесс сборки приложения|Сетевой адрес Stingray|Внутренний|80, 443|Загрузка артефакта сборки (мобильного приложения) для анализа в Stingray
 6|Сетевой адрес системы Stingray|Backend мобильного приложения|Внутренний|80, 443|Сетевая доступность backend для корректной работы мобильного приложения
 7|Рабочее место пользователя Stingray|Сетевой адрес Stingray|Внутренний|80, 443|Работа пользователей с графическим интерфейсом системы
