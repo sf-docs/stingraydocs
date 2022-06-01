@@ -4,7 +4,6 @@
 * Системы CI/CD
 * Интеграция с LDAP
 * Система дистрибуции AppCenter
-* Система дистрибуции HockeyApp
 * Система дистрибуции Nexus Repository
 * Интеграция с Firebase
 * Интеграция с AppStore
