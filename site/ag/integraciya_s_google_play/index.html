@@ -1162,8 +1162,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_3_9">
@@ -1214,20 +1212,6 @@
     <li class="md-nav__item">
       <a href="../integraciya_s_ldap/" class="md-nav__link">
         Интеграция с LDAP
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../sistema_distribucii_hockeyapp/" class="md-nav__link">
-        Система дистрибуции HockeyApp
       </a>
     </li>
   
@@ -3372,33 +3356,6 @@
 <li><code>google_play_password</code> — пароль аккаунта Google.</li>
 <li><code>distribution_system</code> — для Google Play указываем значение <code>google_play</code>.</li>
 </ul>
-<p>Таким образом, команда предварительного запуска скрипта может выглядеть следующим образом:</p>
-<pre class="highlight"><code>python mdast_cli/mdast_scan.py \
-  --profile_id 1337 \
-  --architecture_id 1 \
-  --distribution_system google_play \
-  --url "https://saas.mobile.appsec.world" \
-  --company_id 1 \
-  --token 5d5f6c98*********487a68ee20d4562d9f \
-  --google_play_package_name com.instagram.android \
-  --google_play_email download*******ly@gmail.com \
-  --google_play_password Password
-</code></pre>
-<p>Результатом предварительного запуска будут следующие сообщения: </p>
-<pre class="highlight"><code>20/04/2022 15:00:30 - INFO Google Play - Google Play integration, trying to login
-20/04/2022 15:00:30 - INFO Google Play - Logging in with email and password, you should copy token after
-20/04/2022 15:00:30 - ERROR Google Play - Security check is needed, try to visit https://accounts.google.com/b/0/DisplayUnlockCaptcha to unlock.
-20/04/2022 15:00:30 - ERROR Google Play - server says: "NeedsBrowser"
-</code></pre>
-<p>Необходимо перейти по ссылке и пройти проверку безопасности в браузере.</p>
-<div class="admonition note">
-<p class="admonition-title">Примечание</p>
-<p>Возможно, такая проверка не потребуется.</p>
-</div>
-<figure>
-<p><img alt="" src="../img/33.png" /></p>
-</figure>
-<p>Пройдя проверку безопасности, запустите скрипт с этими же параметрами повторно. </p>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
 <p>Если на этом этапе необходимо скачать приложение, добавьте параметр <code>--google_play_download_with_creds</code>.</p>
