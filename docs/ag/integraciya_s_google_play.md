@@ -19,37 +19,6 @@
 * `google_play_password` — пароль аккаунта Google.
 * `distribution_system` — для Google Play указываем значение `google_play`.
 
-Таким образом, команда предварительного запуска скрипта может выглядеть следующим образом:
-
-    python mdast_cli/mdast_scan.py \
-      --profile_id 1337 \
-      --architecture_id 1 \
-      --distribution_system google_play \
-      --url "https://saas.mobile.appsec.world" \
-      --company_id 1 \
-      --token 5d5f6c98*********487a68ee20d4562d9f \
-      --google_play_package_name com.instagram.android \
-      --google_play_email download*******ly@gmail.com \
-      --google_play_password Password
-
-Результатом предварительного запуска будут следующие сообщения: 
-
-    20/04/2022 15:00:30 - INFO Google Play - Google Play integration, trying to login
-    20/04/2022 15:00:30 - INFO Google Play - Logging in with email and password, you should copy token after
-    20/04/2022 15:00:30 - ERROR Google Play - Security check is needed, try to visit https://accounts.google.com/b/0/DisplayUnlockCaptcha to unlock.
-    20/04/2022 15:00:30 - ERROR Google Play - server says: "NeedsBrowser"
-
-Необходимо перейти по ссылке и пройти проверку безопасности в браузере.
-
-!!! note "Примечание"
-    Возможно, такая проверка не потребуется.
-
-<figure markdown>
-![](../ag/img/33.png)
-</figure>
-
-Пройдя проверку безопасности, запустите скрипт с этими же параметрами повторно. 
-
 !!! note "Примечание"
     Если на этом этапе необходимо скачать приложение, добавьте параметр `--google_play_download_with_creds`.
 
