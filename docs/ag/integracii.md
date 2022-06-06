@@ -90,7 +90,7 @@
 
 ## Oversecured
 
-Выберите в расположенном слева меню пункт Oversecured. Для интеграции с Oversecured понадобится токен, порядок создания которого подробно описан в разделе «[Интеграция с Oversecured](./integraciya_s_oversecured.md)».
+Выберите в расположенном слева меню пункт Oversecured. Для интеграции с Oversecured понадобится токен, порядок создания которого подробно описан в разделе «[Интеграция с Oversecured](./integraciya_s_oversecured.md)» Руководства по установке и интеграции.
 
 Дальнейшая настройка интеграции с Oversecured выполняется аналогично интеграции с AppScreener, описанной выше в разделе «[AppScreener](./integracii.md#appscreener)».
 
