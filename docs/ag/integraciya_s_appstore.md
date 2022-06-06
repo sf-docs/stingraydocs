@@ -36,8 +36,8 @@
 При запуске скрипта указываются следующие обязательные параметры:
 
 * `distribution_system appstore` — признак того, что приложение скачивается из AppStore;
-* `appstore_bundle_id` or `appstore_app_id`
-  * `appstore_bundle_id` - бандл имя приложения в AppStore
+* `appstore_bundle_id` или `appstore_app_id`
+  * `appstore_bundle_id` — бандл имя приложения в AppStore
   * `appstore_app_id` — идентификатор приложения в AppStore, который можно получить из ссылки приложения в магазине AppStore, взяв числовое значение `id` нужного приложения: apps.apple.com/app/id**{appstore_app_id}**.
 * `appstore_apple_id` — электронная почта аккаунта iTunes;
 * `appstore_password2FA` — пароль и код двухфакторной авторизации аккаунта iTunes.

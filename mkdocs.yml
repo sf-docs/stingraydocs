@@ -41,7 +41,6 @@ nav:
       - ag/integracii_cherez_rest_api.md
       - ag/sistemy_ci_cd.md
       - ag/integraciya_s_ldap.md
-#      - ag/sistema_distribucii_hockeyapp.md
       - ag/sistema_distribucii_appcenter.md
       - ag/sistema_distribucii_nexus_repository.md
       - ag/integraciya_s_firebase.md
