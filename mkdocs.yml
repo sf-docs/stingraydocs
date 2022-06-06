@@ -17,6 +17,13 @@ nav:
     - ug/testcases.md
     - ug/standarty.md
     - ug/profil_polzovatelya.md
+    - Настройки:
+      - ag/nastrojki.md
+      - ag/polzovateli.md
+      - ag/pravila_analiza_na_urovne_organizacii.md
+      - ag/ustrojstva.md
+      - ag/companies.md
+      - ag/integracii.md
     - ug/dokumentaciya_i_rekomendacii.md
     - Приложения:
       - ag/prilozhenie_1.md
@@ -30,13 +37,13 @@ nav:
     - ag/ostanovka_stingray.md
     - ag/obnovlenie_sistemy.md
     - ag/perezagruzka_servera_bez_obnovleniya_stingray.md
-    - Настройки:
-      - ag/nastrojki.md
-      - ag/polzovateli.md
-      - ag/pravila_analiza_na_urovne_organizacii.md
-      - ag/ustrojstva.md
-      - ag/companies.md
-      - ag/integracii.md
+#    - Настройки:
+#      - ag/nastrojki.md
+#      - ag/polzovateli.md
+#      - ag/pravila_analiza_na_urovne_organizacii.md
+#      - ag/ustrojstva.md
+#      - ag/companies.md
+#      - ag/integracii.md
     - Интеграции системы:
       - ag/integracii_cherez_rest_api.md
       - ag/sistemy_ci_cd.md
