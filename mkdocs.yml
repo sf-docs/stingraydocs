@@ -29,7 +29,7 @@ nav:
       - ag/prilozhenie_1.md
       - ag/prilozhenie_2.md
       - ag/prilozhenie_3.md
-  - Руководство по установке, настройке и интеграции:
+  - Руководство по установке и интеграции:
     - ag/index.md
     - ag/trebovaniya_k_infrastrukture.md
     - ag/ustanovka_stingray.md
@@ -47,7 +47,7 @@ nav:
     - Интеграции системы:
       - ag/integracii_cherez_rest_api.md
       - ag/sistemy_ci_cd.md
-      - ag/integraciya_s_ldap.md
+#      - ag/integraciya_s_ldap.md
       - ag/sistema_distribucii_appcenter.md
       - ag/sistema_distribucii_nexus_repository.md
       - ag/integraciya_s_firebase.md
