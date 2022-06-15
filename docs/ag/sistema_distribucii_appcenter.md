@@ -17,8 +17,8 @@
 
 Для загрузки приложения из системы дистрибуции AppCenter при запуске необходимо указать параметр `distribution_system appcenter`. Также необходимо указать обязательные параметры:
 
-* `appcenter_token` — API токен для доступа. Как его получить можно узнать [здесь](https://docs.microsoft.com/en-us/appcenter/api-docs/);
-* `appcenter_owner_name` — владелец приложения, как узнать имя владельца можно узнать [здесь](https://intercom.help/appcenter/en/articles/1764707-how-to-find-the-app-name-and-owner-name-from-your-app-url) или в [официальной документации](https://docs.microsoft.com/en-us/appcenter/api-docs/#find-your-app-center-app-name-and-owner-name);
+* `appcenter_token` — API токен для доступа. Как его получить, можно узнать [здесь](https://docs.microsoft.com/en-us/appcenter/api-docs/);
+* `appcenter_owner_name` — владелец приложения, как узнать имя владельца можно прочитать [здесь](https://intercom.help/appcenter/en/articles/1764707-how-to-find-the-app-name-and-owner-name-from-your-app-url) или в [официальной документации](https://docs.microsoft.com/en-us/appcenter/api-docs/#find-your-app-center-app-name-and-owner-name);
 * `appcenter_app_name` — имя приложения в системе AppCenter. Как его узнать можно по [ссылке](https://docs.microsoft.com/en-us/appcenter/api-docs/#find-your-app-center-app-name-and-owner-name);
     * `appcenter_release_id` или `appcenter_app_version`:
     * `appcenter_release_id` — идентификатор загружаемого релиза в системе AppCenter для конкретного приложения. Возможно выставить значение `latest` — тогда будет загружен последний доступный релиз приложения ([официальная документация](https://openapi.appcenter.ms/#/distribute/releases_getLatestByUser));
