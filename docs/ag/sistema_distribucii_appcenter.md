@@ -11,15 +11,15 @@
 * `distribution_system` — способ загрузки приложения, возможные опции: file, appcenter;
 * `company_id` — идентификатор компании, в рамках которой будет осуществлено сканирование;
 * `architecture_id` — опциональный параметр. Определяет идентификатор архитектуры операционной системы, на которой будет произведено сканирование;
-* `nowait` — опциональный параметр, определяющий необходимость ожидания завершения сканирования. Если данный флаг установлен — скрипт не будет дожидаться завершения сканирования, а выйдет сразу же после запуска. Если флаг не стоит — скрипт будет ожидать завершения процесса анализа и формировать отчет;
+* `nowait` — опциональный параметр, определяющий необходимость ожидания завершения сканирования. Если данный флаг установлен — скрипт не будет дожидаться завершения сканирования, а выйдет сразу же после запуска. Если флаг не установлен — скрипт будет ожидать завершения процесса анализа и формировать отчет;
 * `summary_report_json_file_name` — опциональный параметр. Определяет имя JSON файла, в который выгружается информация по сканированию в формате JSON. При отсутствии параметра информация сохраняться в JSON не будет;
 * `pdf_report_file_name` — опциональный параметр. Определяет имя PDF файла в который выгружается информация по сканированию в формате PDF. При отсутствии параметра PDF-отчет сохраняться не будет.
 
-Для загрузки приложения из системы дистрибуции AppCenter при запуске необходимо указать параметр `distribution_system appcenter`. Так же необходимо указать обязательные параметры:
+Для загрузки приложения из системы дистрибуции AppCenter при запуске необходимо указать параметр `distribution_system appcenter`. Также необходимо указать обязательные параметры:
 
 * `appcenter_token` — API токен для доступа. Как его получить можно узнать [здесь](https://docs.microsoft.com/en-us/appcenter/api-docs/);
-* `appcenter_owner_name` — владелец приложения, как узнать имя владельца можно [здесь](https://intercom.help/appcenter/en/articles/1764707-how-to-find-the-app-name-and-owner-name-from-your-app-url) или в [официальной документации](https://docs.microsoft.com/en-us/appcenter/api-docs/#find-your-app-center-app-name-and-owner-name);
-* `appcenter_app_name` — имя приложения в системе AppCenter. Как его узнать можно по ссылке;
+* `appcenter_owner_name` — владелец приложения, как узнать имя владельца можно узнать [здесь](https://intercom.help/appcenter/en/articles/1764707-how-to-find-the-app-name-and-owner-name-from-your-app-url) или в [официальной документации](https://docs.microsoft.com/en-us/appcenter/api-docs/#find-your-app-center-app-name-and-owner-name);
+* `appcenter_app_name` — имя приложения в системе AppCenter. Как его узнать можно по [ссылке](https://docs.microsoft.com/en-us/appcenter/api-docs/#find-your-app-center-app-name-and-owner-name);
     * `appcenter_release_id` или `appcenter_app_version`:
     * `appcenter_release_id` — идентификатор загружаемого релиза в системе AppCenter для конкретного приложения. Возможно выставить значение `latest` — тогда будет загружен последний доступный релиз приложения ([официальная документация](https://openapi.appcenter.ms/#/distribute/releases_getLatestByUser));
     * `appcenter_app_version` — при указании данного параметра будет найдена и скачана конкретная версия приложения по коду его версии (указанной в Android Manifest) (поле `version` в [документации](https://openapi.appcenter.ms/#/distribute/releases_list)).

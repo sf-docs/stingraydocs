@@ -9,14 +9,14 @@
 
 При предварительном запуске скрипта обязательна передача следующих параметров:
 
-* `google_play_package_name` — имя скачиваемого пакета. Чтобы узнать имя пакета приложения, можно открыть его страницу в Google Play — имя пакета является частью URL (параметр `id`).
+* `google_play_package_name` — имя скачиваемого пакета. Чтобы узнать имя пакета приложения, можно открыть его страницу в Google Play — имя пакета является частью URL (параметр `id`);
 
     <figure markdown>
     ![](../ag/img/32.png)
     </figure>
 
-* `google_play_email` — электронная почта аккаунта Google.
-* `google_play_password` — пароль аккаунта Google.
+* `google_play_email` — электронная почта аккаунта Google;
+* `google_play_password` — пароль аккаунта Google;
 * `distribution_system` — для Google Play указываем значение `google_play`.
 
 !!! note "Примечание"
