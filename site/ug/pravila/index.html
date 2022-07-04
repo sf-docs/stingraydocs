@@ -584,6 +584,8 @@
         
           
         
+          
+        
       
       
         
@@ -820,11 +822,25 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../ag/companies/" class="md-nav__link">
+        Компании
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_12" data-md-state="indeterminate" type="checkbox" id="__nav_2_12" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_13" data-md-state="indeterminate" type="checkbox" id="__nav_2_13" checked>
       
       
       
@@ -839,17 +855,15 @@
         
           
         
-          
-        
       
       
-        <label class="md-nav__link" for="__nav_2_12">
+        <label class="md-nav__link" for="__nav_2_13">
           Настройки
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Настройки" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_12">
+        <label class="md-nav__title" for="__nav_2_13">
           <span class="md-nav__icon md-icon"></span>
           Настройки
         </label>
@@ -917,20 +931,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ag/companies/" class="md-nav__link">
-        Компании
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../ag/integracii/" class="md-nav__link">
         Интеграции
       </a>
@@ -969,7 +969,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_14" data-md-state="indeterminate" type="checkbox" id="__nav_2_14" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_15" data-md-state="indeterminate" type="checkbox" id="__nav_2_15" checked>
       
       
       
@@ -982,13 +982,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_14">
+        <label class="md-nav__link" for="__nav_2_15">
           Приложения
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Приложения" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_14">
+        <label class="md-nav__title" for="__nav_2_15">
           <span class="md-nav__icon md-icon"></span>
           Приложения
         </label>
@@ -3384,22 +3384,18 @@
 </figure>
 <p>Выбранное правило подсвечивается и справа отображается <strong>Основная информация</strong> о нем:</p>
 <ul>
-<li><strong>Название</strong> — имя правила.</li>
-<li><strong>Описание</strong> — описание правила.</li>
 <li><strong>Строки поиска</strong> — набор строк и регулярных выражений для поиска конфиденциальной информации.</li>
 <li><strong>Места поиска</strong> — где именно искать необходимую информацию, в каких файлах и форматах данных.</li>
 <li><strong>Список модулей</strong> — модули системы, для которых будет применяться данное правило.</li>
 </ul>
-<figure>
-<p><img alt="" src="../img/95.png" /></p>
-</figure>
-<p>Рассмотрим, как работают правила анализа на примере одного из правил.</p>
+<p>Система поддерживает вложенность правил, как в случае с правилом <strong>Серверные ключи</strong>.</p>
+<p>Рассмотрим, как работают правила анализа на примере одного из них.</p>
 <figure>
 <p><img alt="" src="../img/97.png" /></p>
 </figure>
 <p>Это правило анализа в данный момент является активным и называется «Пароль». Оно определяет, что следующие паттерны:</p>
 <ul>
-<li>Регулярные выражения вида <code>pin(?:[_-]?code)?</code>.</li>
+<li>Регулярные выражения вида <code>(pin(?:[_-]?code)?)|([\w]+_pin)|([\w]+Pin)</code>.</li>
 <li>Строка password.</li>
 <li>Строка passphrase.</li>
 </ul>
@@ -3415,7 +3411,7 @@
 <li><strong>Название</strong> правила. Для сохранения произведенных изменений нажмите кнопку <strong>Изменить</strong> справа.</li>
 <li><strong>Описание</strong> правила анализа. Для сохранения произведенных изменений нажмите кнопку <strong>Изменить</strong> справа.</li>
 <li>
-<p>В поле <strong>Строки поиска</strong> можно добавить строку или регулярное выражение для поиска конфиденциальной информации. Для этого необходимо нажать на кнопку <strong>Добавить</strong> справа в поле <strong>Строки поиска</strong>, в появившемся поле Строка поиска задать собственно новую строку или регулярное выражение и нажать кнопку <strong>Добавить</strong>:</p>
+<p>В поле <strong>Строки поиска</strong> можно добавить строку или регулярное выражение для поиска конфиденциальной информации. Для этого необходимо нажать на кнопку <strong>Добавить</strong> справа в поле <strong>Строки поиска</strong>, в появившемся поле Строка поиска задать собственно новую строку или регулярное выражение и нажать кнопку <strong>Добавить</strong>.</p>
 <p><figure markdown>
 <img alt="" src="../img/98.png" />
 </figure></p>
@@ -3435,9 +3431,6 @@
 <p><img alt="" src="../img/100.png" /></p>
 </figure>
 <p>Добавленное правило будет отображено в списке и доступно для дальнейшего редактирования. У вновь добавленного правила поле <strong>Строки поиска</strong> является пустым, а в полях <strong>Места поиска</strong> и <strong>Список модулей</strong> все селекторы находятся в положении выключено <img alt="" src="../img/swith_off.png" />.</p>
-<figure>
-<p><img alt="" src="../img/101.png" /></p>
-</figure>
 <h2 id="_6">Удаление правил анализа</h2>
 <p>Удаление правил анализа может быть произведено на вкладке <strong>Правила</strong>. Для удаления правила нажмите на кнопку <strong>Удалить</strong> в правом верхнем углу поля <strong>Основная информация</strong>.</p>
 <figure>

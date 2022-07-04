@@ -584,6 +584,8 @@
         
           
         
+          
+        
       
       
         
@@ -750,6 +752,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        Компании
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -757,7 +773,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_12" type="checkbox" id="__nav_2_12" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_13" type="checkbox" id="__nav_2_13" checked>
       
       
       
@@ -772,17 +788,15 @@
         
           
         
-          
-        
       
       
-        <label class="md-nav__link" for="__nav_2_12">
+        <label class="md-nav__link" for="__nav_2_13">
           Настройки
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Настройки" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_12">
+        <label class="md-nav__title" for="__nav_2_13">
           <span class="md-nav__icon md-icon"></span>
           Настройки
         </label>
@@ -845,24 +859,41 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Устройства
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Устройства
       </a>
       
-    </li>
-  
+        
 
-            
-          
-            
-              
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
   
   
   
-    <li class="md-nav__item">
-      <a href="../companies/" class="md-nav__link">
-        Компании
-      </a>
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Управление устройствами
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -912,7 +943,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_14" data-md-state="indeterminate" type="checkbox" id="__nav_2_14" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_15" data-md-state="indeterminate" type="checkbox" id="__nav_2_15" checked>
       
       
       
@@ -925,13 +956,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_14">
+        <label class="md-nav__link" for="__nav_2_15">
           Приложения
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Приложения" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_14">
+        <label class="md-nav__title" for="__nav_2_15">
           <span class="md-nav__icon md-icon"></span>
           Приложения
         </label>
@@ -3247,6 +3278,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Управление устройствами
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3269,8 +3315,30 @@
 <ul>
 <li>Имя устройства в системе.</li>
 <li>Архитектура — операционная система устройства.</li>
-<li>Статус устройства отображает состояние устройства (<strong>Запущен</strong>, <strong>Запускается</strong>, <strong>Остановлен</strong> или <strong>Не существует</strong>).</li>
+<li>Состояние устройства (<strong>Запущен</strong>, <strong>Запускается</strong>, <strong>Остановлен</strong> или <strong>Не существует</strong>).</li>
+<li>Статус устройства (<strong>свободен</strong>, <strong>занят сканированием</strong> или <strong>занят тест-кейсом</strong>).</li>
 </ul>
+<h2 id="_2">Управление устройствами</h2>
+<p>Администратор компании может добавить устройство к уже существующим в компании. Нажмите кнопку <strong>Добавить устройство</strong> в правой части экрана. В появившемся окне <strong>Добавить устройство</strong> укажите название устройства и выберите его архитектуру из выпадающего списка. Вновь созданное устройство будет запущено сразу после создания, если будет выбрана опция <strong>Запустить устройство после создания</strong>.</p>
+<figure>
+<p><img alt="" src="../img/44.png" /></p>
+</figure>
+<p>Чтобы посмотреть детальную информацию об устройстве, нажмите на его карточку. Вновь открывшаяся страница, помимо детальной информации об устройстве на вкладках <strong>Основная информация</strong>, <strong>Проверка здоровья</strong> и <strong>Сетевые настройки</strong>, предоставляет возможность остановить, пересоздать или удалить устройство с помощью соответствующих кнопок справа вверху.</p>
+<figure>
+<p><img alt="" src="../img/45.png" /></p>
+</figure>
+<p>На вкладке <strong>Проверка здоровья</strong> приведена информация о текущем состоянии готовности устройства.</p>
+<figure>
+<p><img alt="" src="../img/46.png" /></p>
+</figure>
+<p>На вкладке <strong>Сетевые настройки</strong> для Android-устройства можно добавить или удалить хосты.</p>
+<figure>
+<p><img alt="" src="../img/47.png" /></p>
+</figure>
+<p>Для iOS-устройства на этой вкладке можно задать внешний IP-адрес.</p>
+<figure>
+<p><img alt="" src="../img/48.png" /></p>
+</figure>
 
               
             </article>
@@ -3305,13 +3373,13 @@
       
       
         
-        <a href="../companies/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Компании" rel="next">
+        <a href="../integracii/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Интеграции" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              Компании
+              Интеграции
             </div>
           </div>
           <div class="md-footer__button md-icon">

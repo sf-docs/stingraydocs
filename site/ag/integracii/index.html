@@ -584,6 +584,8 @@
         
           
         
+          
+        
       
       
         
@@ -750,6 +752,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        Компании
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -757,7 +773,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_12" type="checkbox" id="__nav_2_12" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_13" type="checkbox" id="__nav_2_13" checked>
       
       
       
@@ -772,17 +788,15 @@
         
           
         
-          
-        
       
       
-        <label class="md-nav__link" for="__nav_2_12">
+        <label class="md-nav__link" for="__nav_2_13">
           Настройки
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Настройки" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_12">
+        <label class="md-nav__title" for="__nav_2_13">
           <span class="md-nav__icon md-icon"></span>
           Настройки
         </label>
@@ -838,20 +852,6 @@
     <li class="md-nav__item">
       <a href="../ustrojstva/" class="md-nav__link">
         Устройства
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../companies/" class="md-nav__link">
-        Компании
       </a>
     </li>
   
@@ -1011,7 +1011,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_14" data-md-state="indeterminate" type="checkbox" id="__nav_2_14" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_15" data-md-state="indeterminate" type="checkbox" id="__nav_2_15" checked>
       
       
       
@@ -1024,13 +1024,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_14">
+        <label class="md-nav__link" for="__nav_2_15">
           Приложения
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Приложения" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_14">
+        <label class="md-nav__title" for="__nav_2_15">
           <span class="md-nav__icon md-icon"></span>
           Приложения
         </label>
@@ -3450,7 +3450,7 @@
 <h2 id="cicd">CI/CD</h2>
 <p>Выберите в расположенном слева меню пункт <strong>CI/CD</strong> — здесь представлены следующие поля:</p>
 <ul>
-<li><strong>Integration token</strong> — интерфейс для получения токена интеграции в процесс разработки.</li>
+<li><strong>Токен</strong> — интерфейс для получения токена интеграции в процесс разработки.</li>
 <li><strong>Конструктор строки запуска</strong> — конструктор для получения строки запуска в зависимости от типа выбранных параметров.</li>
 </ul>
 <p>Действующий токен CI/CD может быть использован в качестве аутентификационных данных и позволяет не авторизоваться и не проходить аутентификацию вручную каждый раз при запуске сканирования приложения. Время жизни такого токена — один год. Таким образом, появляется возможность работы через CLI или через систему дистрибуции.</p>
@@ -3473,18 +3473,23 @@
 <p>Как было сказано выше в разделе «<a href="../../ug/zapusk_skanirovaniya/">Запуск сканирования</a>», сканирование приложения можно запустить не только из пользовательского интерфейса системы, но также из командной строки. Запуск сканирования из командной строки можно производить только имея валидный токен CI/CD.</p>
 <p>Процесс формирования командной строки включает следующие шаги:</p>
 <ul>
-<li>В параметрах формы Конструктор строки запуска выбрать необходимые значения для запуска:<ul>
+<li>В параметрах формы <strong>Конструктор строки запуска</strong> выбрать необходимые значения для запуска:<ul>
 <li>Проект.</li>
 <li>Профиль.</li>
 <li>Архитектура.</li>
 <li>Тест-кейс.</li>
+<li>Вариант запуска. </li>
+<li>Система дистрибьюции.</li>
+<li>Путь файлу.</li>
+<li>Ряд опций работы (<strong>Не ожидать окончания скана</strong>, <strong>Получить отчет в виде JSON-файла</strong>, <strong>Получить отчет в виде PDF-файла</strong>).</li>
 </ul>
 </li>
+<li>В зависимости от выбранных значений, могут появиться дополнительные параметры запуска, которые также необходимо заполнить.</li>
 <li>Будет сформирована строка запуска, в которой необходимо заменить месторасположение файла.</li>
 </ul>
 <p>Сформированную таким образом командную строку можно использовать при работе через CLI.</p>
 <h2 id="appscreener">AppScreener</h2>
-<p>Выберите в расположенном слева меню пункт <strong>AppScreener</strong>. Для интеграции с AppScreener понадобится токен, порядок создания которого подробно описан в разделе «[Интеграция с AppScreener]»(./integraciya_s_appscreener.md) Руководства по настройке и интеграции».</p>
+<p>Выберите в расположенном слева меню пункт <strong>AppScreener</strong>. Для интеграции с AppScreener понадобится токен, порядок создания которого подробно описан в разделе «<a href="../integraciya_s_appscreener/">Интеграция с AppScreener</a>» Руководства по установке и интеграции.</p>
 <p>Переведите селектор, расположенный справа, в положение «включено».</p>
 <p>Вставьте полученный токен для интеграции в соответствующее поле.</p>
 <figure>
@@ -3588,7 +3593,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул">
       
         
-        <a href="../companies/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Компании" rel="prev">
+        <a href="../ustrojstva/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Устройства" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -3597,7 +3602,7 @@
               <span class="md-footer__direction">
                 Назад
               </span>
-              Компании
+              Устройства
             </div>
           </div>
         </a>

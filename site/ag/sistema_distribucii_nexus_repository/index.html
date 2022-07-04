@@ -582,6 +582,8 @@
         
           
         
+          
+        
       
       
         
@@ -749,11 +751,25 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../companies/" class="md-nav__link">
+        Компании
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_12" data-md-state="indeterminate" type="checkbox" id="__nav_2_12" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_13" data-md-state="indeterminate" type="checkbox" id="__nav_2_13" checked>
       
       
       
@@ -768,17 +784,15 @@
         
           
         
-          
-        
       
       
-        <label class="md-nav__link" for="__nav_2_12">
+        <label class="md-nav__link" for="__nav_2_13">
           Настройки
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Настройки" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_12">
+        <label class="md-nav__title" for="__nav_2_13">
           <span class="md-nav__icon md-icon"></span>
           Настройки
         </label>
@@ -846,20 +860,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../companies/" class="md-nav__link">
-        Компании
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../integracii/" class="md-nav__link">
         Интеграции
       </a>
@@ -898,7 +898,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_14" data-md-state="indeterminate" type="checkbox" id="__nav_2_14" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_15" data-md-state="indeterminate" type="checkbox" id="__nav_2_15" checked>
       
       
       
@@ -911,13 +911,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_2_14">
+        <label class="md-nav__link" for="__nav_2_15">
           Приложения
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Приложения" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_14">
+        <label class="md-nav__title" for="__nav_2_15">
           <span class="md-nav__icon md-icon"></span>
           Приложения
         </label>
@@ -3313,7 +3313,7 @@
 <li><code>profile_id</code> — id профиля, для которого проводится анализ;</li>
 <li><code>testcase_id</code> — id того тест-кейса, который будет воспроизведен во время анализа; возможен запуск нескольких тест-кейсов, для этого их id перечисляются через пробел. Это необязательный параметр, если он не задан, то будет запущено сканирование в ручном режиме и через 20 секунд после запуска остановлено, а данные отправлены на анализ;</li>
 <li><code>token</code> — CI/CD токен для доступа, более подробная информация приведена в разделе «<a href="../integracii/">Интеграции</a>» Руководства пользователя;</li>
-<li><code>distribution_system</code> — способ загрузки приложения, возможные опции: <code>file</code>, <code>nexus</code>. Более подробно про них описано ниже в соответствующих разделах;</li>
+<li><code>distribution_system</code> — способ загрузки приложения, возможные опции: <code>file</code>, <code>google_play</code>, <code>appstore</code>, <code>firebase</code>, <code>appcenter</code>, <code>nexus</code>. Более подробно про них описано ниже в соответствующих разделах;</li>
 <li><code>company_id</code> — идентификатор компании, в рамках которой будет осуществлено сканирование;</li>
 <li><code>architecture_id</code> — опциональный параметр. Определяет идентификатор архитектуры операционной системы, на которой будет произведено сканирование;</li>
 <li><code>nowait</code> — опциональный параметр, определяющий необходимость ожидания завершения сканирования. Если данный флаг установлен — скрипт не будет дожидаться завершения сканирования, а выйдет сразу же после запуска. Если флаг не установлен — скрипт будет ожидать завершения процесса анализа и формировать отчет;</li>
