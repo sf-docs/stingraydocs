@@ -24,7 +24,7 @@
         docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api30:release-x
         docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/ios:release-x
         docker-compose up -d
-        docker exec stingray-maintenance django-adminmaintenance engines recreate
+        docker exec stingray-maintenance django-admin maintenance engines recreate
 
     !!! note "Примечание"
         Команда `recreate` пересоздает контейнеры в их ранее сохраненном состоянии, используя новые версии образов.
