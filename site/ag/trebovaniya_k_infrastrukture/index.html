@@ -3377,13 +3377,13 @@
 <p>Для работы системы обязательно наличие поддержки виртуализации, а именно необходим процессор с поддержкой технологии виртуализации Intel Virtualization Technology (VT, VT-x, vmx) или AMD Virtualization (AMD-V, SVM).</p>
 <h3 id="_3">Минимальные технические характеристики серверного оборудования</h3>
 <ul>
-<li>6-ядерный CPU 2 ГГц. </li>
+<li>8-ядерный CPU 2 ГГц. </li>
 <li>Оперативная память: 24 Гб. </li>
 <li>Свободное дисковое пространство 100 GB (+ пространство для размещения прикладных систем и баз данных).</li>
 </ul>
 <h3 id="_4">Рекомендуемые технические характеристики серверного оборудования</h3>
 <ul>
-<li>8-ядерный CPU 3 ГГц. </li>
+<li>16-ядерный CPU 3 ГГц. </li>
 <li>Оперативная память: 32 Гб. </li>
 <li>Свободное дисковое пространство 500 GB (+ пространство для размещения прикладных систем и баз данных).</li>
 </ul>
@@ -3402,14 +3402,14 @@
 <tr>
 <td>Stingray (минимальная конфигурация)</td>
 <td align="center">1</td>
-<td>6-ядерный процессор (2 ГГц) с поддержкой технологии виртуализации Intel Virtualization Technology (VT, VT-x, vmx) или AMD Virtualization (AMD-V, SVM)</td>
+<td>8-ядерный процессор (2 ГГц) с поддержкой технологии виртуализации Intel Virtualization Technology (VT, VT-x, vmx) или AMD Virtualization (AMD-V, SVM)</td>
 <td align="center">24</td>
 <td align="center">200</td>
 </tr>
 <tr>
 <td>Stingray (рекомендуемая конфигурация)</td>
 <td align="center">1</td>
-<td>8-ядерный процессор (3 ГГц) с поддержкой технологии виртуализации Intel Virtualization Technology (VT, VT-x, vmx) или AMD Virtualization (AMD-V, SVM)</td>
+<td>16-ядерный процессор (3 ГГц) с поддержкой технологии виртуализации Intel Virtualization Technology (VT, VT-x, vmx) или AMD Virtualization (AMD-V, SVM)</td>
 <td align="center">32</td>
 <td align="center">500</td>
 </tr>
@@ -3433,25 +3433,25 @@
 <tbody>
 <tr>
 <td>2 Android, 2 iOS</td>
-<td align="center">6*</td>
-<td align="center">12</td>
-<td align="center">24</td>
-</tr>
-<tr>
-<td>4 Android, 4 iOS</td>
 <td align="center">8*</td>
 <td align="center">16</td>
 <td align="center">24</td>
 </tr>
 <tr>
-<td>6 Android, 6 iOS</td>
+<td>4 Android, 4 iOS</td>
 <td align="center">12*</td>
 <td align="center">24</td>
+<td align="center">24</td>
+</tr>
+<tr>
+<td>6 Android, 6 iOS</td>
+<td align="center">16*</td>
+<td align="center">32</td>
 <td align="center">32</td>
 </tr>
 </tbody>
 </table>
-<p>* При виртуализации количество vCPU должно соответствовать общему количеству потоков.</p>
+<p>* При виртуализации количество виртуальных процессоров (vCPU) должно соответствовать общему количеству потоков.</p>
 <h2 id="_5">Архитектура и ОС</h2>
 <p>Система поддерживает следующие типы ОС и ПО для полноценного функционирования.</p>
 <table>
