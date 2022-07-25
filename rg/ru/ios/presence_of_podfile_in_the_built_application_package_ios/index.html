@@ -1,0 +1,3441 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Наличие Podfile в собранном пакете приложения - Документация</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+
+<style> /* Embeded fonts start */
+
+/* roboto-300 - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300.svg#Roboto ' format('svg') /* Legacy iOS */
+}
+/* roboto-300italic - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  src: url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300italic.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300italic.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300italic.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300italic.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300italic.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-300italic.svg#Roboto ' format('svg') /* Legacy iOS */
+}
+/* roboto-italic - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-italic.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-italic.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-italic.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-italic.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-italic.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-italic.svg#Roboto ' format('svg') /* Legacy iOS */
+}
+/* roboto-regular - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-regular.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-regular.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-regular.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-regular.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-regular.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-regular.svg#Roboto ' format('svg') /* Legacy iOS */
+}
+/* roboto-500 - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500.svg#Roboto ' format('svg') /* Legacy iOS */
+}
+/* roboto-500italic - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500italic.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500italic.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500italic.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500italic.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500italic.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-500italic.svg#Roboto ' format('svg') /* Legacy iOS */
+}
+/* roboto-700 - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700.svg#Roboto ' format('svg') /* Legacy iOS */
+}
+/* roboto-700italic - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700italic.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700italic.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700italic.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700italic.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700italic.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-v30-latin_cyrillic-ext-700italic.svg#Roboto ' format('svg') /* Legacy iOS */
+}
+
+/* roboto-mono-regular - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-regular.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-regular.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-regular.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-regular.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-regular.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-regular.svg#RobotoMono ' format('svg') /* Legacy iOS */
+}
+/* roboto-mono-700 - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700.svg#RobotoMono ' format('svg') /* Legacy iOS */
+}
+/* roboto-mono-italic - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-italic.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-italic.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-italic.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-italic.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-italic.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-italic.svg#RobotoMono ' format('svg') /* Legacy iOS */
+}
+/* roboto-mono-700italic - latin_cyrillic-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 700;
+  src: url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700italic.eot' /* IE9 Compat Modes */
+  src: local(''),
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700italic.eot?#iefix ' format('embedded-opentype'), /* IE6-IE8 */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700italic.woff2 ' format('woff2'), /* Super Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700italic.woff ' format('woff'), /* Modern Browsers */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700italic.ttf ' format('truetype'), /* Safari, Android, iOS */
+       url(' ../../../../assets/fonts/roboto-mono-v21-latin_cyrillic-ext-700italic.svg#RobotoMono ' format('svg') /* Legacy iOS */
+}
+</style>
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="stingray" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#podfile" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../../../.." title="Документация" class="md-header__button md-logo" aria-label="Документация" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+            Документация&nbsp;&nbsp;/&nbsp;&nbsp;Наличие Podfile в собранном пакете приложения
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="extlink"><a href="https://stingray-mobile.ru/" title="Перейти на stingray-mobile.ru" target="_self">stingray-mobile.ru</a></div>
+<!--    <div class="extlink">&nbsp;&nbsp;&nbsp;</div>
+    <div class="extlink">Ссылка на сайт</div>-->
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="stingray" data-md-color-primary="" data-md-color-accent=""  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Очистить" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../gi/" class="md-tabs__link">
+        Общая информация
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ug/" class="md-tabs__link">
+        Руководство пользователя
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ag/" class="md-tabs__link">
+        Руководство по установке и интеграции
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+        Рекомендации по безопасной разработке
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../../faq/" class="md-tabs__link">
+      FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Документация" class="md-nav__button md-logo" aria-label="Документация" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Документация
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../gi/">Общая информация</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Общая информация" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Общая информация
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gi/o_produkte/" class="md-nav__link">
+        О продукте
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gi/trebovaniya_k_rabochemu_mestu_polzovatelya/" class="md-nav__link">
+        Требования к рабочему месту пользователя
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../gi/osnovnye_ponyatiya/" class="md-nav__link">
+        Основные понятия
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../ug/">Руководство пользователя</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство пользователя" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство пользователя
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ug/autentifikaciya_polzovatelya/" class="md-nav__link">
+        Аутентификация пользователя
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ug/osnovnoe_menu/" class="md-nav__link">
+        Основное меню
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ug/projects/" class="md-nav__link">
+        Проекты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ug/pravila/" class="md-nav__link">
+        Правила
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ug/profile/" class="md-nav__link">
+        Профили
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ug/rezultaty_skanirovanij/" class="md-nav__link">
+        Результаты сканирований
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ug/zapusk_skanirovaniya/" class="md-nav__link">
+        Запуск сканирования
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ug/testcases/" class="md-nav__link">
+        Тест-кейсы
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ug/standarty/" class="md-nav__link">
+        Стандарты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ug/profil_polzovatelya/" class="md-nav__link">
+        Профиль пользователя
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/companies/" class="md-nav__link">
+        Компании
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_13" data-md-state="indeterminate" type="checkbox" id="__nav_2_13" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_13">
+          Настройки
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Настройки" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_13">
+          <span class="md-nav__icon md-icon"></span>
+          Настройки
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/nastrojki/" class="md-nav__link">
+        Настройки Компании
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/polzovateli/" class="md-nav__link">
+        Пользователи, группы, проекты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/pravila_analiza_na_urovne_organizacii/" class="md-nav__link">
+        Правила анализа на уровне Компании
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/ustrojstva/" class="md-nav__link">
+        Устройства
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/integracii/" class="md-nav__link">
+        Интеграции
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ug/dokumentaciya_i_rekomendacii/" class="md-nav__link">
+        Документация и рекомендации
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_15" data-md-state="indeterminate" type="checkbox" id="__nav_2_15" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_15">
+          Приложения
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Приложения" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_15">
+          <span class="md-nav__icon md-icon"></span>
+          Приложения
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/prilozhenie_1/" class="md-nav__link">
+        Приложение 1. Список модулей для сбора информации
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/prilozhenie_2/" class="md-nav__link">
+        Приложение 2. Список обнаруживаемых уязвимостей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/prilozhenie_3/" class="md-nav__link">
+        Приложение 3. Описание стандартов безопасности
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../ag/">Руководство по установке и интеграции</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство по установке и интеграции" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство по установке и интеграции
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/trebovaniya_k_infrastrukture/" class="md-nav__link">
+        Требования к инфраструктуре
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/ustanovka_stingray/" class="md-nav__link">
+        Установка Stingray
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/zapusk_stingray/" class="md-nav__link">
+        Запуск Stingray
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/ostanovka_stingray/" class="md-nav__link">
+        Остановка Stingray
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/obnovlenie_sistemy/" class="md-nav__link">
+        Обновление системы
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/perezagruzka_servera_bez_obnovleniya_stingray/" class="md-nav__link">
+        Перезагрузка сервера без обновления Stingray
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" data-md-state="indeterminate" type="checkbox" id="__nav_3_8" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          Интеграции системы
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Интеграции системы" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Интеграции системы
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/integracii_cherez_rest_api/" class="md-nav__link">
+        Интеграции через REST API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/sistemy_ci_cd/" class="md-nav__link">
+        Системы CI/CD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/sistema_distribucii_appcenter/" class="md-nav__link">
+        Система дистрибуции AppCenter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/sistema_distribucii_nexus_repository/" class="md-nav__link">
+        Система дистрибуции Nexus Repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/integraciya_s_firebase/" class="md-nav__link">
+        Интеграция с Firebase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/integraciya_s_appstore/" class="md-nav__link">
+        Интеграция с AppStore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/integraciya_c_burp_suite/" class="md-nav__link">
+        Интеграция c Burp Suite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/integraciya_s_netsparker/" class="md-nav__link">
+        Интеграция с Netsparker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/integraciya_s_appscreener/" class="md-nav__link">
+        Интеграция с AppScreener
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/integraciya_s_oversecured/" class="md-nav__link">
+        Интеграция с Oversecured
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/integraciya_s_google_play/" class="md-nav__link">
+        Интеграция с Google Play
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_9" data-md-state="indeterminate" type="checkbox" id="__nav_3_9" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_9">
+          Настройка мониторинга
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Настройка мониторинга" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          Настройка мониторинга
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ag/nastrojka_zhurnalov_audita/" class="md-nav__link">
+        Настройка журналов аудита
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../">Рекомендации по безопасной разработке</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Рекомендации по безопасной разработке" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Рекомендации по безопасной разработке
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Рекомендации для Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Рекомендации для Android" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Рекомендации для Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_2_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_1">
+          Небезопасное хранение ключевой информации
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Небезопасное хранение ключевой информации" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Небезопасное хранение ключевой информации
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/a_writable_keystore/" class="md-nav__link">
+        Доступное на запись хранилище ключей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/a_keystore_with_write_permission_protected_by_a_weak_password/" class="md-nav__link">
+        Доступное на запись хранилище ключей со слабым паролем
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/readable_file_keystore/" class="md-nav__link">
+        Доступное на чтение файловое хранилище ключей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/a_readable_keystore%2C_protected_by_a_weak_password%2C_with_private_keys/" class="md-nav__link">
+        Доступное на чтение хранилище ключей со слабым паролем, содержащее закрытые ключи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/a_readable_keystore%2C_protected_by_a_weak_password%2C_with_public_keys/" class="md-nav__link">
+        Доступное на чтение хранилище ключей со слабым паролем, содержащее открытые ключи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/a_readable_keystore_containing_private_keys_protected_by_a_weak_password/" class="md-nav__link">
+        Доступное на чтение хранилище ключей с приватными ключами, защищёнными слабым паролем
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/using_a_file_keystore/" class="md-nav__link">
+        Использование файлового хранилища ключей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/a_keystore%2C_protected_by_weak_password%2C_containing_private_keys/" class="md-nav__link">
+        Хранилище ключей со слабым паролем, содержащее закрытые ключи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/a_keystore%2C_protected_by_weak_password%2C_containing_public_keys/" class="md-nav__link">
+        Хранилище ключей со слабым паролем, содержащее открытые ключи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/a_keystore_containing_private_keys_protected_by_a_weak_password/" class="md-nav__link">
+        Хранилище ключей с приватными ключами, защищёнными слабым паролем
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_2">
+          Передача sensitive-информации в Activity
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Передача sensitive-информации в Activity" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Передача sensitive-информации в Activity
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insecure_transmission_of_sensitive_information_in_activity/" class="md-nav__link">
+        Небезопасная передача sensitive-информации в Activity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insecure_transmission_of_sensitive_information_in_external_activity/" class="md-nav__link">
+        Небезопасная передача sensitive-информации во внешнюю Activity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insecure_transmission_of_sensitive_information_in_private_activity/" class="md-nav__link">
+        Передача sensitive-информации во внутреннюю Activity
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_4_2_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_3">
+          Передача sensitive-информации в Service
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Передача sensitive-информации в Service" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Передача sensitive-информации в Service
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insecure_transmission_of_sensitive_information_in_service/" class="md-nav__link">
+        Небезопасная передача sensitive-информации в Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insecure_transmission_of_sensitive_information_in_external_service/" class="md-nav__link">
+        Небезопасная передача sensitive-информации во внешний Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insecure_transmission_of_sensitive_information_in_internal_service/" class="md-nav__link">
+        Небезопасная передача sensitive-информации во внутренний Service
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4" data-md-state="indeterminate" type="checkbox" id="__nav_4_2_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_4">
+          Передача sensitive-информации по сети
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Передача sensitive-информации по сети" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Передача sensitive-информации по сети
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/inclusion_of_sensitive_information_into_the_get_request_parameters/" class="md-nav__link">
+        Включение sensitive-информации в параметры GET-запроса
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/inclusion_of_sensitive_information_into_an_https_request/" class="md-nav__link">
+        Включение чувствительной информации в HTTPS запрос
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/transmission_of_sensitive_information_in_an_http_request/" class="md-nav__link">
+        Передача sensitive информации в HTTP-запросе
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/transmission_of_sensitive_information_in_an_http_response/" class="md-nav__link">
+        Получение sensitive-информации в HTTP-ответе
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/inclusion_of_sensitive_information_into_an_https_response/" class="md-nav__link">
+        Получение чувствительной информации в HTTPS-ответе
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_5" data-md-state="indeterminate" type="checkbox" id="__nav_4_2_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_5">
+          Хранение sensitive-информации
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Хранение sensitive-информации" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Хранение sensitive-информации
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_sensitive_information_in_memory/" class="md-nav__link">
+        Хранение sensitive-информации в памяти
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_sensitive_information_in_a_public_file_outside_the_application_s_directory/" class="md-nav__link">
+        Хранение sensitive-информации в общедоступном файле вне директории приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_sensitive_information_in_a_public_file_inside_the_application_s_directory/" class="md-nav__link">
+        Хранение sensitive-информации в общедоступном файле внутри директории приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_sensitive_information_in_a_private_file_outside_the_application_s_directory/" class="md-nav__link">
+        Хранение sensitive-информации в приватном файле вне директории приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_sensitive_information_in_a_private_file_inside_the_application_s_directory/" class="md-nav__link">
+        Хранение sensitive-информации в приватном файле внутри директории приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_sensitive_information_in_a_public_protected_database/" class="md-nav__link">
+        Хранение sensitive-информации в общедоступной защищённой базе данных
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_sensitive_information_in_a_protected_database/" class="md-nav__link">
+        Хранение sensitive-информации в защищённой базе данных
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_sensitive_information_in_an_insecure_database/" class="md-nav__link">
+        Хранение чувствительной информации в незащищённой базе данных
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_sensitive_information_in_a_public_unprotected_database/" class="md-nav__link">
+        Хранение sensitive-информации в общедоступной незащищённой базе данных
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_sensitive_information_in_the_application_source_code/" class="md-nav__link">
+        Хранение sensitive-информации в исходном коде приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storage_or_use_of_previously_found_sensitive_information/" class="md-nav__link">
+        Хранение или использование ранее найденной sensitive-информации
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_sensitive_information_in_the_keyboard_cache/" class="md-nav__link">
+        Хранение sensitive-информации в кэше клавиатуры
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_6" data-md-state="indeterminate" type="checkbox" id="__nav_4_2_6" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_6">
+          Хранение ключей/сертификатов
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Хранение ключей/сертификатов" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Хранение ключей/сертификатов
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_a_private_key_certificate_that_is_not_protected_by_a_password_in_the_directory_resources_of_the_application/" class="md-nav__link">
+        Хранение приватного ключа/сертификата, не защищенного паролем в директории/ресурсах приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_a_public_key_certificate_in_the_directory_resources_of_the_application/" class="md-nav__link">
+        Хранение публичного ключа/сертификата в директории/ресурсах приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_a_private_key_certificate_protected_by_a_password_in_the_directory_resources_of_the_application/" class="md-nav__link">
+        Хранение приватного ключа/сертификата, защищенного паролем, в директории/ресурсах приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_a_key_certificate_in_the_directory_resources_of_the_application/" class="md-nav__link">
+        Хранение сертификата/ключа в директории/ресурсах приложения
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/output_of_sensitive_information_into_the_system_log/" class="md-nav__link">
+        Вывод sensitive-информации в системный лог
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insecure_signature_algorithm/" class="md-nav__link">
+        Небезопасный алгоритм подписи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insufficient_length_of_a_signature_key/" class="md-nav__link">
+        Недостаточная длина ключа подписи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/transmission_of_sensitive_information_in_broadcastreceiver/" class="md-nav__link">
+        Передача sensitive-информации в BroadcastReceiver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/transmission_of_sensitive_information_to_a_private_broadcastreceiver/" class="md-nav__link">
+        Передача sensitive-информации в Private BroadcastReceiver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/transmission_of_sensitive_information_in_sql_query_parameters/" class="md-nav__link">
+        Передача sensitive-информации в параметрах SQL-запроса
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/possibility_to_create_a_backup_copy_of_the_application/" class="md-nav__link">
+        Возможность создания резервной копии приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/application_is_not_obfuscated/" class="md-nav__link">
+        Приложение не обфусцировано
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/weak_database_encryption_password/" class="md-nav__link">
+        Слабый пароль шифрования базы данных
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/interception_of_the_database_encryption_password/" class="md-nav__link">
+        Перехват пароля шифрования базы данных
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/an_application_allows_network_connections_via_http/" class="md-nav__link">
+        Приложение разрешает сетевые соединения по протоколу HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insecure_networking_configuration/" class="md-nav__link">
+        Небезопасная конфигурация сетевого взаимодействия
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/potential_execution_of_arbitrary_code_within_the_application/" class="md-nav__link">
+        Потенциальное выполнение произвольного кода в контексте приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/storing_cookie_values_in_the_standard_webview_database/" class="md-nav__link">
+        Хранение значений Cookies в стандартной базе WebView
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insecure_settings_in_androidmanifest.xml/" class="md-nav__link">
+        Небезопасные настройки в AndroidManifest.xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insecure_settings_in_androidmanifest.xml._the_android_hasfragileuserdata_flag/" class="md-nav__link">
+        Небезопасные настройки в AndroidManifest.xml. Флаг android:hasFragileUserData
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/insecure_settings_in_androidmanifest.xml._the_android_requestlegacyexternalstorage_flag/" class="md-nav__link">
+        Небезопасные настройки в AndroidManifest.xml. Флаг android:requestLegacyExternalStorage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/ssl-pinning_is_missing_or_incorrectly_realized/" class="md-nav__link">
+        Отсутствует или некорректно реализован SSL-pinning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/ability_to_run_private_activity_indirectly/" class="md-nav__link">
+        Возможность опосредованного запуска приватных Activity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/url_spoofing_possibility/" class="md-nav__link">
+        Возможность подмены URL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/ability_to_open_an_arbitrary_url_in_webview/" class="md-nav__link">
+        Возможность открытия произвольного URL в WebView
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/access_to_an_arbitrary_file/" class="md-nav__link">
+        Возможность получения доступа к произвольному файлу
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/access_to_an_arbitrary_contentprovider/" class="md-nav__link">
+        Возможность получения доступа к произвольному ContentProvider
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/ability_to_access_an_arbitrary_file_via_contentprovider/" class="md-nav__link">
+        Возможность доступа к произвольному файлу через ContentProvider
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Рекомендации для iOS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Рекомендации для iOS" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Рекомендации для iOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" data-md-state="indeterminate" type="checkbox" id="__nav_4_3_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_1">
+          Хранение ключей/сертификатов
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Хранение ключей/сертификатов" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Хранение ключей/сертификатов
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storing_a_key_certificate_in_the_directory_resources_of_the_application_ios/" class="md-nav__link">
+        Хранение сертификата/ключа в директории/ресурсах приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storing_a_private_key_certificate_protected_by_a_password_in_the_directory_resources_of_the_application_ios/" class="md-nav__link">
+        Хранение приватного ключа/сертификата защищенного паролем в директории/ресурсах приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storing_a_public_key_certificate_in_the_directory_resources_of_the_application_ios/" class="md-nav__link">
+        Хранение публичного ключа/сертификата в директории/ресурсах приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storing_a_private_key_certificate_that_is_not_protected_by_a_password_in_the_directory_resources_of_the_application_ios/" class="md-nav__link">
+        Хранение приватного ключа/сертификата не защищенного паролем в директории/ресурсах приложения
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_4_3_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_2">
+          Небезопасное хранение ключевой информации
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Небезопасное хранение ключевой информации" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Небезопасное хранение ключевой информации
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a_writable_keystore_ios/" class="md-nav__link">
+        Доступное на запись хранилище ключей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a_keystore_with_write_permission_protected_by_a_weak_password_ios/" class="md-nav__link">
+        Доступное на запись хранилище ключей со слабым паролем
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../readable_file_keystore_ios/" class="md-nav__link">
+        Доступное на чтение файловое хранилище ключей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a_readable_keystore%2C_protected_by_a_weak_password%2C_with_private_keys_ios/" class="md-nav__link">
+        Доступное на чтение хранилище ключей со слабым паролем, содержащее закрытые ключи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a_readable_keystore%2C_protected_by_a_weak_password%2C_with_public_keys_ios/" class="md-nav__link">
+        Доступное на чтение хранилище ключей со слабым паролем, содержащее открытые ключи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a_readable_keystore_containing_private_keys_protected_by_a_weak_password_ios/" class="md-nav__link">
+        Доступное на чтение хранилище ключей с приватными ключами, защищёнными слабым паролем
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_a_file_keystore_ios/" class="md-nav__link">
+        Использование файлового хранилища ключей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a_keystore%2C_protected_by_weak_password%2C_containing_private_keys_ios/" class="md-nav__link">
+        Хранилище ключей со слабым паролем, содержащее закрытые ключи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a_keystore%2C_protected_by_weak_password%2C_containing_public_keys_ios/" class="md-nav__link">
+        Хранилище ключей со слабым паролем, содержащее открытые ключи
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a_keystore_containing_private_keys_protected_by_a_weak_password_ios/" class="md-nav__link">
+        Хранилище ключей с приватными ключами, защищёнными слабым паролем
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enabled_caching_of_network_requests_ios/" class="md-nav__link">
+        Включенное кэширование сетевых запросов
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output_of_sensitive_information_into_the_system_log_ios/" class="md-nav__link">
+        Вывод sensitive-информации в системный лог
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insecure_app_transport_security_configuration_ios/" class="md-nav__link">
+        Небезопасная конфигурация App Transport Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application_does_not_use_overflow_protection_features_ios/" class="md-nav__link">
+        Приложение не использует функции защиты от переполнений
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presence_of_build_scripts_in_the_built_application_package_ios/" class="md-nav__link">
+        Наличие скриптов сборки в собранном пакете приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Наличие Podfile в собранном пакете приложения
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Наличие Podfile в собранном пакете приложения
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Описание
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Рекомендации
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storing_sensitive_information_in_the_keyboard_cache_ios/" class="md-nav__link">
+        Хранение sensitive-информации в кэше клавиатуры
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storing_sensitive_information_in_nsuserdefaults_ios/" class="md-nav__link">
+        Хранение sensitive-информации в NSUserDefaults
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storing_sensitive_information_in_a_private_file_ios/" class="md-nav__link">
+        Хранение sensitive-информации в приватном файле
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storing_sensitive_information_in_the_application_source_code_ios/" class="md-nav__link">
+        Хранение sensitive-информации в исходном коде приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storing_sensitive_information_in_binary_cookies_ios/" class="md-nav__link">
+        Хранение чувствительной информации в Binary Cookies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage_or_use_of_previously_found_sensitive_information_ios/" class="md-nav__link">
+        Хранение или использование ранее найденной чувствительной информации
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Описание
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Рекомендации
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="podfile">Наличие Podfile в собранном пакете приложения</h1>
+<table class='noborder'>
+    <colgroup>
+      <col/>
+      <col/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td rowspan="2"><img src="../../../img/defekt_info.png"/></td>
+        <td>Критичность:<strong> ИНФО</strong></td>
+      </tr>
+      <tr>
+        <td>Способ обнаружения:<strong> DAST, SENSITIVE INFO, FILES</strong></td>
+      </tr>
+    </tbody>
+</table>
+
+<h2 id="_1">Описание</h2>
+<p>В пакете приложения присутствует файл с описанием библиотек, применяемых для сборки. Наличие такого файла может помочь в определении уязвимости в используемых библиотеках, а также раскрыть информацию о внутренних репозиториях (если используются внутренние компоненты).</p>
+<h2 id="_2">Рекомендации</h2>
+<p>Рекомендуется исключить файлы из итоговой сборки, которые не требуются для работы приложения и необходимы только во время сборки.</p>
+<ol>
+<li>
+<p>Если отсутствует файл пользовательских настроек для сборки, необходимо его создать.</p>
+<p><figure markdown>
+<img alt="" src="../../../img/image4.png" />
+</figure></p>
+</li>
+<li>
+<p>Добавить ключ настройки <strong>EXCLUDED_SOURCE_FILE_NAMES</strong> если он отсутствует.</p>
+<p><figure markdown>
+<img alt="" src="../../../img/image5.png" />
+</figure></p>
+</li>
+<li>
+<p>Добавить значение настройки какие файлы и папки необходимо исключить из конечной сборки приложения.</p>
+<p><figure markdown>
+<img alt="" src="../../../img/image6.png" />
+</figure></p>
+</li>
+</ol>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            К началу
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул">
+      
+        
+        <a href="../presence_of_build_scripts_in_the_built_application_package_ios/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Наличие скриптов сборки в собранном пакете приложения" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              Наличие скриптов сборки в собранном пакете приложения
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../storing_sensitive_information_in_the_keyboard_cache_ios/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Хранение sensitive-информации в кэше клавиатуры" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              Хранение sensitive-информации в кэше клавиатуры
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+  <div class="copy">
+    <div class="logo_footer"><img src="../../assets/logo_footer.png" alt="" srcset=""></div>
+    <p class="footer_info">Номер свидетельства о регистрации в Федеральной службе по интеллектуальной собственности: 2020660236.</p>
+    <p class="footer_info">Регистрационный номер в реестре российского ПО Министерства Цифрового Развития РФ: 7699</p>
+  </div>
+  <p class="footer_info">© 2020—2022&nbsp;&nbsp;<a href="https://stingray-mobile.ru//" target="_blank" rel="noopener">ООО «Стингрей Технолоджиз»</a></p>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.shares", "content.code.annotate", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.d5a3c699.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.897f3768.min.js"></script>
+      
+    
+  
