@@ -3323,28 +3323,28 @@
 <li>Остановите Stingray согласно инструкциям в разделе «<a href="../ostanovka_stingray/">Остановка Stingray</a>». </li>
 <li>
 <p>Обновите специальный docker-образ для подготовки конфигурационных файлов командой:</p>
-<pre class="highlight"><code>docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
+<pre class="highlight"><code>docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/wizard:release-x
 </code></pre>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
-<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
+<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия (например, 2022.6.1). Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
 </div>
 </li>
 <li>
 <p>Запустите docker-контейнер с параметром <code>update</code>.</p>
-<pre class="highlight"><code>docker run -i -t -v /opt/stingray:/opt/docker-files cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x update
+<pre class="highlight"><code>docker run -i -t -v /opt/stingray:/opt/docker-files cr.yandex/crp8idtsajke3lbauqel/stingray/wizard:release-x update
 </code></pre>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
-<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
+<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия (например, 2022.6.1). Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
 </div>
 </li>
 <li>
 <p>После завершения копирования новых конфигурационных файлов необходимо выполнить команду обновления образов из директории с конфигурационными файлами (в примере <code>/opt/stingray</code>):</p>
 <pre class="highlight"><code>docker-compose pull
-docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api27:release-x
-docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api30:release-x
-docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/ios:release-x
+docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/android_api27:release-x
+docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/android_api30:release-x
+docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/ios:release-x
 docker-compose up -d
 docker exec stingray-maintenance django-admin maintenance engines recreate
 </code></pre>
@@ -3354,7 +3354,7 @@ docker exec stingray-maintenance django-admin maintenance engines recreate
 </div>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
-<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
+<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия (например, 2022.6.1). Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
@@ -3372,16 +3372,16 @@ docker exec stingray-maintenance django-admin maintenance engines recreate
 </li>
 <li>
 <p>В случае возникновения ошибок возможна загрузка образов вручную:</p>
-<pre class="highlight"><code>docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/stingray:release-x
-docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api27:release-x
-docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/android_api30:release-x
-docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/ios:release-x
-docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/stingray-ui:release-x
-docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/stingray-knowledgebase:release-x
+<pre class="highlight"><code>docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/stingray:release-x
+docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/android_api27:release-x
+docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/android_api30:release-x
+docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/ios:release-x
+docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/stingray-ui:release-x
+docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/stingray-knowledgebase:release-x
 </code></pre>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
-<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
+<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия (например, 2022.6.1). Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
 </div>
 <p>После загрузки образов запустите систему согласно инструкциям в предыдущем пункте данного раздела.</p>
 </li>
@@ -3407,11 +3407,11 @@ docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/stingray-knowledgebase:relea
 </li>
 <li>
 <p>Запустите специальный конфигуратор (Wizard) с параметром <code>update</code>.</p>
-<pre class="highlight"><code>docker run -i -t -v /opt/stingray-docker-compose:/opt/docker-files cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x update
+<pre class="highlight"><code>docker run -i -t -v /opt/stingray-docker-compose:/opt/docker-files cr.yandex/crp8idtsajke3lbauqel/stingray/wizard:release-x update
 </code></pre>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
-<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
+<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия (например, 2022.6.1). Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
 </div>
 </li>
 <li>
@@ -3473,8 +3473,12 @@ docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/stingray-knowledgebase:relea
       <div class="md-copyright">
   
   
-    © 2020—2022&nbsp;&nbsp;<a href="https://stingray-mobile.ru//" target="_blank" rel="noopener">
-      ООО «Стингрей Технолоджиз»</a>
+  <div class="copy">
+    <div class="logo_footer"><img src="../../assets/logo_footer.png" alt="" srcset=""></div>
+    <p class="footer_info">Номер свидетельства о регистрации в Федеральной службе по интеллектуальной собственности: 2020660236.</p>
+    <p class="footer_info">Регистрационный номер в реестре российского ПО Министерства Цифрового Развития РФ: 7699</p>
+  </div>
+  <p class="footer_info">© 2020—2022&nbsp;&nbsp;<a href="https://stingray-mobile.ru//" target="_blank" rel="noopener">ООО «Стингрей Технолоджиз»</a></p>
   
 </div>
       

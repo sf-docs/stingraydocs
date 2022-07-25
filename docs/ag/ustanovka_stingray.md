@@ -45,10 +45,10 @@
 
 2. Загрузите специальный docker-образ для подготовки конфигурационных файлов командой:
 
-        docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
+        docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/wizard:release-x
 
     !!! note "Примечание"
-        Версия релиза указывается в формате `release-x`, где `x` — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
+        Версия релиза указывается в формате `release-x`, где `x` — это текущая версия (например, 2022.6.1). Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
 
 ### Установка без наличия доступа к внешнему репозиторию docker-образов YCR
 
@@ -71,17 +71,17 @@
 
     Пример запуска контейнера с двумя подключенными volumes для файлов конфигурации и с сертификатами (при доступе по HTTPS):
 
-        docker run -i -t -v /opt/stingray:/opt/docker-files -v /opt/certs:/opt/nginx/certs cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
+        docker run -i -t -v /opt/stingray:/opt/docker-files -v /opt/certs:/opt/nginx/certs cr.yandex/crp8idtsajke3lbauqel/stingray/wizard:release-x
 
     !!! note "Примечание"
-        Версия релиза указывается в формате `release-x`, где `x` — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
+        Версия релиза указывается в формате `release-x`, где `x` — это текущая версия (например, 2022.6.1). Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
 
     Пример запуска контейнера с одним volume для файлов конфигурации (при доступе по HTTP):
 
-        docker run -i -t -v /opt/stingray:/opt/docker-files cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
+        docker run -i -t -v /opt/stingray:/opt/docker-files cr.yandex/crp8idtsajke3lbauqel/stingray/wizard:release-x
 
     !!! note "Примечание"
-        Версия релиза указывается в формате `release-x`, где `x` — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
+        Версия релиза указывается в формате `release-x`, где `x` — это текущая версия (например, 2022.6.1). Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.
 
 После запуска контейнера в интерактивном режиме необходимо заполнить ряд параметров.
 

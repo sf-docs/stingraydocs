@@ -3450,11 +3450,11 @@ chgrp kvm /dev/kvm
 </li>
 <li>
 <p>Загрузите специальный docker-образ для подготовки конфигурационных файлов командой:</p>
-<pre class="highlight"><code>docker pull cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
+<pre class="highlight"><code>docker pull cr.yandex/crp8idtsajke3lbauqel/stingray/wizard:release-x
 </code></pre>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
-<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
+<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия (например, 2022.6.1). Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
 </div>
 </li>
 </ol>
@@ -3484,18 +3484,18 @@ chgrp kvm /dev/kvm
 <li>
 <p>Запустите docker-контейнер для подготовки конфигурации.</p>
 <p>Пример запуска контейнера с двумя подключенными volumes для файлов конфигурации и с сертификатами (при доступе по HTTPS):</p>
-<pre class="highlight"><code>docker run -i -t -v /opt/stingray:/opt/docker-files -v /opt/certs:/opt/nginx/certs cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
+<pre class="highlight"><code>docker run -i -t -v /opt/stingray:/opt/docker-files -v /opt/certs:/opt/nginx/certs cr.yandex/crp8idtsajke3lbauqel/stingray/wizard:release-x
 </code></pre>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
-<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
+<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия (например, 2022.6.1). Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
 </div>
 <p>Пример запуска контейнера с одним volume для файлов конфигурации (при доступе по HTTP):</p>
-<pre class="highlight"><code>docker run -i -t -v /opt/stingray:/opt/docker-files cr.yandex/crp8p3a3l1ri2431n3ce/stingray/wizard:release-x
+<pre class="highlight"><code>docker run -i -t -v /opt/stingray:/opt/docker-files cr.yandex/crp8idtsajke3lbauqel/stingray/wizard:release-x
 </code></pre>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
-<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия. Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
+<p>Версия релиза указывается в формате <code>release-x</code>, где <code>x</code> — это текущая версия (например, 2022.6.1). Пожалуйста, уточняйте эту информацию у вендора или на официальном сайте.</p>
 </div>
 </li>
 </ol>
@@ -3798,8 +3798,12 @@ chgrp kvm /dev/kvm
       <div class="md-copyright">
   
   
-    © 2020—2022&nbsp;&nbsp;<a href="https://stingray-mobile.ru//" target="_blank" rel="noopener">
-      ООО «Стингрей Технолоджиз»</a>
+  <div class="copy">
+    <div class="logo_footer"><img src="../../assets/logo_footer.png" alt="" srcset=""></div>
+    <p class="footer_info">Номер свидетельства о регистрации в Федеральной службе по интеллектуальной собственности: 2020660236.</p>
+    <p class="footer_info">Регистрационный номер в реестре российского ПО Министерства Цифрового Развития РФ: 7699</p>
+  </div>
+  <p class="footer_info">© 2020—2022&nbsp;&nbsp;<a href="https://stingray-mobile.ru//" target="_blank" rel="noopener">ООО «Стингрей Технолоджиз»</a></p>
   
 </div>
       

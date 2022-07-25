@@ -47,7 +47,7 @@ Stingray (рекомендуемая конфигурация)|1|16-ядерны
 Операционная система|Архитектура|Платформа
 -|:-:|-
 Linux|64-bit|Ubuntu Server 18.04.6 x64
-Linux|64-bit|Centos / RHEL 7 and higher
+Linux|64-bit|Centos / RHEL 8.4 и выше
 
 ## Сетевой доступ
 
